@@ -105,10 +105,9 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
           cname: blog.aaruvi.space
 
-      - name: Ping Bing sitemap
+      - name: Submit latest posts to IndexNow (Bing, Yandex, Seznam, Naver)
         if: success()
-        run: |
-          curl -sf "https://www.bing.com/ping?sitemap=https://blog.aaruvi.space/sitemap.xml" || true
+        run: uv run python scripts/indexnow_submit.py --recent 3 --sitemap blog-source/_site/sitemap.xml
 
       - name: Submit sitemap to Google Search Console
         if: success()

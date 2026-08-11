@@ -136,6 +136,7 @@ crewai test -n 2 -m gpt-4o-mini  # test crew
 | `REDDIT_USER_AGENT` | ❌ Optional | `ai.ts` | Reddit search |
 | `TELEGRAM_API_ROOT` | ❌ Optional | `index.ts` | Override Bot API base URL (local testing only) |
 | `GSC_SERVICE_ACCOUNT_JSON` | ❌ Optional | `gsc_submit.py`, workflows | Google Cloud service account JSON — submits sitemap to Search Console Sitemaps API after each deploy (Google has no ping/IndexNow; this is the only sanctioned channel) |
+| `INDEXNOW_KEY_FILE` | ❌ Optional | `indexnow_submit.py` | Path to IndexNow key file (auto-detected: `blog-source/<32hex>.txt`) |
 
 > ⚠️ `.env` is **gitignored** (local dev only). Production secrets go via `wrangler secret put <NAME>` — never paste a key into a chat or commit it.
 

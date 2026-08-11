@@ -45,9 +45,8 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"purge_everything":true}' || true
 
-      - name: Ping Bing sitemap
-        run: |
-          curl -sf "https://www.bing.com/ping?sitemap=https://blog.aaruvi.space/sitemap.xml" || true
+      - name: Submit latest posts to IndexNow (Bing, Yandex, Seznam, Naver)
+        run: python3 scripts/indexnow_submit.py --recent 5 --sitemap blog-source/_site/sitemap.xml
 
       - name: Submit sitemap to Google Search Console
         env:
