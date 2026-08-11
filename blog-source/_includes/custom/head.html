@@ -29,6 +29,9 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+<!-- Atom feed discovery (RSS readers find the feed without a bookmark) -->
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }} — Atom Feed" href="{{ '/feed.xml' | absolute_url }}">
+
 <!-- Robots — allow full index + large image previews in SERPs -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow, max-image-preview:large">

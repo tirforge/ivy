@@ -2,6 +2,7 @@
 title: About
 icon: fa-regular fa-circle-info
 order: 4
+sitemap: true
 ---
 
 Ivy is a daily blog exploring the intersection of technology, science, and culture. Each article is researched from real sources and crafted to be insightful, readable, and worth your time.
