@@ -82,3 +82,7 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+
+# Minify compiled CSS (Lighthouse: "Minify CSS" + smaller LCP pipeline)
+sass:
+  style: compressed

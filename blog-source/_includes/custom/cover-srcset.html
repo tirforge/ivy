@@ -1,0 +1,31 @@
+{% comment %}
+  ============================================================
+  Responsive srcset for cover images (used by the copied
+  _layouts/home.html and _layouts/post.html).
+
+  Chirpy 7.5 renders covers WITHOUT srcset, so every page was
+  downloading the full w=1200 Unsplash image (~200KB) on all
+  devices — and the LCP preload (which used imagesrcset) was
+  silently discarded because the <img> had no srcset to match.
+
+  This include:
+    - emits 480/680/960 candidates + q=75 (Unsplash quality;
+      visually identical, ~50% smaller files)
+    - keeps the 0.525 aspect ratio (h = w * 0.525) so the
+      width/height attributes prevent CLS
+    - falls back to the plain URL for non-Unsplash images
+
+  IMPORTANT: the generated URLs MUST stay byte-identical to the
+  preload in _includes/favicons.html (same replace logic).
+  ============================================================
+{% endcomment %}
+{% assign src = include.src %}
+
+{% if src contains '://' and src contains 'unsplash' and src contains 'w=1200' %}
+  {% assign s480 = src | replace: 'w=1200', 'w=480' | replace: 'h=630', 'h=252' | append: '&q=75' %}
+  {% assign s680 = src | replace: 'w=1200', 'w=680' | replace: 'h=630', 'h=357' | append: '&q=75' %}
+  {% assign s960 = src | replace: 'w=1200', 'w=960' | replace: 'h=630', 'h=504' | append: '&q=75' %}
+  src="{{ s960 }}" srcset="{{ s480 }} 480w, {{ s680 }} 680w, {{ s960 }} 960w" sizes="(max-width: 768px) 100vw, 50vw" width="960" height="504"
+{% else %}
+  src="{{ src }}" width="1200" height="630"
+{% endif %}

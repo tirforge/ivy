@@ -5,18 +5,21 @@
   render-blocking stylesheets, so this preload is discovered first
   and the LCP image request starts immediately — not after the CSS
   finishes downloading (was costing ~900ms+ on mobile).
-  imagesrcset MUST mirror the <img> srcset (680/960/1200) so the
-  preload resolves to the SAME URL the image uses — a mismatch makes
-  the browser preload one size, discard it, and fetch another.
+  imagesrcset MUST mirror the <img> srcset from
+  _includes/custom/cover-srcset.html (480/680/960 + q=75, same
+  replace logic) so the preload resolves to the SAME URL the image
+  uses — a mismatch makes the browser preload one size, discard it,
+  and fetch another.
   ============================================================
 {% endcomment %}
 {% assign first_post = site.posts | first %}
 {% if first_post and first_post.image %}
   {% assign first_src = first_post.image.path | default: first_post.image %}
   {% if first_src contains '://' %}
-    {% assign first_680 = first_src | replace: 'w=1200', 'w=680' | replace: 'h=630', 'h=357' %}
-    {% assign first_960 = first_src | replace: 'w=1200', 'w=960' | replace: 'h=630', 'h=504' %}
-    <link rel="preload" as="image" href="{{ first_960 }}" imagesrcset="{{ first_680 }} 680w, {{ first_960 }} 960w, {{ first_src }} 1200w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high">
+    {% assign first_480 = first_src | replace: 'w=1200', 'w=480' | replace: 'h=630', 'h=252' | append: '&q=75' %}
+    {% assign first_680 = first_src | replace: 'w=1200', 'w=680' | replace: 'h=630', 'h=357' | append: '&q=75' %}
+    {% assign first_960 = first_src | replace: 'w=1200', 'w=960' | replace: 'h=630', 'h=504' | append: '&q=75' %}
+    <link rel="preload" as="image" href="{{ first_960 }}" imagesrcset="{{ first_480 }} 480w, {{ first_680 }} 680w, {{ first_960 }} 960w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high">
   {% endif %}
 {% endif %}
 
