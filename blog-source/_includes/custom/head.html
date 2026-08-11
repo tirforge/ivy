@@ -1,17 +1,6 @@
 <style>.shimmer::before{display:none!important}.shimmer{background:transparent!important}</style>
-<!-- Preload LCP image (first post cover). imagesrcset MUST mirror the <img> srcset
-     (680/960/1200) so the preload resolves to the SAME URL the image will use —
-     a mismatch makes the browser preload one size, discard it, and fetch another. -->
-{% assign first_post = site.posts | first %}
-{% if first_post and first_post.image %}
-  {% assign first_src = first_post.image.path | default: first_post.image %}
-  {% if first_src contains '://' %}
-    {% assign first_680 = first_src | replace: 'w=1200', 'w=680' | replace: 'h=630', 'h=357' %}
-    {% assign first_960 = first_src | replace: 'w=1200', 'w=960' | replace: 'h=630', 'h=504' %}
-    <link rel="preload" as="image" href="{{ first_960 }}" imagesrcset="{{ first_680 }} 680w, {{ first_960 }} 960w, {{ first_src }} 1200w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high">
-  {% endif %}
-{% endif %}
-
+<!-- LCP image preload moved to _includes/favicons.html (included BEFORE the
+     render-blocking CSS in the theme head) so the image request starts first. -->
 <!-- Google Fonts — non-blocking (no preload: the LCP image wins the bandwidth race) -->
 <link rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"

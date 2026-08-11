@@ -1,0 +1,78 @@
+<!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+
+  OVERRIDE: search.json (~400KB, full text of every post) was being fetched
+  on every page load because SimpleJekyllSearch fetches its JSON at
+  construction. Now initialized lazily — only when the user focuses/clicks
+  the search input or opens search. The `search.json` script tag is still
+  rendered by the layout (kept), but the XHR only happens on demand.
+-->
+
+{% capture result_elem %}
+  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">
+    <header>
+      <h2><a href="{url}">{title}</a></h2>
+      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">
+        {categories}
+        {tags}
+      </div>
+    </header>
+    <p>{content}</p>
+  </article>
+{% endcapture %}
+
+{% capture not_found %}<p class="mt-5">{{ site.data.locales[include.lang].search.no_results }}</p>{% endcapture %}
+
+<script>
+  {% comment %} Note: dependent library will be loaded in `js-selector.html` {% endcomment %}
+  function startSearch() {
+    if (window.__searchStarted || typeof SimpleJekyllSearch === 'undefined') {
+      return;
+    }
+    window.__searchStarted = true;
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('search-results'),
+      json: '{{ '/assets/js/data/search.json' | relative_url }}',
+      searchResultTemplate: '{{ result_elem | strip_newlines }}',
+      noResultsText: '{{ not_found }}',
+      templateMiddleware: function(prop, value, template) {
+        if (prop === 'categories') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+          }
+        }
+
+        if (prop === 'tags') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+          }
+        }
+      }
+    });
+  }
+
+  document.addEventListener('focus', function (e) {
+    if (e.target && e.target.id === 'search-input') {
+      startSearch();
+    }
+  }, { passive: true });
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.closest && e.target.closest('#search-trigger')) {
+      setTimeout(startSearch, 50);
+    }
+    if (e.target && e.target.id === 'search-input') {
+      startSearch();
+    }
+  }, { passive: true });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && e.target.id === 'search-input') {
+      startSearch();
+    }
+  }, { passive: true });
+</script>

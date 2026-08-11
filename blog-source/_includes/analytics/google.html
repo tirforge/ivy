@@ -1,0 +1,32 @@
+<!-- Google Analytics (gtag.js) — lazy-loaded on first user interaction.
+     The gtag.js script is ~170KB; it was loading with `defer` on every page
+     visit, competing with the LCP image for Slow 4G bandwidth and hogging
+     the main thread. Events queue in dataLayer until the script arrives.
+     Analytics still fires for the vast majority of sessions (users scroll/
+     click). -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', '{{ site.analytics.google.id }}');
+
+  (function () {
+    var loaded = false;
+    function load() {
+      if (loaded) {
+        return;
+      }
+      loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.id }}';
+      document.head.appendChild(s);
+    }
+    ['scroll', 'click', 'touchstart', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, load, { passive: true, once: true });
+    });
+  })();
+</script>
