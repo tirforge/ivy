@@ -135,6 +135,7 @@ crewai test -n 2 -m gpt-4o-mini  # test crew
 | `REDDIT_CLIENT_SECRET` | ❌ Optional | `ai.ts` | Reddit search |
 | `REDDIT_USER_AGENT` | ❌ Optional | `ai.ts` | Reddit search |
 | `TELEGRAM_API_ROOT` | ❌ Optional | `index.ts` | Override Bot API base URL (local testing only) |
+| `GSC_SERVICE_ACCOUNT_JSON` | ❌ Optional | `gsc_submit.py`, workflows | Google Cloud service account JSON — submits sitemap to Search Console Sitemaps API after each deploy (Google has no ping/IndexNow; this is the only sanctioned channel) |
 
 > ⚠️ `.env` is **gitignored** (local dev only). Production secrets go via `wrangler secret put <NAME>` — never paste a key into a chat or commit it.
 
@@ -379,7 +380,7 @@ Three agents running sequentially:
 ### ✍️ Writer
 - **Tools:** `news_search` (Tavily), `wikipedia_search`, `hackernews_search` (Algolia), `arxiv_search`, `openlibrary_search`, `rss_feed` (feedparser)
 - Researches across all sources — verifiable facts, statistics, real user quotes, academic papers
-- Writes **≥2500 words** — 8 sections + intro + conclusion
+- Writes at a readable length — **600–900 words for news topics, 1,200–1,500 for evergreen** (5–6 min read, finishable in one sitting) — 4–5 sections + intro + conclusion, dense not padded
 - Emoji headers, Mermaid diagrams, blockquotes, bullet lists, inline source links
 - Self-verifies every claim has a source URL
 
@@ -585,7 +586,7 @@ WORKER_URL = "https://ivy-blog-bot.priyamolmpraveen2.workers.dev"
 
 | Constraint | Detail |
 |-----------|--------|
-| **Blog posts** | ≥2500 words, 8 sections + intro + conclusion, emoji headers, Mermaid, blockquotes, source links |
+| **Blog posts** | 600–900 words (news) / 1,200–1,500 (evergreen) — 4–5 sections + intro + conclusion, emoji headers, Mermaid, blockquotes, source links |
 | **Bot persona** | Ivy — warm, friendly AI assistant. Identity/tone configurable via `IVY_PERSONA` secret |
 | **Session history** | D1 via `d1SessionAdapter()`, last ~10 messages (system + 9 recent) |
 | **Long-term memory** | `memories` (key-value) + `knowledge` (subject→predicate→object triples, `source` = `memory_save`/tool or `autosave`) — injected into the system prompt on every turn |

@@ -44,3 +44,18 @@ jobs:
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             -H "Content-Type: application/json" \
             -d '{"purge_everything":true}' || true
+
+      - name: Ping Bing sitemap
+        run: |
+          curl -sf "https://www.bing.com/ping?sitemap=https://blog.aaruvi.space/sitemap.xml" || true
+
+      - name: Submit sitemap to Google Search Console
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -n "$GSC_SERVICE_ACCOUNT_JSON" ]; then
+            python3 -m pip install --quiet google-auth >/dev/null 2>&1 || pip3 install --quiet google-auth
+            python3 scripts/gsc_submit.py
+          else
+            echo "GSC_SERVICE_ACCOUNT_JSON not set — skipping Search Console submission"
+          fi
