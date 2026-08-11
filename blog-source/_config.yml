@@ -46,7 +46,6 @@ analytics:
 
 plugins:
   - jekyll-sitemap
-  - jekyll-last-modified-at
 
 pwa:
   enabled: true
