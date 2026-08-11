@@ -26,11 +26,131 @@ def slugify(text: str) -> str:
     return text.strip("-")
 
 
-def extract_title(content: str) -> str:
+def parse_editor_frontmatter(content: str) -> dict:
+    """Harvest the editor's leading ```yaml block (title/tags) before
+    strip_stray_blocks() removes it. Minimal YAML parse — flow and block
+    styles for `tags:`, plus `title:`. No pyyaml dependency."""
+    m = re.search(r"^```yaml\s*\n(.*?)^```", content, re.M | re.S)
+    if not m:
+        return {}
+    block = m.group(1)
+    data = {}
+    m_title = re.search(r"^title\s*:\s*(.+)$", block, re.M)
+    if m_title:
+        data["title"] = m_title.group(1).strip().strip("\"'")
+    m_tags_flow = re.search(r"^tags\s*:\s*\[([^\]]*)\]", block, re.M)
+    if m_tags_flow:
+        data["tags"] = [t.strip().strip("\"'") for t in m_tags_flow.group(1).split(",") if t.strip()]
+    else:
+        m_tags_block = re.search(r"^tags\s*:\s*\n((?:\s*-\s*.+\n?)+)", block, re.M)
+        if m_tags_block:
+            data["tags"] = [
+                re.sub(r"^\s*-\s*", "", line).strip()
+                for line in m_tags_block.group(1).splitlines()
+                if line.strip()
+            ]
+    return data
+
+
+def extract_tags(content: str, topic: str) -> list:
+    """Tags from the editor's frontmatter; fallback to meaningful topic words."""
+    data = parse_editor_frontmatter(content)
+    tags = data.get("tags", [])
+    tags = [re.sub(r"[\"'\[\]]", "", t).strip().lower() for t in tags]
+    tags = [t for t in tags if t]
+    if not tags:
+        stopwords = {
+            "the", "of", "and", "for", "how", "what", "why", "with", "from",
+            "that", "this", "are", "you", "your", "new", "into", "when",
+        }
+        tags = [
+            w for w in re.split(r"[^a-z0-9]+", topic.lower())
+            if len(w) > 3 and w not in stopwords
+        ]
+    seen, out = set(), []
+    for t in tags:
+        if t not in seen and t not in {"untitled", "post"}:
+            seen.add(t)
+            out.append(t)
+    return out[:8]
+
+
+def extract_title(content: str, topic: str = "") -> str:
+    yaml_title = parse_editor_frontmatter(content).get("title")
+    if yaml_title:
+        return yaml_title
     for line in content.splitlines():
         if line.startswith("# "):
             return line[2:].strip()
+    # Fallback: humanize the topic/slug so we never publish "Untitled Post"
+    if topic:
+        return topic.strip().title()
     return "Untitled Post"
+
+
+def post_url(stem: str) -> str:
+    """Chirpy permalink is /:title/ — slug is the filename minus the YYYY-MM-DD- prefix."""
+    return "/" + re.sub(r"^\d{4}-\d{2}-\d{2}-", "", stem) + "/"
+
+
+def parse_title_from_fm(fm: str) -> str:
+    """Extract a post title from frontmatter, handling escaped quotes and
+    single/double-quoted or bare YAML values."""
+    m = re.search(r'^title\s*:\s*"((?:[^"\\]|\\.)*)"\s*$', fm, re.M)
+    if m:
+        return m.group(1).replace('\\"', '"').replace("\\\\", "\\")
+    m = re.search(r"^title\s*:\s*'([^']*)'\s*$", fm, re.M)
+    if m:
+        return m.group(1)
+    m = re.search(r"^title\s*:\s*(.+?)\s*$", fm, re.M)
+    if m:
+        return m.group(1).strip()
+    return ""
+
+
+def find_related_posts(tags: list, exclude: Path, limit: int = 3) -> list:
+    """Tag-matched internal links: score every existing post by shared tags
+    (ties broken by newest first). Returns list of (title, url) tuples."""
+    related = []
+    for post_path in sorted(POSTS_DIR.glob("*.md"), reverse=True):
+        if post_path == exclude or not post_path.exists():
+            continue
+        text = post_path.read_text(encoding="utf-8")
+        if not text.startswith("---"):
+            continue
+        fm, _, _ = text[3:].partition("---\n")
+        title = parse_title_from_fm(fm) or post_path.stem.replace("-", " ").title()
+        m_tags = re.search(r"^tags\s*:\s*\[([^\]]*)\]", fm, re.M)
+        post_tags = [t.strip().strip("\"'") for t in m_tags.group(1).split(",")] if m_tags else []
+        score = len(set(t.lower() for t in post_tags) & set(tags))
+        if score > 0:
+            related.append((score, title, post_url(post_path.stem)))
+    related.sort(key=lambda x: (-x[0], x[1].lower()))
+    # 1 shared tag is weak — fall through to newest posts instead
+    out = [(t, u) for s, t, u in related if s >= 2][:limit]
+    if len(out) < limit:
+        for post_path in sorted(POSTS_DIR.glob("*.md"), reverse=True)[:limit + 1]:
+            if post_path == exclude:
+                continue
+            text = post_path.read_text(encoding="utf-8")
+            fm = text[3:].partition("---\n")[0] if text.startswith("---") else ""
+            title = parse_title_from_fm(fm) or post_path.stem.replace("-", " ").title()
+            url = post_url(post_path.stem)
+            if (title, url) not in out:
+                out.append((title, url))
+            if len(out) >= limit:
+                break
+    return out[:limit]
+
+
+def append_related_links(content: str, related: list) -> str:
+    """Append a 'Related reading' block with descriptive anchor text."""
+    if not related:
+        return content
+    lines = ["", "---", "", "## 📖 Related Reading", ""]
+    for title, url in related:
+        lines.append(f"- [{title}]({url})")
+    return content.rstrip() + "\n" + "\n".join(lines) + "\n"
 
 
 def extract_first_paragraph(content: str) -> str:
@@ -129,10 +249,15 @@ def yaml_escape(s: str) -> str:
     """Escape double quotes in a YAML double-quoted string."""
     return s.replace("\\", "\\\\").replace('"', '\\"')
 
-def build_frontmatter(title: str, topic: str, description: str, unsplash: dict | None, mermaid: bool, math: bool = False) -> str:
+def build_frontmatter(title: str, topic: str, description: str, unsplash: dict | None, mermaid: bool, math: bool = False, tags: list | None = None) -> str:
     now = datetime.now().astimezone()
     date = now.strftime("%Y-%m-%d %H:%M:%S %z")
     lines = ["---", "layout: post", f'title: "{yaml_escape(title)}"', f"date: {date}", "toc: true"]
+    if tags:
+        # Quote numeric tags ("00000") — YAML 1.1 would parse them as octal
+        # integers and break Liquid's slugify filter at build time.
+        safe_tags = [f'"{t}"' if re.fullmatch(r"-?\d[\d_]*", t) else t for t in tags]
+        lines.append(f"tags: [{', '.join(yaml_escape(t) for t in safe_tags)}]")
     if mermaid:
         lines.append("mermaid: true")
     if math:
@@ -202,8 +327,9 @@ def main():
         sys.exit(1)
 
     content = BLOG_POST.read_text(encoding="utf-8")
+    tags = extract_tags(content, topic)  # harvest BEFORE the yaml block is stripped
     content = strip_stray_blocks(content)
-    title = extract_title(content)
+    title = extract_title(content, topic)
     desc = extract_first_paragraph(content)
     slug = slugify(topic)
     today = datetime.now().strftime("%Y-%m-%d")
@@ -217,7 +343,7 @@ def main():
     mermaid = has_mermaid(content)
     math = has_latex(content)
 
-    frontmatter = build_frontmatter(title, topic, desc, cover, mermaid, math)
+    frontmatter = build_frontmatter(title, topic, desc, cover, mermaid, math, tags)
     body = re.sub(r"^# .+\n?", "", content, count=1).strip()
     # Insert inline image inside the first content section
     if inline_img:
@@ -230,8 +356,19 @@ def main():
     POSTS_DIR.mkdir(parents=True, exist_ok=True)
     post_path.write_text(post_content, encoding="utf-8")
 
+    # In-content internal links: tag-matched existing posts (SEO: topical authority)
+    related = find_related_posts(tags, post_path)
+    if related:
+        post_content = frontmatter + "\n\n" + append_related_links(body, related)
+        post_path.write_text(post_content, encoding="utf-8")
+
     print(f"Published: {post_path}")
     print(f"URL slug: {slug}")
+    print(f"Tags: {', '.join(tags)}")
+    if related:
+        print("Related links:")
+        for title, url in related:
+            print(f"  - {title} → {url}")
     if cover:
         print(f"Cover: {cover['path']}")
     if inline_img:

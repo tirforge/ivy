@@ -13,6 +13,7 @@ image:
   photographer: "Michaela St"
   photographer_url: "https://unsplash.com/@michaela_st"
   unsplash_url: "https://unsplash.com/photos/a-cup-of-coffee-next-to-a-notepad-with-the-words-to-do-on-it-lIdLyU_J6u4"
+tags: [education, graduation, trump, weighs, "00000"]
 ---
 
 # Pay to Stay: What Trump’s Proposed $100,000 OPT Fee Means for Global Talent

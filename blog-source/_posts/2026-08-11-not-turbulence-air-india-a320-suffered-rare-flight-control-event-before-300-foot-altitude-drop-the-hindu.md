@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Untitled Post"
+title: "Air India A320 Flight-Control Event: What Caused the 300-Foot Drop?"
 date: 2026-08-11 00:09:13 +0000
 toc: true
 mermaid: true
@@ -13,6 +13,7 @@ image:
   photographer: "Avel Chuklanov"
   photographer_url: "https://unsplash.com/@chuklanov"
   unsplash_url: "https://unsplash.com/photos/selective-focus-photography-of-yellow-sun-cvrg2vlBwRI"
+tags: [india, aviation, turbulence, flight]
 ---
 
 Imagine you are cruising at **35,000 feet** somewhere over the Indian subcontinent. The cabin is humming with the white noise of the engines, the autopilot is maintaining a steady course from Delhi to Mumbai, and the horizon is a flat, unchanging line of blue and haze. Then, without warning, the world shifts. It feels as though the floor has vanished beneath your feet. For a few harrowing seconds, the aircraft dips—a sudden, uncommanded drop of **300 feet**. 
