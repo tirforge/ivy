@@ -1399,6 +1399,7 @@ app.get("/init", async (c) => {
     "CREATE TABLE IF NOT EXISTS knowledge (chat_id TEXT NOT NULL, subject TEXT NOT NULL, predicate TEXT NOT NULL, object TEXT NOT NULL, source TEXT, updated_at INTEGER NOT NULL, PRIMARY KEY (chat_id, subject, predicate, object))",
     "CREATE INDEX IF NOT EXISTS idx_knowledge_subject ON knowledge(chat_id, subject)",
     "CREATE TABLE IF NOT EXISTS dedup (update_id INTEGER PRIMARY KEY, created_at INTEGER NOT NULL)",
+    "CREATE INDEX IF NOT EXISTS idx_dedup_created_at ON dedup(created_at)",
     "CREATE TABLE IF NOT EXISTS continuations (id TEXT PRIMARY KEY, chat_id TEXT NOT NULL, data TEXT NOT NULL, attempts INTEGER NOT NULL, created_at INTEGER NOT NULL)",
     "CREATE INDEX IF NOT EXISTS idx_continuations_chat ON continuations(chat_id)",
   ];
