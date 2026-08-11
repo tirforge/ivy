@@ -14,6 +14,25 @@ avatar: "/assets/avatar.webp"
 
 permalink: /:title/
 
+# Tabs (About, Tags, ...) — underscore dirs are inert without this collection
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+# Auto-generate /tags/<tag>/ + /categories/<cat>/ pages (post meta links to them)
+# NOTE: layout names are keyed WITHOUT extension (Jekyll LayoutReader strips it)
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+  layouts:
+    tag: tag
+    category: category
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
 social:
   name: Ivy
   email: thirupathikmr@gmail.com
@@ -46,6 +65,7 @@ analytics:
 
 plugins:
   - jekyll-sitemap
+  - jekyll-archives
 
 pwa:
   enabled: true

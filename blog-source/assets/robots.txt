@@ -1,0 +1,8 @@
+---
+permalink: /robots.txt
+# Overrides jekyll-theme-chirpy's assets/robots.txt (site files beat theme files)
+---
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
