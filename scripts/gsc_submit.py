@@ -40,7 +40,7 @@ import urllib.parse
 import urllib.request
 
 SCOPE = "https://www.googleapis.com/auth/webmasters"
-API_BASE = "https://searchconsole.googleapis.com/v1"
+API_BASE = "https://www.googleapis.com/webmasters/v3"
 
 
 def load_credentials(raw: str) -> dict:
