@@ -40,12 +40,13 @@ webmaster_verifications:
 
 analytics:
   google:
-    id: ""
+    id: "G-D076GFKPSR"
     pv:
       enabled: false
 
 plugins:
   - jekyll-sitemap
+  - jekyll-last-modified-at
 
 pwa:
   enabled: true

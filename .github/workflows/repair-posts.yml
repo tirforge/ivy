@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history — jekyll-last-modified-at needs it for sitemap lastmod
 
       # Idempotent: only rewrites files with real fixes, so `git diff` below
       # is the source of truth for whether anything actually changed.

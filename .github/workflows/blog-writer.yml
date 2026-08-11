@@ -27,6 +27,8 @@ jobs:
       post_url: ${{ steps.url.outputs.url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history — jekyll-last-modified-at needs it for sitemap lastmod
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
