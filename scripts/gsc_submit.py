@@ -26,7 +26,7 @@ Usage:
 
 Env vars:
     GSC_SERVICE_ACCOUNT_JSON  the service account JSON (raw or base64)
-    GSC_SITE_URL              Search Console property (default https://blog.aaruvi.space/)
+    GSC_SITE_URL              Search Console property (default sc-domain:blog.aaruvi.space)
     GSC_SITEMAP_URL           sitemap to submit (default https://blog.aaruvi.space/sitemap.xml)
 """
 
@@ -100,7 +100,7 @@ def submit_sitemap(sa: dict, site_url: str, sitemap_url: str) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site-url", default=os.environ.get(
-        "GSC_SITE_URL", "https://blog.aaruvi.space/"))
+        "GSC_SITE_URL", "sc-domain:blog.aaruvi.space"))
     parser.add_argument("--sitemap-url", default=os.environ.get(
         "GSC_SITEMAP_URL", "https://blog.aaruvi.space/sitemap.xml"))
     args = parser.parse_args()
