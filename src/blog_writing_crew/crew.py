@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 # by the writing crew — the topic selector uses gemini-2.5-flash-lite and
 # the Telegram bot uses its own models.
 CREW_MODEL_31B = os.environ.get("CREW_MODEL_31B", "gemini/gemma-4-31b-it")
-CREW_MODEL_26B = os.environ.get("CREW_MODEL_26B", "gemini/gemma-4-26b-it")
+CREW_MODEL_26B = os.environ.get("CREW_MODEL_26B", "gemini/gemma-4-26b-a4b-it")
 
 logger.info(
     "Writing crew models: writer/editor=%s, humaniser=%s",
