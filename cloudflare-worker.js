@@ -2,12 +2,28 @@ const TELEGRAM_API = "https://api.telegram.org";
 const GROQ_API = "https://api.groq.com/openai/v1/chat/completions";
 const MAX_HISTORY = 20;
 
+function escapeHtml(s) {
+  return String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
 function sendTelegram(env, chatId, text, parseMode = "Markdown") {
   const url = `${TELEGRAM_API}/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`;
   return fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ chat_id: chatId, text, parse_mode: parseMode }),
+  }).then(async (resp) => {
+    if (!resp.ok) {
+      // parse_mode rejection (e.g. unbalanced Markdown in user content) or a
+      // transient error — retry as plain text so the message always lands.
+      const retry = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chatId, text }),
+      }).catch(() => null);
+      return retry || resp;
+    }
+    return resp;
   });
 }
 
@@ -101,11 +117,23 @@ async function createReminder(env, chatId, timeStr, message) {
   return { id, timestamp };
 }
 
+async function listAllReminderKeys(env) {
+  // KV list returns at most 1000 keys per page — follow the cursor.
+  const keys = [];
+  let cursor;
+  do {
+    const page = await env.IVY_KV.list({ prefix: "reminder:", cursor });
+    keys.push(...page.keys);
+    cursor = page.cursor;
+  } while (cursor);
+  return keys;
+}
+
 async function listReminders(env, chatId) {
   if (!env.IVY_KV) return [];
-  const list = await env.IVY_KV.list({ prefix: "reminder:" });
+  const list = await listAllReminderKeys(env);
   const items = [];
-  for (const key of list.keys) {
+  for (const key of list) {
     const val = await env.IVY_KV.get(key.name, "json");
     if (val?.chat_id === chatId) {
       const parts = key.name.split(":");
@@ -117,8 +145,8 @@ async function listReminders(env, chatId) {
 
 async function cancelReminder(env, chatId, reminderId) {
   if (!env.IVY_KV) return false;
-  const list = await env.IVY_KV.list({ prefix: "reminder:" });
-  for (const key of list.keys) {
+  const list = await listAllReminderKeys(env);
+  for (const key of list) {
     if (key.name.endsWith(`:${reminderId}`)) {
       const val = await env.IVY_KV.get(key.name, "json");
       if (val?.chat_id === chatId) {
@@ -205,7 +233,14 @@ function getTools(env) {
 }
 
 async function handleFunctionCall(env, chatId, toolCall) {
-  const args = JSON.parse(toolCall.function.arguments);
+  // Never let malformed tool arguments crash the whole reply.
+  let args = {};
+  try {
+    args = JSON.parse(toolCall.function.arguments || "{}");
+  } catch {
+    args = {};
+  }
+  if (typeof args !== "object" || args === null) args = {};
   switch (toolCall.function.name) {
     case "create_reminder": {
       const result = await createReminder(env, chatId, args.time, args.message);
@@ -268,7 +303,12 @@ async function handleChat(env, chatId, text) {
     return;
   }
 
-  let message = response.choices[0].message;
+  const firstChoice = response.choices?.[0];
+  if (!firstChoice?.message) {
+    await sendTelegram(env, chatId, "I got an empty response from the model — please try again.");
+    return;
+  }
+  let message = firstChoice.message;
   let turns = 0;
 
   while (message.tool_calls && useTools && turns < 5) {
@@ -289,10 +329,13 @@ async function handleChat(env, chatId, text) {
     try {
       response = await callGroq(env, history, tools);
       if (response._retry_without_tools) {
+        // Without this, `message` stays the tool_calls-only message and the
+        // user gets NO reply — grab the fresh response before breaking out.
         response = await callGroq(env, history, []);
+        message = response.choices?.[0]?.message;
         break;
       }
-      message = response.choices[0].message;
+      message = response.choices?.[0]?.message;
     } catch (e) {
       await sendTelegram(env, chatId, `Error: ${e.message}`, "HTML");
       return;
@@ -374,17 +417,30 @@ export default {
 
       const val = await env.IVY_KV.get(key.name, "json");
       if (val) {
-        await fetch(`${TELEGRAM_API}/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        // HTML + escaped text: Markdown parse failures on user content used to
+        // 400 silently, and the reminder was deleted anyway (lost forever).
+        const resp = await fetch(`${TELEGRAM_API}/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             chat_id: val.chat_id,
-            text: `⏰ *Reminder:* ${val.message}`,
-            parse_mode: "Markdown",
+            text: `<b>⏰ Reminder:</b> ${escapeHtml(val.message)}`,
+            parse_mode: "HTML",
           }),
-        }).catch(() => {});
+        }).catch(() => null);
+        if (resp && resp.ok) {
+          await env.IVY_KV.delete(key.name).catch(() => {});
+        } else if (resp && resp.status === 403) {
+          // Bot blocked by the user — it can never be delivered; stop retrying.
+          console.warn(`Reminder ${key.name}: chat blocked the bot, dropping`);
+          await env.IVY_KV.delete(key.name).catch(() => {});
+        } else {
+          // Transient failure — keep the reminder for the next tick.
+          console.warn(`Reminder ${key.name}: delivery failed, will retry`);
+        }
+      } else {
+        await env.IVY_KV.delete(key.name).catch(() => {});
       }
-      await env.IVY_KV.delete(key.name).catch(() => {});
     }
   },
 };

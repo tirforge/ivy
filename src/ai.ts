@@ -835,7 +835,10 @@ export async function runScheduledJob(env: Env, job: JobRow): Promise<void> {
     try {
       seen = JSON.parse(job.last_result || "{}").urls || [];
     } catch {}
-    if (urls.length === 0 || urls.some((u) => !seen.includes(u))) {
+    // Only alert on NEW results: an empty result set (no extractable links)
+    // would previously send a duplicate "no results" alert on every run.
+    const newUrls = urls.filter((u) => !seen.includes(u));
+    if (newUrls.length > 0) {
       const body = mdToTelegramHtml(result);
       const text = `<b>🔔 Keyword alert:</b> <i>${escapeHtml(keyword)}</i>\n\n${body}`;
       const resp = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
@@ -844,7 +847,7 @@ export async function runScheduledJob(env: Env, job: JobRow): Promise<void> {
         body: JSON.stringify({ chat_id: job.chat_id, text: text.slice(0, 4096), parse_mode: "HTML" }),
       });
       if (!resp.ok) throw new Error(`Telegram send failed: ${resp.status}`);
-      console.log(`[JOB] keyword alert ${job.id} sent to ${job.chat_id} (${urls.length} urls)`);
+      console.log(`[JOB] keyword alert ${job.id} sent to ${job.chat_id} (${newUrls.length} new of ${urls.length} urls)`);
     } else {
       console.log(`[JOB] keyword alert ${job.id}: no new results (seen ${seen.length} urls)`);
     }
@@ -2525,8 +2528,10 @@ async function processAiInternal(
       const isGeminiModel = isGemini(model);
       const apiKey = isGeminiModel ? env.GEMINI_API_KEY : env.GROQ_API_KEY;
       if (!apiKey) {
+        // break (not continue): the inner loop would otherwise retry the same
+        // model maxDepth times before moving down the chain.
         console.warn(`[${model}] API key not configured, skipping`);
-        continue;
+        break;
       }
       console.log(`[MODEL] ${isGeminiModel ? "Gemini" : "Groq"} :: ${model} :: turn ${turn}/${maxDepth} :: tools ${useTools ? "on" : "off"}`);
 

@@ -117,7 +117,11 @@ jobs:
 
       - name: Push commit to main
         if: success()
-        run: git push || true
+        run: |
+          # Absorb commits that landed during the build (e.g. repair-posts)
+          # instead of failing the push silently and drifting from gh-pages.
+          git pull --rebase --autostash || true
+          git push || true
 
       - name: Build post URL
         id: url

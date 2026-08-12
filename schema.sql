@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS sessions (
 );
 
 CREATE TABLE IF NOT EXISTS memories (
-  chat_id INTEGER NOT NULL,
+  chat_id TEXT NOT NULL,
   key TEXT NOT NULL,
   value TEXT NOT NULL,
   PRIMARY KEY (chat_id, key)
@@ -14,7 +14,7 @@ CREATE INDEX IF NOT EXISTS idx_memories_chat_id ON memories(chat_id);
 
 CREATE TABLE IF NOT EXISTS reminders (
   id TEXT PRIMARY KEY,
-  chat_id INTEGER NOT NULL,
+  chat_id TEXT NOT NULL,
   timestamp INTEGER NOT NULL,
   message TEXT NOT NULL
 );

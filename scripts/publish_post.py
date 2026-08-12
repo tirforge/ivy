@@ -223,8 +223,21 @@ def has_mermaid(content: str) -> bool:
     return "```mermaid" in content
 
 
+# Known LaTeX commands that reliably indicate math mode (even outside $...$)
+_LATEX_COMMANDS = re.compile(
+    r"\\(?:text|rightarrow|sum|int|alpha|beta|gamma|delta|theta|lambda|mu|pi|sigma|omega|infty|partial|nabla)\b"
+)
+
+
 def has_latex(content: str) -> bool:
-    return bool(re.search(r"(?<!\w)\$[^$]+\$|\\\(|\\\[|\\\\text\{|\\\\rightarrow|\\\\sum|\\\\int|\\\\alpha|\\\\beta|\\\\gamma|\\\\delta|\\\\theta|\\\\lambda|\\\\mu|\\\\pi|\\\\sigma|\\\\omega|\\\\infty|\\\\partial|\\\\nabla", content))
+    """Detect real LaTeX math. The old bare `$...$` pattern matched currency
+    amounts ("$500 million") and enabled math mode on posts about money —
+    inline $...$ now only counts when it contains an actual LaTeX command."""
+    if "$$" in content or "\\[" in content or "\\(" in content:
+        return True
+    if _LATEX_COMMANDS.search(content):
+        return True
+    return bool(re.search(r"(?<!\w)\$[^$\n]*\\[A-Za-z]+[^$\n]*\$", content))
 
 
 def fetch_unsplash_images(topic: str, count: int = 2) -> list:
@@ -268,8 +281,19 @@ def build_frontmatter(title: str, topic: str, description: str, unsplash: dict |
     if tags:
         # Quote numeric tags ("00000") — YAML 1.1 would parse them as octal
         # integers and break Liquid's slugify filter at build time.
-        safe_tags = [f'"{t}"' if re.fullmatch(r"-?\d[\d_]*", t) else t for t in tags]
-        lines.append(f"tags: [{', '.join(yaml_escape(t) for t in safe_tags)}]")
+        def _yaml_flow_tag(t: str) -> str:
+            # YAML 1.1 parses bare digit-only tags as numbers (00000 → octal)
+            # — quote them raw. Plain-safe slugs pass through unchanged; any
+            # tag with special YAML chars gets properly wrapped with inner
+            # quotes escaped (never a bare backslash leak).
+            if re.fullmatch(r"-?\d[\d_]*", t):
+                return f'"{t}"'
+            if re.fullmatch(r"[a-zA-Z0-9_-]+", t):
+                return t
+            return '"' + yaml_escape(t) + '"'
+
+        safe_tags = [_yaml_flow_tag(t) for t in tags]
+        lines.append(f"tags: [{', '.join(safe_tags)}]")
     if mermaid:
         lines.append("mermaid: true")
     if math:

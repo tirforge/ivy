@@ -73,7 +73,11 @@ jobs:
 
       - name: Push fixes to main
         if: steps.changes.outputs.changed == 'true'
-        run: git push || true
+        run: |
+          # Absorb commits that landed during the build (e.g. blog-writer)
+          # instead of failing the push silently and drifting from gh-pages.
+          git pull --rebase --autostash || true
+          git push || true
 
       # Fail loudly on purge errors (the `|| true`-swallowed failures in
       # rebuild-deploy.yml hid a stale token for weeks).

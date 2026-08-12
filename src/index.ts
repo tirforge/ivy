@@ -62,6 +62,12 @@ interface Env {
   IVY_PERSONA?: string;
   /** Override the Telegram Bot API base URL (local testing only). */
   TELEGRAM_API_ROOT?: string;
+  /**
+   * Optional Telegram webhook secret (setWebhook secret_token). When configured,
+   * incoming webhook calls without the matching X-Telegram-Bot-Api-Secret-Token
+   * header are rejected (only Telegram can post). When unset, nothing changes.
+   */
+  TELEGRAM_WEBHOOK_SECRET?: string;
 }
 
 interface SessionData {
@@ -1387,6 +1393,9 @@ app.options("/admin/:path", async (c) => {
 // ---------- Init endpoint (one-time: creates DB tables) ----------
 
 app.get("/init", async (c) => {
+  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+    return c.json({ error: "unauthorized" }, 401);
+  }
   const statements = [
     "CREATE TABLE IF NOT EXISTS sessions (chat_id TEXT PRIMARY KEY, data TEXT NOT NULL)",
     "CREATE TABLE IF NOT EXISTS memories (chat_id TEXT NOT NULL, key TEXT NOT NULL, value TEXT NOT NULL, PRIMARY KEY (chat_id, key))",
@@ -1429,6 +1438,10 @@ app.post("/internal/continue", async (c) => {
 // ---------- Migrate: recreate tables with TEXT chat_id ----------
 
 app.get("/migrate", async (c) => {
+  // Destructive (drops memories + reminders) — admin only, like the /debug routes.
+  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+    return c.json({ error: "unauthorized" }, 401);
+  }
   const statements = [
     "DROP TABLE IF EXISTS memories",
     "DROP TABLE IF EXISTS reminders",
@@ -1547,11 +1560,13 @@ app.all("*", async (c) => {
       const botToken = c.env.TELEGRAM_BOT_TOKEN;
       const apiBase = `https://api.telegram.org/bot${botToken}`;
 
-      // Set webhook
+      // Set webhook (secret_token included when TELEGRAM_WEBHOOK_SECRET is set)
+      const webhookBody: Record<string, string> = { url: webhookUrl };
+      if (c.env.TELEGRAM_WEBHOOK_SECRET) webhookBody.secret_token = c.env.TELEGRAM_WEBHOOK_SECRET;
       const webhookResp = await fetch(`${apiBase}/setWebhook`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: webhookUrl }),
+        body: JSON.stringify(webhookBody),
       });
       const webhookData: any = await webhookResp.json();
 
@@ -1569,6 +1584,13 @@ app.all("*", async (c) => {
       return c.json({ webhook: webhookData, commands: cmdData });
     }
     return c.text("Bot running. Send POST for webhook.");
+  }
+
+  // Webhook auth: when TELEGRAM_WEBHOOK_SECRET is configured, reject anything
+  // that isn't Telegram (no secret configured = current behavior unchanged).
+  const webhookSecret = c.env.TELEGRAM_WEBHOOK_SECRET;
+  if (webhookSecret && c.req.header("X-Telegram-Bot-Api-Secret-Token") !== webhookSecret) {
+    return c.text("Unauthorized", 401);
   }
 
   // Dedup: in-memory fast path + D1 authoritative check. The D1 INSERT OR IGNORE
