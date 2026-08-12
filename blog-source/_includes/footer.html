@@ -1,0 +1,11 @@
+<!-- Editorial footer — wordmark + copyright + tagline + email.
+     Design source: opendesign/index.html footer. -->
+<footer class="pagefoot" data-od-id="footer">
+  <div class="container">
+    <p class="wordmark">{{ site.title }}</p>
+    <div class="row-between">
+      <span>© {{ site.time | date: '%Y' }} {{ site.title }} · {{ site.url | remove: 'https://' | remove: 'http://' }}</span>
+      <span class="meta">{{ site.tagline }} · <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a></span>
+    </div>
+  </div>
+</footer>

@@ -1,4 +1,11 @@
 theme: jekyll-theme-chirpy
+
+# Lock Chirpy's built-in mode system to dark — the editorial theme's own
+# dark/light toggle (data-theme + localStorage/cookie, see custom/tail.html)
+# handles both themes. Chirpy's theme.min.js becomes inert when data-mode is
+# present, so the two toggles can't fight.
+theme_mode: dark
+
 lang: en
 timezone: Asia/Kolkata
 title: Ivy
@@ -37,7 +44,7 @@ social:
   name: Ivy
   email: thirupathikmr@gmail.com
   links:
-    - https://github.com/Thirupathi-pirate
+    - https://github.com/tirforge
 
 paginate: 5
 

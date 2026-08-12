@@ -1,7 +1,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F1E8">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#202A38">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta
@@ -105,9 +105,27 @@
     <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">
   {% endif %}
 
-  <!-- Critical: set mode before paint to prevent flash -->
+  <!-- Critical: set theme before paint to prevent flash.
+       Reads saved choice (localStorage ivy-theme → cookie → OS preference),
+       writes data-theme (the editorial theme hook). Chirpy's data-mode is
+       locked to dark via `theme_mode: dark` in _config.yml. -->
   <script>
-    (function(){var m=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-mode',m);})();
+    (function () {
+      function readSaved() {
+        try {
+          var v = localStorage.getItem('ivy-theme');
+          if (v === 'light' || v === 'dark') return v;
+        } catch (e) {}
+        try {
+          var m = document.cookie.match(/(?:^|;\s*)ivy-theme=([a-z]+)/);
+          if (m && (m[1] === 'light' || m[1] === 'dark')) return m[1];
+        } catch (e) {}
+        return null;
+      }
+      var theme = readSaved() ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
   </script>
   <link rel="preload" as="script" href="{{ '/assets/js/dist/theme.min.js' | relative_url }}" fetchpriority="high">
   <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}" defer></script>

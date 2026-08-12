@@ -13,8 +13,20 @@ script_includes:
 
 {% include toc-status.html %}
 
+<div class="reading-progress" aria-hidden="true"></div>
+
 <article class="px-1" data-toc="{{ enable_toc }}">
   <header>
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        {% if page.categories.size > 0 %}
+          <li><a href="{{ site.baseurl }}/categories/{{ page.categories.first | slugify | url_encode }}/">{{ page.categories.first }}</a></li>
+        {% endif %}
+        <li aria-current="page">{{ page.title }}</li>
+      </ol>
+    </nav>
+
     <h1 data-toc-skip>{{ page.title }}</h1>
     {% if page.description %}
       <p class="post-desc fw-light mb-4">{{ page.description }}</p>

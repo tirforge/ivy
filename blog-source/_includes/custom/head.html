@@ -1,23 +1,21 @@
 <style>.shimmer::before{display:none!important}.shimmer{background:transparent!important}</style>
 <!-- LCP image preload moved to _includes/favicons.html (included BEFORE the
      render-blocking CSS in the theme head) so the image request starts first. -->
-<!-- Google Fonts — non-blocking (no preload: the LCP image wins the bandwidth race) -->
+<!-- Google Fonts — IBM Plex Sans (headings/UI) + IBM Plex Serif (reading),
+     non-blocking (no preload: the LCP image wins the bandwidth race) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
-  media="print" onload="this.media='all'">
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
   media="print" onload="this.media='all'">
 
 <noscript>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap">
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap">
 </noscript>
 
-<!-- Theme Color (mobile browser) -->
-<meta name="theme-color" content="#12121E">
+<!-- Theme Color (mobile browser) — Frozen lake dark default -->
+<meta name="theme-color" content="#202A38">
 
 <!-- Referrer policy -->
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -43,20 +41,20 @@
 <meta name="google-site-verification" content="DVlakunl_jZgYbXcHvX3KfmocgyIiaIg81" />
 
 <script>
-/* Mermaid dark theme — matches Midnight Purple */
+/* Mermaid — matches the editorial "Frozen lake" palette */
 window.mermaid = {
   startOnLoad: true,
   theme: 'base',
   themeVariables: {
-    background: '#1A1A2E',
-    primaryColor: '#BB86FC',
-    primaryTextColor: '#FFFFFF',
-    primaryBorderColor: '#BB86FC',
-    lineColor: '#BB86FC',
-    secondaryColor: '#2A2A3E',
-    tertiaryColor: '#12121E',
-    edgeLabelBackground: '#1A1A2E',
-    fontFamily: '"Google Sans", sans-serif',
+    background: '#1B2533',
+    primaryColor: '#263140',
+    primaryTextColor: '#EFF4F7',
+    primaryBorderColor: '#A8D4E6',
+    lineColor: '#A8D4E6',
+    secondaryColor: '#202A38',
+    tertiaryColor: '#202A38',
+    edgeLabelBackground: '#263140',
+    fontFamily: '"IBM Plex Sans", sans-serif',
     fontSize: '14px'
   }
 };
