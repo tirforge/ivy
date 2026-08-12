@@ -78,7 +78,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog-source/_posts/
+          git add blog-source/_posts/ scripts/used_topics.json
           NEW_POST=$(git diff --name-only --cached -- blog-source/_posts/ | head -1)
           git commit -m "Add post: ${NEW_POST##*/} [skip ci]" || echo "No new post to commit"
           git pull --rebase --autostash || true
