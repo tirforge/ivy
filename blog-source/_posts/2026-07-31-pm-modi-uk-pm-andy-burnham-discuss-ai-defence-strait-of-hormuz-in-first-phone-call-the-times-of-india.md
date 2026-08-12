@@ -7,6 +7,7 @@ mermaid: true
 math: true
 description: >-
   In the high-stakes arena of global diplomacy, certain conversations serve as more than mere formalities—they act as architectural blueprints for futur
+tags: [smartphones, india, burnham, discuss, defence]
 ---
 
 # 🌐 The New Strategic Axis: How Modi and Starmer are Redefining AI, Defence, and Maritime Security

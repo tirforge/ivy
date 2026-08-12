@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   For decades, the definition of an "expert" was someone who possessed exhaustive knowledge of a single, narrow domain. In the traditional academic land
+tags: [jodhpur, kanpur, programmes, careers]
 ---
 
 # More Than Just a Degree: The AI and Interdisciplinary Shake-up at IIT Jodhpur and IIT Kanpur

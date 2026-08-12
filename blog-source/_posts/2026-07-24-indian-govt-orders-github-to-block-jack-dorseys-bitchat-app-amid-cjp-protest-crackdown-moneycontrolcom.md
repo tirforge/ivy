@@ -13,6 +13,7 @@ image:
   photographer: "Brett Jordan"
   photographer_url: "https://unsplash.com/@brett_jordan"
   unsplash_url: "https://unsplash.com/photos/brown-wooden-blocks-on-white-surface-ZoZJLgAIvGc"
+tags: [india, india-politics, indian, orders, github]
 ---
 
 # 🔍 The Anatomy of a Digital Hoax: Bitchat and the Truth About Censorship

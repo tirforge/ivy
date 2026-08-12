@@ -13,13 +13,14 @@ image:
   photographer: "Ashish Kumar Senapati"
   photographer_url: "https://unsplash.com/@photographsbyashish"
   unsplash_url: "https://unsplash.com/photos/a-couple-of-boats-floating-on-top-of-a-river-g165XQGF7Xc"
+tags: [supreme-court, courts, karnataka, environment]
 ---
 
 # The Fight for the Cauvery: Why Tamil Nadu and Karnataka are Back in Court
 
 The Cauvery river is far more than a geographical feature; for the millions inhabiting the basins of South India, it is a lifeline, a cultural symbol, and a source of ancestral pride. However, it is also the epicenter of one of the most protracted and bitter legal battles in the history of the Indian republic. For over a century, the upstream state of Karnataka and the downstream state of Tamil Nadu have clashed over the allocation of its waters, turning a natural resource into a political weapon. 
 
-Recently, tensions have escalated once again. The DMK-led government in Tamil Nadu has approached the Supreme Court of India, seeking urgent intervention to compel Karnataka to release additional water. At the heart of this fresh dispute is the survival of the **Samba crop**, the primary paddy cycle that sustains the agrarian economy of the Cauvery Delta. With reservoirs fluctuating and monsoon patterns becoming increasingly erratic due to climate change, the Tamil Nadu government fears an agricultural collapse. As reported by [Live Law](https://www.livelaw.in), the state is arguing that the [Cauvery Water Management Authority (CWMA)](https://en.wikipedia.org/wiki/Cauvery_river_water_dispute) has failed to ensure the timely flow of water, leaving millions of farmers in a state of precariousness.
+Recently, tensions have escalated once again. The DMK-led government in Tamil Nadu has approached the Supreme Court of India, seeking urgent intervention to compel Karnataka to release additional water. At the heart of this fresh dispute is the survival of the **Samba crop**, the primary paddy cycle that sustains the agrarian economy of the Cauvery Delta. With reservoirs fluctuating and monsoon patterns becoming increasingly erratic due to climate change, the Tamil Nadu government fears an agricultural collapse. As reported by [Live Law](https://www.livelaw.in), the state is arguing that the [Cauvery Water Management Authority (CWMA)](https://en.wikipedia.org/wiki/Kaveri_River_water_dispute) has failed to ensure the timely flow of water, leaving millions of farmers in a state of precariousness.
 
 ---
 
@@ -27,7 +28,7 @@ Recently, tensions have escalated once again. The DMK-led government in Tamil Na
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1605419635453-ac4e3bce0abc?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxDYXV2ZXJ5JTIwRGlzcHV0ZSUyMCUzQXxlbnwwfDB8fHwxNzg1Njg1MjMxfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="river between green trees under white clouds and blue sky during daytime" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/iT5HdREilcw/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxDYXV2ZXJ5JTIwRGlzcHV0ZSUyMCUzQXxlbnwwfDB8fHwxNzg1Njg1MjMxfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@anmol_ram_">Anmol Ramanujam</a> on <a href="https://unsplash.com/photos/river-between-green-trees-under-white-clouds-and-blue-sky-during-daytime-iT5HdREilcw">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@anmol_ram_">Anmol Ramanujam</a> on <a href="https://unsplash.com/photos/river-between-green-trees-under-white-clouds-and-blue-sky-during-daytime-iT5HdREilcw">Unsplash</a></div>
 </div>
 
 
@@ -43,7 +44,7 @@ The mathematics of the Samba crop are unforgiving. Agronomists suggest that a sh
 
 ## ⚖️ The Legal Framework: The 2018 Judgment and the CWMA
 
-To understand why the dispute perpetually returns to the courtroom, one must examine the complex legal architecture governing the river. For decades, the conflict was managed by a series of ad-hoc committees and tribunals. However, the [2018 Supreme Court Judgment](https://en.wikipedia.org/wiki/Cauvery_river_water_dispute) attempted to bring a finality to the chaos. The court upheld the majority of the Cauvery Water Disputes Tribunal's (CWDT) award but adjusted the allocation to account for the drinking water needs of Bengaluru.
+To understand why the dispute perpetually returns to the courtroom, one must examine the complex legal architecture governing the river. For decades, the conflict was managed by a series of ad-hoc committees and tribunals. However, the [2018 Supreme Court Judgment](https://en.wikipedia.org/wiki/Kaveri_River_water_dispute) attempted to bring a finality to the chaos. The court upheld the majority of the Cauvery Water Disputes Tribunal's (CWDT) award but adjusted the allocation to account for the drinking water needs of Bengaluru.
 
 The most significant outcome of the 2018 verdict was the establishment of the **Cauvery Water Management Authority (CWMA)**. Designed as an independent regulatory body, the CWMA was tasked with:
 1.  Monitoring reservoir levels in real-time.
@@ -161,10 +162,10 @@ Ultimately, the solution lies in recognizing that the Cauvery basin is a single,
 ## 📚 References
 
 *   [Live Law - Comprehensive Coverage of Cauvery Water Dispute Pleas](https://www.livelaw.in)
-*   [Wikipedia - Detailed History of the Cauvery River Water Dispute](https://en.wikipedia.org/wiki/Cauvery_river_water_dispute)
+*   [Wikipedia - Detailed History of the Cauvery River Water Dispute](https://en.wikipedia.org/wiki/Kaveri_River_water_dispute)
 *   [The Hindu - Analysis of Inter-State Water Conflicts in South India](https://www.thehindu.com)
 *   [Supreme Court of India - 2018 Final Verdict on Cauvery Allocation](https://main.sci.gov.in)
-*   [CWMA - Official Guidelines for Water Management](https://en.wikipedia.org/wiki/Cauvery_river_water_dispute)
+*   [CWMA - Official Guidelines for Water Management](https://en.wikipedia.org/wiki/Kaveri_River_water_dispute)
 *   [Indian Express - Reports on the Socioeconomic Impact of Samba Crop Failure](https://indianexpress.com)
 *   [Central Water Commission (CWC) - Basin Reports on the Cauvery River](https://cwc.gov.in)
 *   [Environmental Reports on Western Ghats Deforestation and Rainfall Patterns](https://en.wikipedia.org/wiki/Western_Ghats)

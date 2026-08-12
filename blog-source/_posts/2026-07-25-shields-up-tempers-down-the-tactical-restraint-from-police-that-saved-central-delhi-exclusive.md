@@ -12,6 +12,7 @@ image:
   photographer: "Rebecca Manning"
   photographer_url: "https://unsplash.com/@mooncup"
   unsplash_url: "https://unsplash.com/photos/white-and-blue-box-on-brown-wooden-table-tUgNTJ15WnA"
+tags: [delhi, india, railways]
 ---
 
 # Shields Up, Tempers Down: How Delhi Police Kept the Peace During G20
@@ -150,7 +151,7 @@ Central Delhi remained calm not because the police gripped their weapons tighter
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1648411644852-49927e4f12f6?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTaGllbGRzJTIwVXAlMkMlMjBUZW1wZXJzfGVufDB8MHx8fDE3ODQ5NDI0MjN8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a sign that is on the side of a building" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/m2j00zuOZP4/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTaGllbGRzJTIwVXAlMkMlMjBUZW1wZXJzfGVufDB8MHx8fDE3ODQ5NDI0MjN8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@leonbredella">Leon Bredella</a> on <a href="https://unsplash.com/photos/a-sign-that-is-on-the-side-of-a-building-m2j00zuOZP4">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@leonbredella">Leon Bredella</a> on <a href="https://unsplash.com/photos/a-sign-that-is-on-the-side-of-a-building-m2j00zuOZP4">Unsplash</a></div>
 </div>
 
 

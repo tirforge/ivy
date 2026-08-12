@@ -27,7 +27,7 @@ Essentially, the prestige of the legal world is being auctioned to the highest b
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1658958327132-a80f8a9409fb?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTdXByZW1lJTIwQ291cnQlMjBTZWVrc3xlbnwwfDB8fHwxNzg2NDkzNzk5fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a large white building with columns with United States Supreme Court Building in the background" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/osJUjMNpcak/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTdXByZW1lJTIwQ291cnQlMjBTZWVrc3xlbnwwfDB8fHwxNzg2NDkzNzk5fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@finephotographics">Fine Photographics</a> on <a href="https://unsplash.com/photos/a-large-white-building-with-columns-with-united-states-supreme-court-building-in-the-background-osJUjMNpcak">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@finephotographics">Fine Photographics</a> on <a href="https://unsplash.com/photos/a-large-white-building-with-columns-with-united-states-supreme-court-building-in-the-background-osJUjMNpcak">Unsplash</a></div>
 </div>
 
 

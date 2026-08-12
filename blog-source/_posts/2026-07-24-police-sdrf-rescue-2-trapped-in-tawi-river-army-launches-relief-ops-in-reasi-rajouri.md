@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   Monsoon season in Jammu and Kashmir is a study in contradictions. To the casual observer, the rain transforms the Shivalik hills into a lush, emerald 
+tags: [india, climate, environment]
 ---
 
 # 🌊 The Monsoon’s Fury and the Fight to Save Lives

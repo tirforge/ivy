@@ -59,6 +59,17 @@ def extract_tags(content: str, topic: str) -> list:
     tags = [re.sub(r"[\"'\[\]]", "", t).strip().lower() for t in tags]
     tags = [t for t in tags if t]
     if not tags:
+        # Prefer the curated lexicon (same mapping as backfill_tags.py) so
+        # auto-published posts get topical tags instead of junk topic words.
+        try:
+            from backfill_tags import derive_tags  # noqa: PLC0415
+
+            slug_words = [w for w in re.split(r"[^a-z0-9]+", slugify(topic)) if w]
+            tags = derive_tags(extract_title(content, topic), slug_words)
+        except Exception:
+            tags = []
+    if not tags:
+        # Legacy fallback: meaningful topic words (never "the/and/of" junk).
         stopwords = {
             "the", "of", "and", "for", "how", "what", "why", "with", "from",
             "that", "this", "are", "you", "your", "new", "into", "when",
@@ -69,6 +80,7 @@ def extract_tags(content: str, topic: str) -> list:
         ]
     seen, out = set(), []
     for t in tags:
+        t = t.lower()
         if t not in seen and t not in {"untitled", "post"}:
             seen.add(t)
             out.append(t)
@@ -307,7 +319,7 @@ def insert_inline_image(content: str, img: dict | None) -> str:
         f'  <img src="{img["path"]}&w=780&h=440&fit=crop"'
         f' alt="{img["alt"]}" loading="lazy" width="780" height="440"'
         f' data-unsplash-dl="{img["download_location"]}" />\n'
-        f'  <div class="post-hero-credit">📸'
+        f'  <div class="post-hero-credit">'
         f' <a href="{img["photographer_url"]}">{img["photographer"]}</a>'
         f' on <a href="{img["unsplash_url"]}">Unsplash</a></div>\n'
         f'</div>\n'

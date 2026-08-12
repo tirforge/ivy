@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   If you live in Delhi, you know the city never really sleeps, but it does breathe—and that breath is the **Delhi Metro Rail Corporation (DMRC)**. For m
+tags: [delhi, railways, closes, metro, stations]
 ---
 
 # 🚇 When the Heartbeat of Delhi Skips a Beat
@@ -63,7 +64,7 @@ Beyond the statistics lies a deeper psychological toll. For the corporate employ
 
 ### 🧬 The Science of the Crash: Network Theory and Cascading Failure
 
-If we analyze the DMRC through the lens of **Network Science**, the 17-station shutdown is a textbook example of "node failure" in a scale-free network. Research into urban transit resilience, such as studies hosted on [ArXiv](https://arxiv.org/abs/2103.00000), suggests that transport networks rely on a few "super-hubs" to maintain efficiency.
+If we analyze the DMRC through the lens of **Network Science**, the 17-station shutdown is a textbook example of "node failure" in a scale-free network. Research into urban transit resilience, such as studies hosted on [ArXiv](https://arxiv.org/abs/1210.1975), suggests that transport networks rely on a few "super-hubs" to maintain efficiency.
 
 In the Delhi Metro, hubs like Kashmere Gate, Rajiv Chowk, and Hauz Khas act as these super-hubs. When you remove these nodes, the network doesn't just slow down—it fragments. This triggers what is known as a **cascading failure**.
 

@@ -47,7 +47,6 @@ layout: default
 {% endif %}
 
 {% assign feed_size = posts.size %}
-{% if paginator.page == 1 %}{% assign feed_size = feed_size | minus: 1 %}{% endif %}
 
 <div class="home-editorial">
 
@@ -76,7 +75,6 @@ layout: default
   {% if paginator.page == 1 and posts.size > 0 %}
     {% assign featured = posts[0] %}
     {% assign post = posts[0] %}
-    {% assign src = featured.image.path | default: featured.image %}
 
     <!-- Featured story — editorial lead -->
     <section class="featured" data-od-id="featured">
@@ -105,14 +103,15 @@ layout: default
           {% continue %}
         {% endif %}
 
-        {% capture row_num %}{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}{% endcapture %}
+        {% assign rn = visible_start | plus: forloop.index %}
+        {% capture row_num %}{% if rn < 10 %}0{% endif %}{{ rn }}{% endcapture %}
         {% assign src = post.image.path | default: post.image %}
 
         <article class="post-row reveal">
           <div class="post-row-meta">
             <span class="post-num num">{{ row_num }}</span>
             <span class="post-cat">{{ post.categories.first | default: 'Journal' }}</span>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{% include datetime.html date=post.date lang=lang %}</time>
+            {% include datetime.html date=post.date lang=lang %}
           </div>
           <div class="post-row-main">
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -131,15 +130,21 @@ layout: default
     </div>
   </section>
 
-  <!-- Browse by topic -->
-  {% assign sorted_tags = site.tags | sort %}
-  {% if sorted_tags.size > 0 %}
+  <!-- Browse by topic — curated (config: curated_topics), existing tags only -->
+  {% assign topic_links = '' | split: '' %}
+  {% for topic in site.curated_topics %}
+    {% if site.tags[topic.slug] %}
+      {% assign topic_links = topic_links | push: topic %}
+    {% endif %}
+  {% endfor %}
+
+  {% if topic_links.size > 0 %}
     <section class="section topics" data-od-id="topics">
       <div class="container topics-inner">
         <p class="ui-label">Browse by topic</p>
         <nav class="topics-nav" aria-label="Topics">
-          {% for tag in sorted_tags limit: 8 %}
-            <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify | url_encode }}/">{{ tag[0] }}</a>{% unless forloop.last %}<span aria-hidden="true">&middot;</span>{% endunless %}
+          {% for topic in topic_links %}
+            <a href="{{ site.baseurl }}/tags/{{ topic.slug | slugify | url_encode }}/">{{ topic.name }}</a>{% unless forloop.last %}<span aria-hidden="true">&middot;</span>{% endunless %}
           {% endfor %}
         </nav>
       </div>

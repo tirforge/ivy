@@ -12,6 +12,7 @@ image:
   photographer: "Gary Bendig"
   photographer_url: "https://unsplash.com/@kris_ricepees"
   unsplash_url: "https://unsplash.com/photos/blurry-sign-with-the-word-sausage-QYscNZxeV6k"
+tags: [technology, savagery, leader, tahir, hussain]
 ---
 
 # The Price of Incitement: Tahir Hussain’s Life Sentence and the Scars of 2020
@@ -164,7 +165,7 @@ For Delhi to truly heal, the city must move toward a future where political powe
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1740560051676-3efc55e1da3d?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTYXZhZ2VyeSUzQSUyMEV4LUFBUCUyMExlYWRlcnxlbnwwfDB8fHwxNzg1NDk4NDkwfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="Scrabble tiles spelling sovereignity on a table" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/N7150PzZW3w/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTYXZhZ2VyeSUzQSUyMEV4LUFBUCUyMExlYWRlcnxlbnwwfDB8fHwxNzg1NDk4NDkwfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@markuswinkler">Markus Winkler</a> on <a href="https://unsplash.com/photos/scrabble-tiles-spelling-sovereignity-on-a-table-N7150PzZW3w">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@markuswinkler">Markus Winkler</a> on <a href="https://unsplash.com/photos/scrabble-tiles-spelling-sovereignity-on-a-table-N7150PzZW3w">Unsplash</a></div>
 </div>
 
 

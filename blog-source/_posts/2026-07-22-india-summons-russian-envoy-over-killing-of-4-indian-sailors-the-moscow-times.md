@@ -12,6 +12,7 @@ image:
   photographer: "Ewan Kennedy"
   photographer_url: "https://unsplash.com/@ewankennedy"
   unsplash_url: "https://unsplash.com/photos/silver-and-black-round-coin-3nnq9uOQrOo"
+tags: [india, war, summons, russian, envoy]
 ---
 
 # 🚢 The MV Golden Leo Tragedy: Is This the Breaking Point for India and Russia?
@@ -28,7 +29,7 @@ The Indian Ministry of External Affairs (MEA) responded with a level of urgency 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1707974171778-795c81bb112a?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxJbmRpYSUyMFN1bW1vbnMlMjBSdXNzaWFufGVufDB8MHx8fDE3ODQ2ODI0MjN8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a large submarine sitting on top of a bridge" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/v8FciZPFKRY/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxJbmRpYSUyMFN1bW1vbnMlMjBSdXNzaWFufGVufDB8MHx8fDE3ODQ2ODI0MjN8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@vizagexplore">Vizag Explore</a> on <a href="https://unsplash.com/photos/a-large-submarine-sitting-on-top-of-a-bridge-v8FciZPFKRY">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@vizagexplore">Vizag Explore</a> on <a href="https://unsplash.com/photos/a-large-submarine-sitting-on-top-of-a-bridge-v8FciZPFKRY">Unsplash</a></div>
 </div>
 
 

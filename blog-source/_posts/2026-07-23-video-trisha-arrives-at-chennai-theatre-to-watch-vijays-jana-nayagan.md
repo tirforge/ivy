@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   You know that feeling when two absolute icons cross paths? That’s exactly what happened in Chennai recently, and the energy was nothing short of elect
+tags: [video, trisha, arrives, chennai, theatre]
 ---
 
 # 🌟 The Queen and the People's Leader: Trisha’s Big Moment at the Chennai Theatre for Vijay’s Latest

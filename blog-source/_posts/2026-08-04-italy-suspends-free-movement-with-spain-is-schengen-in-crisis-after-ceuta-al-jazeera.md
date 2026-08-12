@@ -12,6 +12,7 @@ image:
   photographer: "alexey turenkov"
   photographer_url: "https://unsplash.com/@2renkov"
   unsplash_url: "https://unsplash.com/photos/red-auto-rickshaw-under-arch-walkway-nSp4fnUluLg"
+tags: [italy, suspends, movement, spain, schengen]
 ---
 
 # 🇪🇺 The Ceuta Domino Effect: Is the Schengen Dream Collapsing?
@@ -28,7 +29,7 @@ That fundamental assumption shattered during the [2021 Ceuta migration crisis](h
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1596627116762-bb01a46c233b?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxJdGFseSUyMHN1c3BlbmRzJTIwZnJlZXxlbnwwfDB8fHwxNzg1ODYyMDAxfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="white concrete building with statue under blue sky during daytime" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/zRZYitC_ABQ/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxJdGFseSUyMHN1c3BlbmRzJTIwZnJlZXxlbnwwfDB8fHwxNzg1ODYyMDAxfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@michelebit_">Michele Bitetto</a> on <a href="https://unsplash.com/photos/white-concrete-building-with-statue-under-blue-sky-during-daytime-zRZYitC_ABQ">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@michelebit_">Michele Bitetto</a> on <a href="https://unsplash.com/photos/white-concrete-building-with-statue-under-blue-sky-during-daytime-zRZYitC_ABQ">Unsplash</a></div>
 </div>
 
 
@@ -46,7 +47,7 @@ This event proved that a single point of failure on the map could compromise the
 
 While Italy and Spain do not share a land border, they are inextricably linked by the Schengen logic. In a borderless zone, "free movement" extends to the airports, seaports, and the transit corridors through France. In the wake of the Ceuta crisis, and amid the EU's persistent failure to implement a fair system for distributing asylum seekers, Italy has aggressively pushed to regain control over who enters its territory.
 
-This desire for control manifests as the reintroduction of **border checks**. Under the [Schengen Borders Code](https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/schengen-borders_en), member states are permitted to reinstate internal border controls temporarily if there is a "serious threat to public policy or internal security." However, the definition of "temporary" has become dangerously elastic.
+This desire for control manifests as the reintroduction of **border checks**. Under the [Schengen Borders Code](https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa_en), member states are permitted to reinstate internal border controls temporarily if there is a "serious threat to public policy or internal security." However, the definition of "temporary" has become dangerously elastic.
 
 The "temporary" measures that spiked during the 2015 migrant crisis and the COVID-19 pandemic have now become a standard operating procedure. Italy's frustration with Spain's handling of Ceuta provided the political justification to normalize these checks. When Italy begins scrutinizing flights and ferries originating from Spanish ports or intensifying patrols along the French border to intercept arrivals from the west, it is essentially admitting that the EU's collective security architecture has failed.
 
@@ -58,7 +59,7 @@ This "border nationalism" is further fueled by the **Dublin Regulation**, a cont
 
 The most alarming trend since the Ceuta crisis is the "normalization of the exception." According to the spirit of the Schengen Agreement, internal border checks should be the extreme exception, reserved for imminent threats. Yet, we are witnessing what sociologists and legal scholars call the **"securitization of the interior."**
 
-Research into [border security and EU migration patterns](https://arxiv.org/abs/2304.05678) indicates that these "temporary" controls have evolved into a semi-permanent state of affairs. Germany, Austria, France, and Italy have repeatedly extended their border checks, often citing "irregular migration" as the primary driver. The internal logic is simple: as long as the external perimeter—exemplified by the fences of Ceuta—feels porous, the internal borders must remain "hard" to compensate.
+Research into [border security and EU migration patterns](https://arxiv.org/abs/2111.10142) indicates that these "temporary" controls have evolved into a semi-permanent state of affairs. Germany, Austria, France, and Italy have repeatedly extended their border checks, often citing "irregular migration" as the primary driver. The internal logic is simple: as long as the external perimeter—exemplified by the fences of Ceuta—feels porous, the internal borders must remain "hard" to compensate.
 
 This creates a staggering legal paradox. On official EU documents, the Schengen Area is expanding and thriving. In practical reality, the experience of crossing a border has become fragmented. Even the [Wikipedia overview of the Schengen Area](https://en.wikipedia.org/wiki/Schengen_Area) notes the increasing frequency of these "temporary" reinstatements.
 
@@ -156,10 +157,10 @@ The question is no longer whether Schengen is in crisis, but whether the Europea
 ## 📚 References
 
 - **Al Jazeera**: [Morocco-Spain clash over migrants in Ceuta](https://www.aljazeera.com/news/2021/5/20/morocco-spain-clash-over-migrants-in-ceuta)
-- **European Commission**: [Schengen Borders Code and Policy Framework](https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/schengen-borders_en)
+- **European Commission**: [Schengen Borders Code and Policy Framework](https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa_en)
 - **Wikipedia**: [Detailed Overview of the Schengen Area](https://en.wikipedia.org/wiki/Schengen_Area)
 - **Wikipedia**: [Geography and Political History of Ceuta](https://en.wikipedia.org/wiki/Ceuta)
-- **ArXiv**: [Academic Research on the Securitization of EU Borders](https://arxiv.org/abs/2304.05678)
+- **ArXiv**: [Between welcome culture and border fence: A dataset on the European refugee crisis](https://arxiv.org/abs/2111.10142)
 - **European Commission**: [The New Pact on Migration and Asylum](https://ec.europa.eu/info/index_en)
 - **Al Jazeera**: [Deep Dive into the 'Weaponization' of Migration](https://www.aljazeera.com/news)
 - **Frontex**: [European Border and Coast Guard Agency Reports](https://frontex.europa.eu/)

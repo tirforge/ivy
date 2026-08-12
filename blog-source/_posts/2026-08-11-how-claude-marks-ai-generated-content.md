@@ -4,6 +4,7 @@ title: "How Claude Leaves \"Invisible\" Fingerprints on Everything It Writes ðŸ§
 date: 2026-08-11 15:34:10 +0000
 toc: true
 mermaid: true
+tags: [AI, technology, llms]
 description: >-
   You've probably noticed that AI is getting scarily good at writing. We have entered the era of the "Turing Trap," where the boundary between human int
 image:
@@ -28,7 +29,7 @@ Here is a deep dive into how Claude marks its "handwriting," where the system fa
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1781323772479-631a24de5599?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxIb3clMjBDbGF1ZGUlMjBtYXJrc3xlbnwwfDB8fHwxNzg2NDYyNDQ5fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="Pink claude logo on a translucent surface with bokeh background." loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/XDwEclZnCCA/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxIb3clMjBDbGF1ZGUlMjBtYXJrc3xlbnwwfDB8fHwxNzg2NDYyNDQ5fDA" />
-  <div class="post-hero-credit">ðŸ“¸ <a href="https://unsplash.com/@brechtcorbeel">Brecht Corbeel</a> on <a href="https://unsplash.com/photos/pink-claude-logo-on-a-translucent-surface-with-bokeh-background-XDwEclZnCCA">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@brechtcorbeel">Brecht Corbeel</a> on <a href="https://unsplash.com/photos/pink-claude-logo-on-a-translucent-surface-with-bokeh-background-XDwEclZnCCA">Unsplash</a></div>
 </div>
 
 

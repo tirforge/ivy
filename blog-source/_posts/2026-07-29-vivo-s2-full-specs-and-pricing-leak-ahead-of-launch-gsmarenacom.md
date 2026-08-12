@@ -7,6 +7,7 @@ mermaid: true
 math: true
 description: >-
   For over half a decade, vivo has been meticulously engineering a specific niche in the global mid-range smartphone market—a "sweet spot" where high-en
+tags: [specs, pricing, ahead, gsmarenacom]
 ---
 
 # 📱 The Vibe of the "S" Series: Style Meets Power

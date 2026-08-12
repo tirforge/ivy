@@ -13,6 +13,7 @@ image:
   photographer: "Vadim Bogulov"
   photographer_url: "https://unsplash.com/@franku84"
   unsplash_url: "https://unsplash.com/photos/a-pile-of-letters-that-spell-out-the-word-war-MfBnqUOz_qY"
+tags: [samudra, manthan, scheme, about, explained]
 ---
 
 # 🌊 The Great Cosmic Churn: Decoding the Story of Samudra Manthan
@@ -29,7 +30,7 @@ In this deep dive, we will decode the mechanics of this cosmic event, analyze th
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1661642110258-8718030fd045?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaGF0JTIwaXMlMjB0aGV8ZW58MHwwfHx8MTc4NTY2OTE3M3ww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a young boy holding his hands up" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/VI2X0b01p6g/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaGF0JTIwaXMlMjB0aGV8ZW58MHwwfHx8MTc4NTY2OTE3M3ww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@supaslim">Oyemike Princewill</a> on <a href="https://unsplash.com/photos/a-young-boy-holding-his-hands-up-VI2X0b01p6g">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@supaslim">Oyemike Princewill</a> on <a href="https://unsplash.com/photos/a-young-boy-holding-his-hands-up-VI2X0b01p6g">Unsplash</a></div>
 </div>
 
 
@@ -177,4 +178,4 @@ Life will always be a churn. The question is: are you holding the rope with gree
 - **Wikipedia:** [Mohini - The Divine Illusion](https://en.wikipedia.org/wiki/Mohini)
 - **Wikipedia:** [Amrita - The Nectar of Immortality](https://en.wikipedia.org/wiki/Amrita)
 - **Wikipedia:** [Lakshmi - Goddess of Prosperity](https://en.wikipedia.org/wiki/Lakshmi)
-- **Stanford Encyclopedia of Philosophy:** [Indian Philosophy and the Concept of Self](https://plato.stanford.edu/entries/indian-philosophy/)
+- **Stanford Encyclopedia of Philosophy:** [Indian Philosophy and the Concept of Self](https://en.wikipedia.org/wiki/Indian_philosophy)

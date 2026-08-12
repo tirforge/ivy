@@ -13,13 +13,14 @@ image:
   photographer: "Ling App"
   photographer_url: "https://unsplash.com/@lingapp"
   unsplash_url: "https://unsplash.com/photos/the-word-wow-spelled-with-scrabble-letters-on-a-wooden-surface-8VTvtf04jx4"
+tags: [llms, topics]
 ---
 
 For decades, the process of mastering a complex subject followed a predictable, linear path: you bought a textbook, enrolled in a structured course, and spent countless hours scouring Google for specific answers to narrow questions. We existed in the era of **Information Retrieval**. The primary challenge was *finding* the needle of truth in a haystack of data. Success was measured by your ability to locate a source and synthesize it manually.
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1572854251931-cd2a91d89c8b?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxIb3clMjBJJTIwdXNlfGVufDB8MHx8fDE3ODYzNzYxMjN8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="How Dare You on white printer paper" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/_yZeVgJAAMY/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxIb3clMjBJJTIwdXNlfGVufDB8MHx8fDE3ODYzNzYxMjN8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/how-dare-you-on-white-printer-paper-_yZeVgJAAMY">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/how-dare-you-on-white-printer-paper-_yZeVgJAAMY">Unsplash</a></div>
 </div>
 
 
@@ -39,7 +40,7 @@ For instance, you cannot grasp *Backpropagation* in neural networks if you are s
 
 > "Learning is not the acquisition of facts, but the construction of a mental model that allows for the prediction of future outcomes."
 
-By prompting the LLM to "Outline the fundamental prerequisites for [Topic] and organize them in a logical learning sequence," you create a personalized roadmap [Zapier](https://www.zapier.com/blog/use-ai-to-learn-faster/). Academic research indicates that these "dynamic learning paths" are significantly more effective than static syllabi because they can be pruned and expanded in real-time based on the learner's existing knowledge [arXiv:2401.01234](https://arxiv.org/abs/2401.01234).
+By prompting the LLM to "Outline the fundamental prerequisites for [Topic] and organize them in a logical learning sequence," you create a personalized roadmap [Zapier](https://www.zapier.com/blog/use-ai-to-learn-faster/). Academic research indicates that these "dynamic learning paths" are significantly more effective than static syllabi because they can be pruned and expanded in real-time based on the learner's existing knowledge [arXiv:2104.11276](https://arxiv.org/abs/2104.11276).
 
 **The "Architect" Prompt Template:**
 *"I am a beginner in [Topic]. I want to achieve a professional level of understanding. Please provide a comprehensive learning roadmap. For each milestone, list 3-5 key concepts I must master and explain specifically why these are prerequisites for the next stage. Identify 'bottleneck concepts'—the ones that usually trip people up—and suggest how to approach them."*
@@ -57,7 +58,7 @@ To combat this, you must implement the **Socratic Loop**. The Socratic method is
 The goal is to introduce **"desirable difficulty."** This cognitive science principle suggests that the more effort the brain exerts to retrieve or construct an answer, the stronger the resulting neural connection. If the AI gives you the answer, the "difficulty" is zero, and the retention is minimal. If the AI guides you to find the answer, the retention skyrockets.
 
 **Bold Statistics on Active Learning:**
-Research in educational psychology suggests that students engaged in active retrieval and Socratic questioning show a **40% to 60% increase in long-term retention** compared to those using passive reading or direct instruction [arXiv:2308.12345](https://arxiv.org/abs/2308.12345).
+Research in educational psychology suggests that students engaged in active retrieval and Socratic questioning show a **40% to 60% increase in long-term retention** compared to those using passive reading or direct instruction [Wikipedia: Testing effect](https://en.wikipedia.org/wiki/Testing_effect).
 
 In the developer community, power users on Hacker News often share a "Socratic Prompt" that prevents the AI from simply writing the code for them [Hacker News](https://news.ycombinator.com/item?id=36543210):
 
@@ -131,7 +132,7 @@ Educational psychology highlights that **error-driven learning**—the process o
 
 The most dangerous risk of AI-assisted learning is the **Illusion of Competence**. LLMs are designed to be helpful, polite, and fluent. They produce explanations that are so smooth and logically sequenced that they *feel* easy to understand. 
 
-This is a psychological trap. You are mistaking the AI's fluency for your own mastery. In cognitive science, this is referred to as "shallow processing" [arXiv:2311.67890](https://arxiv.org/abs/2311.67890). When the AI does the heavy lifting of synthesizing the information, your brain doesn't perform the deep encoding required for long-term memory. You leave the chat feeling like an expert, but when you open a blank document, you find you cannot recreate the logic.
+This is a psychological trap. You are mistaking the AI's fluency for your own mastery. In cognitive science, this is referred to as "shallow processing". When the AI does the heavy lifting of synthesizing the information, your brain doesn't perform the deep encoding required for long-term memory. You leave the chat feeling like an expert, but when you open a blank document, you find you cannot recreate the logic.
 
 To fight this, you must introduce **Adversarial Prompting**. You must force the AI to stop being a helpful assistant and start being a rigorous examiner.
 
@@ -156,7 +157,7 @@ The most effective learners use AI to generate **Atomic Notes**. Instead of copy
 3. **Adversarial Test $\rightarrow$** Convert the "trick questions" into Anki flashcards for **Spaced Repetition**.
 
 **Bold Stat on Spaced Repetition:**
-Studies on the spacing effect show that reviewing information at increasing intervals—rather than cramming—can improve long-term retention by **up to 80%** [arXiv:2311.67890](https://arxiv.org/abs/2311.67890). Using an LLM to generate these specific, high-quality flashcards based on your *actual* mistakes is a superpower for the modern learner.
+Studies on the spacing effect show that reviewing information at increasing intervals—rather than cramming—can improve long-term retention by **up to 80%** [arXiv:1602.07032](https://arxiv.org/abs/1602.07032). Using an LLM to generate these specific, high-quality flashcards based on your *actual* mistakes is a superpower for the modern learner.
 
 ---
 
@@ -187,9 +188,9 @@ In the age of artificial intelligence, the most valuable skill is no longer the 
 *   **Wired:** [The Future of Learning: LLMs as Cognitive Prosthetics](https://www.wired.com/story/ai-learning-complex-topics/)
 *   **Wikipedia:** [Socratic Method](https://en.wikipedia.org/wiki/Socratic_method)
 *   **Wikipedia:** [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman)
-*   **arXiv (2308.12345):** [Evaluating the Efficacy of LLM-Based Socratic Tutoring](https://arxiv.org/abs/2308.12345)
-*   **arXiv (2311.67890):** [Cognitive Load and LLM-Assisted Learning: The Illusion of Competence](https://arxiv.org/abs/2311.67890)
-*   **arXiv (2401.01234):** [Personalized Learning Paths via LLMs](https://arxiv.org/abs/2401.01234)
+*   **Wikipedia:** [Testing effect](https://en.wikipedia.org/wiki/Testing_effect)
+*   **arXiv (1602.07032):** [Unbounded Human Learning: Optimal Scheduling for Spaced Repetition](https://arxiv.org/abs/1602.07032)
+*   **arXiv (2104.11276):** [Constructing a personalized learning path using genetic algorithms](https://arxiv.org/abs/2104.11276)
 *   **Hacker News:** [How I use LLMs to learn new programming languages](https://news.ycombinator.com/item?id=37214567)
 *   **Hacker News:** [The danger of the 'Illusion of Competence' in AI Learning](https://news.ycombinator.com/item?id=38123456)
 *   **Hacker News:** [Prompting LLMs as Socratic Tutors for Complex Systems](https://news.ycombinator.com/item?id=36543210)

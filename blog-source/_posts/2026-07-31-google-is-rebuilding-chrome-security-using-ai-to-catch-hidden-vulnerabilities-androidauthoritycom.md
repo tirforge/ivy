@@ -12,6 +12,7 @@ image:
   photographer: "Shutter Speed"
   photographer_url: "https://unsplash.com/@shutter_speed_"
   unsplash_url: "https://unsplash.com/photos/a-close-up-of-a-cell-phone-with-the-google-logo-in-the-background-0uMU42uRw28"
+tags: [cybersecurity, google, rebuilding, chrome, security]
 ---
 
 # How Google is Using AI to Stop Chrome from Crashing (and Getting Hacked)
@@ -155,7 +156,7 @@ By combining the raw power of LLMs for triage, the inherent safety of the Rust l
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxHb29nbGUlMjBpcyUyMHJlYnVpbGRpbmd8ZW58MHwwfHx8MTc4NTQ2MDQ2NXww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="Google logo neon light signage" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/jz4ca36oJ_M/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxHb29nbGUlMjBpcyUyMHJlYnVpbGRpbmd8ZW58MHwwfHx8MTc4NTQ2MDQ2NXww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@mitchel3uo">Mitchell Luo</a> on <a href="https://unsplash.com/photos/google-logo-neon-light-signage-jz4ca36oJ_M">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@mitchel3uo">Mitchell Luo</a> on <a href="https://unsplash.com/photos/google-logo-neon-light-signage-jz4ca36oJ_M">Unsplash</a></div>
 </div>
 
 

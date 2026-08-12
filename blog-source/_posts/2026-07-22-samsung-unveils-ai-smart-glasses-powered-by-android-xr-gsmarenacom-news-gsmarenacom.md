@@ -13,6 +13,7 @@ image:
   photographer: "BoliviaInteligente"
   photographer_url: "https://unsplash.com/@boliviainteligente"
   unsplash_url: "https://unsplash.com/photos/a-blue-cube-with-a-white-logo-7nLzbeVfjA4"
+tags: [samsung, unveils, smart, glasses, powered]
 ---
 
 # 👓 The Glass Revolution: How Samsung and Android XR Are Challenging the Spatial Computing Throne
@@ -29,7 +30,7 @@ To execute this pivot, Samsung has forged a "power trio" alliance with Google an
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1661347998423-b15d37d6f61e?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTYW1zdW5nJTIwdW52ZWlscyUyMEFJfGVufDB8MHx8fDE3ODQ3MzYxMzJ8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="logo" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/poSms2EzfNY/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTYW1zdW5nJTIwdW52ZWlscyUyMEFJfGVufDB8MHx8fDE3ODQ3MzYxMzJ8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@jupp">Jonathan Kemper</a> on <a href="https://unsplash.com/photos/logo-poSms2EzfNY">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@jupp">Jonathan Kemper</a> on <a href="https://unsplash.com/photos/logo-poSms2EzfNY">Unsplash</a></div>
 </div>
 
 

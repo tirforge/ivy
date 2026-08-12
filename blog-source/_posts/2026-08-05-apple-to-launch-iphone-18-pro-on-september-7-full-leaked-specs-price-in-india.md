@@ -12,6 +12,7 @@ image:
   photographer: "Sumudu Mohottige"
   photographer_url: "https://unsplash.com/@stm_2790"
   unsplash_url: "https://unsplash.com/photos/apple-logo-on-blue-surface-bIgpii04UIg"
+tags: [apple, smartphones, india]
 ---
 
 # 🚀 Something Big is Coming: The iPhone 18 Pro is Almost Here
@@ -28,7 +29,7 @@ For users in India, the excitement is tempered by financial reality. Between the
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBcHBsZSUyMHRvJTIwbGF1bmNofGVufDB8MHx8fDE3ODU5MTQ4NjB8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="Apple Store shop front" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/VkfhJLz5SMQ/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBcHBsZSUyMHRvJTIwbGF1bmNofGVufDB8MHx8fDE3ODU5MTQ4NjB8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@lagommedia">Laurenz Heymann</a> on <a href="https://unsplash.com/photos/apple-store-shop-front-VkfhJLz5SMQ">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@lagommedia">Laurenz Heymann</a> on <a href="https://unsplash.com/photos/apple-store-shop-front-VkfhJLz5SMQ">Unsplash</a></div>
 </div>
 
 

@@ -13,14 +13,14 @@ image:
   photographer: "Michaela St"
   photographer_url: "https://unsplash.com/@michaela_st"
   unsplash_url: "https://unsplash.com/photos/a-cup-of-coffee-next-to-a-notepad-with-the-words-to-do-on-it-lIdLyU_J6u4"
-tags: [education, graduation, trump, weighs, "00000"]
+tags: [education, graduation, trump, weighs]
 ---
 
 # Pay to Stay: What Trump’s Proposed $100,000 OPT Fee Means for Global Talent
 
 For decades, the United States has served as the ultimate destination for the world's most ambitious minds. From the research laboratories of MIT and Stanford to the high-stakes boardrooms of Wall Street and the engineering hubs of Silicon Valley, the implicit agreement has been simple: if you possess exceptional talent and can secure a world-class American education, the U.S. will provide a pathway for you to contribute your skills to the domestic economy. This "global pipeline" has been a cornerstone of American hegemony in technology, medicine, and finance.
 
-However, that pipeline is facing a potential blockade. Recent reports, including a detailed analysis by [Moneycontrol](https://www.moneycontrol.com/news/business/want-to-work-in-us-after-graduation-trump-weighs-100000-opt-fee-for-foreign-students-12731521.html), indicate that the incoming Trump administration is considering a staggering **$100,000 fee** for foreign students wishing to utilize Optional Practical Training (OPT). 
+However, that pipeline is facing a potential blockade. Recent reports, including a detailed analysis by [Moneycontrol](https://www.moneycontrol.com/world/want-to-work-in-us-after-graduation-trump-weighs-100-000-opt-fee-for-foreign-students-article-13989482.html), indicate that the incoming Trump administration is considering a staggering **$100,000 fee** for foreign students wishing to utilize Optional Practical Training (OPT). 
 
 For the average international graduate, this isn't merely a policy adjustment—it is a financial wall. For years, the "OPT bridge" has been the primary mechanism allowing F-1 visa holders to transition from academic theory to professional practice. By introducing a six-figure entry fee, the U.S. risks shifting the criteria for residency from *merit* to *money*. If this proposal becomes reality, the "American Dream" may cease to be about what you can build or discover, and instead become a luxury product available only to the global elite.
 
@@ -30,7 +30,7 @@ For the average international graduate, this isn't merely a policy adjustment—
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1562577309-d67db487e6cd?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXYW50JTIwdG8lMjB3b3JrfGVufDB8MHx8fDE3ODU0ODMxMzB8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="work freestanding letters" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/zFd9Zvs0yN8/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXYW50JTIwdG8lMjB3b3JrfGVufDB8MHx8fDE3ODU0ODMxMzB8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@merakist">Merakist</a> on <a href="https://unsplash.com/photos/work-freestanding-letters-zFd9Zvs0yN8">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@merakist">Merakist</a> on <a href="https://unsplash.com/photos/work-freestanding-letters-zFd9Zvs0yN8">Unsplash</a></div>
 </div>
 
 
@@ -52,7 +52,7 @@ Without OPT, a student would be forced to depart the U.S. immediately upon gradu
 
 The current cost of applying for OPT is negligible—a few hundred dollars in government filing fees. Jumping to **$100,000** is a tectonic shift. This is no longer a "processing fee"; it is a wealth test.
 
-According to reports from [Moneycontrol](https://www.moneycontrol.com/news/business/want-to-work-in-us-after-graduation-trump-weighs-100000-opt-fee-for-foreign-students-12731521.html), the logic behind this proposal is rooted in an "America First" framework. The administration's goal is twofold: to generate substantial government revenue and to ensure that only "high-value" individuals remain in the country. In this context, "high-value" is defined as those who either possess significant personal wealth or are so indispensable that an employer is willing to pay the fee on their behalf.
+According to reports from [Moneycontrol](https://www.moneycontrol.com/world/want-to-work-in-us-after-graduation-trump-weighs-100-000-opt-fee-for-foreign-students-article-13989482.html), the logic behind this proposal is rooted in an "America First" framework. The administration's goal is twofold: to generate substantial government revenue and to ensure that only "high-value" individuals remain in the country. In this context, "high-value" is defined as those who either possess significant personal wealth or are so indispensable that an employer is willing to pay the fee on their behalf.
 
 > "The proposal aims to deter 'low-skilled' foreign labor and prioritize those who bring substantial financial or intellectual capital to the United States."
 
@@ -176,7 +176,7 @@ The true cost of a $100,000 OPT fee is not the money students lose—it is the b
 
 ## 📚 References
 
-*   **Moneycontrol:** [Trump weighs $100,000 OPT fee for foreign students](https://www.moneycontrol.com/news/business/want-to-work-in-us-after-graduation-trump-weighs-100000-opt-fee-for-foreign-students-12731521.html)
+*   **Moneycontrol:** [Trump weighs $100,000 OPT fee for foreign students](https://www.moneycontrol.com/world/want-to-work-in-us-after-graduation-trump-weighs-100-000-opt-fee-for-foreign-students-article-13989482.html)
 *   **USCIS:** [Optional Practical Training (OPT) Official Guide](https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training)
 *   **NAFSA:** [International Student Economic Impact Data](https://www.nafsa.org/)
 *   **Hacker News:** [Discussions on US Visa Policy and Talent Migration](https://news.ycombinator.com/)

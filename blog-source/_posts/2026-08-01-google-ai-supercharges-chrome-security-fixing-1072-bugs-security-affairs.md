@@ -12,6 +12,7 @@ image:
   photographer: "Growtika"
   photographer_url: "https://unsplash.com/@growtika"
   unsplash_url: "https://unsplash.com/photos/an-abstract-image-of-a-sphere-with-dots-and-lines-nGoCBxiaRO0"
+tags: [google, supercharges, chrome, security, fixing]
 ---
 
 # 🛡️ Google Just Used AI to Nuke 1,072 Chrome Bugs—Here’s Why That’s a Big Deal
@@ -30,7 +31,7 @@ We are witnessing a transition from "reactive patching"—where we fix things af
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1674027444474-e63f9d516f92?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxHb29nbGUlMjBBSSUyMFN1cGVyY2hhcmdlc3xlbnwwfDB8fHwxNzg1NTY4NjAxfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a group of tin cans sitting on top of a blue and pink floor" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/Jcw-i0fSqXg/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxHb29nbGUlMjBBSSUyMFN1cGVyY2hhcmdlc3xlbnwwfDB8fHwxNzg1NTY4NjAxfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@growtika">Growtika</a> on <a href="https://unsplash.com/photos/a-group-of-tin-cans-sitting-on-top-of-a-blue-and-pink-floor-Jcw-i0fSqXg">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@growtika">Growtika</a> on <a href="https://unsplash.com/photos/a-group-of-tin-cans-sitting-on-top-of-a-blue-and-pink-floor-Jcw-i0fSqXg">Unsplash</a></div>
 </div>
 
 

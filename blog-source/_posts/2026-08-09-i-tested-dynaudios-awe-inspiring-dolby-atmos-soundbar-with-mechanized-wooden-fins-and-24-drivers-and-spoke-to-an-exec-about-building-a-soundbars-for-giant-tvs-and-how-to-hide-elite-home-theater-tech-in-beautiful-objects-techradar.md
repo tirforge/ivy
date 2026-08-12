@@ -7,6 +7,7 @@ mermaid: true
 math: true
 description: >-
   You’ve probably noticed a peculiar trend in modern living rooms. We are currently living through an era of visual excess; we purchase massive 85-inch 
+tags: [audio, technology, environment]
 ---
 
 You’ve probably noticed a peculiar trend in modern living rooms. We are currently living through an era of visual excess; we purchase massive 85-inch or 98-inch OLED and Mini-LED TVs that dominate entire walls, turning our lounges into personal IMAX theaters. Yet, beneath these towering screens, we typically place a sleek, plastic black slab—the soundbar. 

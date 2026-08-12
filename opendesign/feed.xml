@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ivy</title>
+    <link>https://blog.aaruvi.space/</link>
+    <atom:link href="https://blog.aaruvi.space/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Daily thoughts on tech, science &amp; culture.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Aug 2026 15:35:24 +0000</lastBuildDate>
+    <item>
+      <title>The AI Tutor: How to Actually Master Hard Topics with LLMs</title>
+      <link>https://blog.aaruvi.space/ai-tutor-master-hard-topics-llms</link>
+      <guid isPermaLink="true">https://blog.aaruvi.space/ai-tutor-master-hard-topics-llms</guid>
+      <pubDate>Mon, 10 Aug 2026 15:35:24 +0000</pubDate>
+      <category>AI</category>
+      <description>We are no longer just searching for information — we are interacting with it in a conversational, iterative loop. Here is how to turn an LLM into a world-class private tutor.</description>
+    </item>
+    <item>
+      <title>Claude, Stop Imitating Me</title>
+      <link>https://blog.aaruvi.space/claude-fingerprints-ai-imitation</link>
+      <guid isPermaLink="true">https://blog.aaruvi.space/claude-fingerprints-ai-imitation</guid>
+      <pubDate>Sun, 09 Aug 2026 08:00:00 +0000</pubDate>
+      <category>AI</category>
+      <description>We have entered the era of the “Turing Trap,” where the boundary between human intuition and algorithmic prediction has blurred to the point of invisibility.</description>
+    </item>
+    <item>
+      <title>Pixel 9 Price Crash: The Right Time to Buy Is Now</title>
+      <link>https://blog.aaruvi.space/pixel-9-price-crash-best-time-to-buy</link>
+      <guid isPermaLink="true">https://blog.aaruvi.space/pixel-9-price-crash-best-time-to-buy</guid>
+      <pubDate>Sat, 08 Aug 2026 08:00:00 +0000</pubDate>
+      <category>Technology</category>
+      <description>Timing is everything when investing in a new flagship smartphone — and the Pixel 9 series just hit its discount sweet spot.</description>
+    </item>
+    <item>
+      <title>Air India A320: What Really Happened Mid-Flight</title>
+      <link>https://blog.aaruvi.space/air-india-a320-flight-control-event</link>
+      <guid isPermaLink="true">https://blog.aaruvi.space/air-india-a320-flight-control-event</guid>
+      <pubDate>Fri, 07 Aug 2026 08:00:00 +0000</pubDate>
+      <category>Aviation</category>
+      <description>Cruising at 35,000 feet over the Indian subcontinent, a rare flight-control event changed everything — and the experts are still parsing it.</description>
+    </item>
+    <item>
+      <title>“Your Reports Are Normal” — But Are They?</title>
+      <link>https://blog.aaruvi.space/dr-shriram-nene-normal-lab-results</link>
+      <guid isPermaLink="true">https://blog.aaruvi.space/dr-shriram-nene-normal-lab-results</guid>
+      <pubDate>Thu, 06 Aug 2026 08:00:00 +0000</pubDate>
+      <category>Science</category>
+      <description>A “normal” lab result can still hide early warning signs — here’s what your check-up actually tells you.</description>
+    </item>
+    <item>
+      <title>UPI MDR Rules: What a Small Charge on Large Payments Means</title>
+      <link>https://blog.aaruvi.space/upi-mdr-rules-large-payments</link>
+      <guid isPermaLink="true">https://blog.aaruvi.space/upi-mdr-rules-large-payments</guid>
+      <pubDate>Wed, 05 Aug 2026 08:00:00 +0000</pubDate>
+      <category>Technology</category>
+      <description>A small charge on large payments is being debated — here’s what the new MDR rules would actually mean for you.</description>
+    </item>
+  </channel>
+</rss>

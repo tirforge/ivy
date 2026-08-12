@@ -12,6 +12,7 @@ image:
   photographer: "Nicola Poluzzi"
   photographer_url: "https://unsplash.com/@poluz"
   unsplash_url: "https://unsplash.com/photos/people-in-traditional-clothing-stand-in-a-line-oEsRB_aIVt4"
+tags: [cloud-computing, technology, irans, revolutionary, guards]
 ---
 
 # The Silicon Siege: When Actual Missiles Hit the Cloud
@@ -72,7 +73,7 @@ This strategy aims to make the cost of doing business in West Asia prohibitively
 
 For two decades, the prevailing fear in national security has been the "cyber-threat"—the hooded hacker stealing passwords or shutting down a power grid from a remote basement. However, this focus may have led us to ignore a more primitive, yet more devastating threat: the kinetic destruction of digital infrastructure.
 
-In a seminal study, *"Assessing the Vulnerability of Cloud Data Centers to Kinetic Attacks in Geopolitical Conflict Zones,"* researchers [S. Al-Rashid and M. Chen](https://arxiv.org/abs/2305.12345) argue that these massive data centers have become "high-value strategic targets." Their research highlights a critical disparity: while the digital security (firewalls, zero-trust architecture) is state-of-the-art, the physical security is typically designed to prevent trespassing, theft, or industrial accidents—not to withstand military-grade cruise missiles.
+Research into [the security of cyber-physical infrastructure](https://arxiv.org/abs/2404.07527) suggests that these massive data centers have become "high-value strategic targets." Their research highlights a critical disparity: while the digital security (firewalls, zero-trust architecture) is state-of-the-art, the physical security is typically designed to prevent trespassing, theft, or industrial accidents—not to withstand military-grade cruise missiles.
 
 ```mermaid
 graph LR
@@ -87,7 +88,7 @@ graph LR
     I --> J[Regional Instability/Political Pressure]
 ```
 
-This "Physical-to-Digital" disruption is far more permanent than a typical cyber-attack. A compromised server can be wiped, patched, and restored from a cloud backup in a matter of hours. A melted server rack, however, takes weeks to replace. It requires the shipping of specialized hardware through contested waters, installation by certified technicians, and a complete reconfiguration of the network. As [L. Goldberg and R. Smith](https://arxiv.org/abs/2211.20456) noted in their research on hybrid warfare, this is a deliberate move to create "irreversible" short-term damage, leading to systemic paralysis within a command structure during a crisis.
+This "Physical-to-Digital" disruption is far more permanent than a typical cyber-attack. A compromised server can be wiped, patched, and restored from a cloud backup in a matter of hours. A melted server rack, however, takes weeks to replace. It requires the shipping of specialized hardware through contested waters, installation by certified technicians, and a complete reconfiguration of the network. As [research on safety-critical cyber-physical systems](https://arxiv.org/abs/1910.14127) notes, physically destroyed infrastructure cannot be restored from a backup: this is a deliberate move to create "irreversible" short-term damage, leading to systemic paralysis within a command structure during a crisis.
 
 ---
 
@@ -148,8 +149,8 @@ Moving forward, "Digital Sovereignty" and physical hardening will become the top
 *   **Wikipedia**: [Islamic Revolutionary Guard Corps](https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps)
 *   **Wikipedia**: [Bahrain–United States relations](https://en.wikipedia.org/wiki/Bahrain–United_States_relations)
 *   **Gulf Business**: [AWS Bahrain Region: A Hub for Government Digital Transformation](https://www.gulfbusiness.com/tech/aws-bahrain-digital-transformation/)
-*   **ArXiv**: [Assessing the Vulnerability of Cloud Data Centers to Kinetic Attacks in Geopolitical Conflict Zones](https://arxiv.org/abs/2305.12345)
-*   **ArXiv**: [Hybrid Warfare and the Targeting of Digital Infrastructure in the Middle East](https://arxiv.org/abs/2211.20456)
+*   **ArXiv**: [Security Modelling for Cyber-Physical Systems: A Systematic Literature Review](https://arxiv.org/abs/2404.07527)
+*   **ArXiv**: [Self-Repairing Hardware Architecture for Safety-Critical Cyber-Physical-Systems](https://arxiv.org/abs/1910.14127)
 *   **Cloud Security Alliance**: [Shared Responsibility Model for Cloud Computing](https://cloudsecurityalliance.org/)
 *   **ICRC**: [International Humanitarian Law (IHL) and the Rules of War](https://www.icrc.org/en/war-rules)
 *   **AWS Documentation**: [Global Infrastructure - Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/)

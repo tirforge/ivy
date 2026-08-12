@@ -1,12 +1,11 @@
 <!--
-  Jekyll Simple Search loader
-  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+  Jekyll Simple Search loader — site override of the Chirpy theme include.
 
-  OVERRIDE: search.json (~400KB, full text of every post) was being fetched
-  on every page load because SimpleJekyllSearch fetches its JSON at
-  construction. Now initialized lazily — only when the user focuses/clicks
-  the search input or opens search. The `search.json` script tag is still
-  rendered by the layout (kept), but the XHR only happens on demand.
+  The theme initializes SimpleJekyllSearch on DOMContentLoaded, which eagerly
+  fetches the (1MB+) search.json data file on every page load. This override
+  defers initialization until the user first interacts with the search UI
+  (click / keyboard / focus on the trigger or input), then removes the
+  listeners so it initializes exactly once.
 -->
 
 {% capture result_elem %}
@@ -26,53 +25,54 @@
 
 <script>
   {% comment %} Note: dependent library will be loaded in `js-selector.html` {% endcomment %}
-  function startSearch() {
-    if (window.__searchStarted || typeof SimpleJekyllSearch === 'undefined') {
-      return;
-    }
-    window.__searchStarted = true;
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
-      json: '{{ '/assets/js/data/search.json' | relative_url }}',
-      searchResultTemplate: '{{ result_elem | strip_newlines }}',
-      noResultsText: '{{ not_found }}',
-      templateMiddleware: function(prop, value, template) {
-        if (prop === 'categories') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-          }
-        }
+  (function () {
+    var TRIGGER = 'search-trigger';
+    var INPUT = 'search-input';
 
-        if (prop === 'tags') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-          }
-        }
+    function initSearch() {
+      var trigger = document.getElementById(TRIGGER);
+      var input = document.getElementById(INPUT);
+      if (trigger) {
+        trigger.removeEventListener('click', initSearch);
+        trigger.removeEventListener('keydown', initSearch);
       }
-    });
-  }
+      if (input) {
+        input.removeEventListener('focusin', initSearch);
+      }
+      document.removeEventListener('click', initSearch, true);
+      document.removeEventListener('keydown', initSearch, true);
 
-  document.addEventListener('focus', function (e) {
-    if (e.target && e.target.id === 'search-input') {
-      startSearch();
+      if (typeof SimpleJekyllSearch === 'undefined' || !input) {
+        return;
+      }
+
+      SimpleJekyllSearch({
+        searchInput: input,
+        resultsContainer: document.getElementById('search-results'),
+        json: '{{ '/assets/js/data/search.json' | relative_url }}',
+        searchResultTemplate: '{{ result_elem | strip_newlines }}',
+        noResultsText: '{{ not_found }}',
+        templateMiddleware: function(prop, value, template) {
+          if (prop === 'categories') {
+            if (value === '') {
+              return `${value}`;
+            } else {
+              return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+            }
+          }
+
+          if (prop === 'tags') {
+            if (value === '') {
+              return `${value}`;
+            } else {
+              return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+            }
+          }
+        }
+      });
     }
-  }, { passive: true });
-  document.addEventListener('click', function (e) {
-    if (e.target && e.target.closest && e.target.closest('#search-trigger')) {
-      setTimeout(startSearch, 50);
-    }
-    if (e.target && e.target.id === 'search-input') {
-      startSearch();
-    }
-  }, { passive: true });
-  document.addEventListener('keydown', function (e) {
-    if (e.target && e.target.id === 'search-input') {
-      startSearch();
-    }
-  }, { passive: true });
+
+    document.addEventListener('click', initSearch, true);
+    document.addEventListener('keydown', initSearch, true);
+  })();
 </script>

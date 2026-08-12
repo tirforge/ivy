@@ -412,26 +412,28 @@ for attempt in 1..3:
 
 ## 📖 Blog Host (`blog-source/`)
 
-Jekyll site — **Chirpy 7.5** — **Midnight Purple** theme.
+Jekyll site — **Chirpy 7.5** — **editorial golden-standard theme** (dark “Frozen lake” / light “Quiet luxury”, IBM Plex Sans/Serif).
 
 ### Key Files
 
 | Path | Purpose |
 |------|---------|
-| `_sass/custom/custom.scss` | Midnight Purple theme (bg `#12121E`, accent `#BB86FC`) |
-| `_includes/custom/head.html` | Mermaid dark-theme, OG tags, JSON-LD, favicon, canonical |
-| `_includes/custom/tail.html` | Unsplash download-tracking JS |
-| `_includes/custom/post.html` | Related posts section |
+| `_sass/custom/custom.scss` | Editorial theme — tokens in `:root`/`[data-theme='light']` (bg `#202A38` / `#F6F1E8`, accent `#A8D4E6` / `#9A4E57`), Chirpy variable remap, components |
+| `_includes/custom/head.html` | Mermaid Frozen-lake palette, OG tags, JSON-LD, CSP, canonical |
+| `_includes/custom/tail.html` | Theme toggle (localStorage + cookie), scroll reveals, feed search, reading progress, TOC fallback |
+| `_includes/js-selector.html` | Site override — CDN libs loaded individually (no giant jsdelivr combine) |
+| `_data/locales/en.yml` | Site locale overrides (custom 404 statement) |
+| `_layouts/home.html` / `post.html` / `tags.html` / `about.html` | Editorial ports of `opendesign/` pages |
 | `_includes/breadcrumb.html` | Breadcrumb nav + JSON-LD |
-| `_includes/footer.html` | Custom footer + GitHub link |
+| `_includes/footer.html` | Custom footer |
 | `_tabs/about.md` | About page |
-| `404.html` | Custom 404 |
-| `robots.txt` | Crawl rules |
-| `sitemap.xml` | Auto-generated (`jekyll-sitemap`) |
+| `_data/contact.yml` | Contact (GitHub `tirforge`, email) |
+| `robots.txt` (`assets/`) | Crawl rules |
+| `sitemap.xml` | Custom posts-only sitemap (jekyll-sitemap output is shadowed by design) |
 
 ### 🧮 Mermaid
-- Dark theme via `window.mermaid` (theme: `base`, purple accents)
-- SCSS overrides: purple strokes/edges, custom font
+- Dark theme via `window.mermaid` (theme: `base`, Frozen-lake colors)
+- SCSS overrides: icy-blue strokes/edges, custom font
 - Frontmatter `mermaid: true` required
 
 ### 🔍 SEO
@@ -444,7 +446,7 @@ Jekyll site — **Chirpy 7.5** — **Midnight Purple** theme.
 - JSON-LD: WebSite (knowledge panel + search action) + BlogPosting (dates, author, publisher, image, keywords)
 - Breadcrumb JSON-LD + `article:section` for category
 - Preconnect/dns-prefetch for Google Fonts + Unsplash
-- `theme-color: #12121E` for mobile browser UI
+- `theme-color`: `#202A38` dark / `#F6F1E8` light (swapped per theme via JS)
 - **No AI references** — reads as a human editorial blog
 
 ### ⚡ Performance

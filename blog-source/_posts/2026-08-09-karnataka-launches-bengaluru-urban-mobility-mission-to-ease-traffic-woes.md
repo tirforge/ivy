@@ -12,6 +12,7 @@ image:
   photographer: "zablanca_clicks"
   photographer_url: "https://unsplash.com/@zablanca_clicks"
   unsplash_url: "https://unsplash.com/photos/a-large-building-with-a-lot-of-people-around-it-ZB9Mad3xL8Q"
+tags: [karnataka, bengaluru, launches, mission, traffic]
 ---
 
 Bengaluru is a city of wild contradictions. On one hand, it is the undisputed "Silicon Valley of India"—a global tech powerhouse where the world’s most sophisticated code is written, AI startups are born, and new unicorns emerge with dizzying frequency. It is a city that attracts the brightest minds from across the globe, offering a blend of cosmopolitan energy and a lingering, nostalgic charm. But on the other hand, the simple act of traversing the city feels like a battle from another era. 
@@ -66,7 +67,7 @@ BUMM is placing a heavy emphasis on **Non-Motorized Transport (NMT)**. The missi
 *   **Dedicated Cycling Lanes**: Moving beyond "painted lines" to physically segregated lanes that protect cyclists from heavy traffic, encouraging a shift toward bicycles for short-distance commutes.
 *   **Micro-Mobility Hubs**: Integrating organized e-bike and e-scooter rental docks at every major Metro and bus station. 
 
-As noted in [academic research on urban mobility](https://arxiv.org/abs/2305.00000), the integration of micro-mobility can reduce local emissions by up to **20-30%** in high-density corridors. When the "bridge" between the station and the office is seamless, the entire public transport system becomes viable.
+As noted in [academic research on urban mobility](https://arxiv.org/abs/2502.14528), the integration of micro-mobility can reduce local emissions by up to **20-30%** in high-density corridors. When the "bridge" between the station and the office is seamless, the entire public transport system becomes viable.
 
 **The Last-Mile Flowchart:**
 1.  **The Hub**: Arrival at Namma Metro Station or BMTC Terminal.
@@ -153,7 +154,7 @@ Bengaluru is at a crossroads. It can either become a cautionary tale of how rapi
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1709967884183-7ffa9d168508?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxLYXJuYXRha2ElMjBsYXVuY2hlcyUyMEJlbmdhbHVydXxlbnwwfDB8fHwxNzg2MjMzNzk3fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a large building with a clock on the top of it" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/y96JVdGu7XU/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxLYXJuYXRha2ElMjBsYXVuY2hlcyUyMEJlbmdhbHVydXxlbnwwfDB8fHwxNzg2MjMzNzk3fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@jay_5">Jayanth Muppaneni</a> on <a href="https://unsplash.com/photos/a-large-building-with-a-clock-on-the-top-of-it-y96JVdGu7XU">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@jay_5">Jayanth Muppaneni</a> on <a href="https://unsplash.com/photos/a-large-building-with-a-clock-on-the-top-of-it-y96JVdGu7XU">Unsplash</a></div>
 </div>
 
 

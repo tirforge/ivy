@@ -7,6 +7,7 @@ mermaid: true
 math: true
 description: >-
   In the high-stakes arena of international cricket, the pitch is typically reserved for those who have reached a certain threshold of physical maturity
+tags: [india, cricket, vaibhav, sooryavanshi, scripts]
 ---
 
 # 🏏 The 12-Year-Old Who Shook Up Indian Cricket: Vaibhav Sooryavanshi’s Historic Run

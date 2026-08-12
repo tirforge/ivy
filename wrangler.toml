@@ -13,13 +13,6 @@ database_name = "ivy-blog-bot"
 database_id = "9d3bfed4-e4af-446c-85aa-0011fcab103f"
 
 # ── Browser automation (Cloudflare Browser Run, PAID usage-based) ──────────
-[browser]
-binding = "BROWSER"
-
-# ── Self service binding ───────────────────────────────────────────────────
-# The ONLY reliable way to re-enter this worker with a fresh waitUntil budget
-# (split-and-continue). A plain fetch() to our own workers.dev route is not
-# routed back and silently stalls — see fireContinuation() in src/index.ts.
 [[services]]
 binding = "SELF"
 service = "ivy-blog-bot"

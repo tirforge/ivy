@@ -27,7 +27,7 @@ This isn't just about fancy new gadgets; it’s about how we experience sound as
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1591025810539-a321000cda85?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxUaGVtZSUyMG9mJTIwTXVzaWN8ZW58MHwwfHx8MTc4MjQ4NzA0MHww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="musical notes on white paper" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/3pCRW_JRKM8/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxUaGVtZSUyMG9mJTIwTXVzaWN8ZW58MHwwfHx8MTc4MjQ4NzA0MHww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@shootnmatch">weston m</a> on <a href="https://unsplash.com/photos/musical-notes-on-white-paper-3pCRW_JRKM8">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@shootnmatch">weston m</a> on <a href="https://unsplash.com/photos/musical-notes-on-white-paper-3pCRW_JRKM8">Unsplash</a></div>
 </div>
 
 

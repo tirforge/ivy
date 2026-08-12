@@ -12,6 +12,7 @@ image:
   photographer: "Vimal Krishnattri"
   photographer_url: "https://unsplash.com/@artloverjv"
   unsplash_url: "https://unsplash.com/photos/a-close-up-of-the-back-of-a-cell-phone-qGuToV32FnM"
+tags: [smartphones, india, oneplus, teased, design]
 ---
 
 # OnePlus Nord 4: Finally, a Phone That Doesn't Look Like Every Other Phone 📱
@@ -28,7 +29,7 @@ For a lot of us, a phone has evolved into a primary fashion accessory, not just 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1628582091924-296b8ec1fffe?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxPbmVQbHVzJTIwTjZ4JTIwdGVhc2VkfGVufDB8MHx8fDE3ODQ3MTk5MTJ8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="black smartphone on black textile" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/sNdBU8siKn0/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxPbmVQbHVzJTIwTjZ4JTIwdGVhc2VkfGVufDB8MHx8fDE3ODQ3MTk5MTJ8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@amarsyaz">Amar Syazwan Rosman</a> on <a href="https://unsplash.com/photos/black-smartphone-on-black-textile-sNdBU8siKn0">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@amarsyaz">Amar Syazwan Rosman</a> on <a href="https://unsplash.com/photos/black-smartphone-on-black-textile-sNdBU8siKn0">Unsplash</a></div>
 </div>
 
 

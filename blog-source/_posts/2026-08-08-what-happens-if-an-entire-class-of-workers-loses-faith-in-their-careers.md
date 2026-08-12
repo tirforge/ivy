@@ -12,6 +12,7 @@ image:
   photographer: "Roger Starnes Sr"
   photographer_url: "https://unsplash.com/@rstar50"
   unsplash_url: "https://unsplash.com/photos/a-white-brick-wall-with-black-words-on-it-eMBS95ath_o"
+tags: [happens, entire, class, workers, loses]
 ---
 
 We used to have a pretty simple deal: study hard, get into a respected career, and in exchange for your hard work and expertise, you’d get stability, a sense of purpose, and a place where you belonged. For a long time, that was the unspoken contract for doctors, teachers, engineers, and lawyers. You gave your life to the craft, and the craft took care of you—not just with a paycheck, but mentally and emotionally. You weren’t just an employee; you were part of a legacy, a professional "guild," and a key part of how society actually functions.
@@ -28,7 +29,7 @@ Whether it’s a nurse who can’t give their patients the care they deserve, a 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1530136072981-9f0c64752859?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaGF0JTIwaGFwcGVucyUyMGlmfGVufDB8MHx8fDE3ODYyMDE0MTl8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="man squatting on road while taking photo" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/u368pt_238k/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaGF0JTIwaGFwcGVucyUyMGlmfGVufDB8MHx8fDE3ODYyMDE0MTl8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@erik_brolin">Erik Brolin</a> on <a href="https://unsplash.com/photos/man-squatting-on-road-while-taking-photo-u368pt_238k">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@erik_brolin">Erik Brolin</a> on <a href="https://unsplash.com/photos/man-squatting-on-road-while-taking-photo-u368pt_238k">Unsplash</a></div>
 </div>
 
 

@@ -12,13 +12,14 @@ image:
   photographer: "Sasun Bughdaryan"
   photographer_url: "https://unsplash.com/@sasun1990"
   unsplash_url: "https://unsplash.com/photos/woman-in-gray-scoop-neck-shirt-holding-her-hands-5dFJavB5Twk"
+tags: [courts, delhi, politics, sports]
 ---
 
 ### 🎙️ Introduction: A Messy Collision of Power
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1657672825833-7b2ad6fae220?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXcmVzdGxlcnMlMjclMjBzZXh1YWwlMjBoYXJhc3NtZW50fGVufDB8MHx8fDE3ODYzNDE4MDF8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a person holding another man in a ring with a crowd watching" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/oucIW6G-3h4/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXcmVzdGxlcnMlMjclMjBzZXh1YWwlMjBoYXJhc3NtZW50fGVufDB8MHx8fDE3ODYzNDE4MDF8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@claudiaraya">Claudia Raya</a> on <a href="https://unsplash.com/photos/a-person-holding-another-man-in-a-ring-with-a-crowd-watching-oucIW6G-3h4">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@claudiaraya">Claudia Raya</a> on <a href="https://unsplash.com/photos/a-person-holding-another-man-in-a-ring-with-a-crowd-watching-oucIW6G-3h4">Unsplash</a></div>
 </div>
 
 

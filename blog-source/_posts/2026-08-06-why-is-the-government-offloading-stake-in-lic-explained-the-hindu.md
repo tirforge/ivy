@@ -5,15 +5,14 @@ date: 2026-08-06 00:59:02 +0000
 toc: true
 mermaid: true
 description: >-
-  ---
+  Why India finally sold a piece of the LIC giant — the economics of stake dilution, budget arithmetic, and market discipline, explained.
+tags: [india, finance, economy]
 image:
   path: "https://images.unsplash.com/photo-1661642110258-8718030fd045?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwxfHxXaHklMjBpcyUyMHRoZXxlbnwwfDB8fHwxNzg1OTc3OTQxfDA&ixlib=rb-4.1.0&fm=webp&w=1200&h=630&fit=crop"
   alt: "a young boy holding his hands up"
   photographer: "Oyemike Princewill"
   photographer_url: "https://unsplash.com/@supaslim"
   unsplash_url: "https://unsplash.com/photos/a-young-boy-holding-his-hands-up-VI2X0b01p6g"
----
-
 ---
 
 ### 🚀 The Big Picture: A Paradigm Shift in Indian Finance
@@ -161,7 +160,7 @@ LIC remains a pillar of the Indian economy, but it is now a pillar that must be 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1633082568100-b23b295589f8?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaHklMjBpcyUyMHRoZXxlbnwwfDB8fHwxNzg1OTc3OTQxfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a book with the title the power of why" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/axK93Sfmflc/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaHklMjBpcyUyMHRoZXxlbnwwfDB8fHwxNzg1OTc3OTQxfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@77hn">The 77 Human Needs System</a> on <a href="https://unsplash.com/photos/a-book-with-the-title-the-power-of-why-axK93Sfmflc">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@77hn">The 77 Human Needs System</a> on <a href="https://unsplash.com/photos/a-book-with-the-title-the-power-of-why-axK93Sfmflc">Unsplash</a></div>
 </div>
 
 

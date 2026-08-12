@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   Justice in the Indian judicial system is often characterized by its endurance—a slow, grinding process that tests the patience and resilience of the g
+tags: [delhi, breaking, tahir, hussain, others]
 ---
 
 # Justice for Ankit Sharma: Why Tahir Hussain's Life Sentence Matters
@@ -34,7 +35,7 @@ The contrast between Ankit's life—dedicated to national security—and his dea
 
 ## 🔥 Anatomy of the 2020 North East Delhi Riots
 
-The murder of Ankit Sharma cannot be analyzed in isolation; it was a symptom of a larger, systemic collapse of law and order. In late February 2020, the districts of North East Delhi were transformed into a battlefield. The catalyst for this violence was the intense polarization surrounding the [Citizenship Amendment Act (CAA)](https://en.wikipedia.org/wiki/Citizenship_Amendment_Act_2019) and the proposed [National Register of Citizens (NRC)](https://en.wikipedia.org/wiki/National_Register_of_Citizens).
+The murder of Ankit Sharma cannot be analyzed in isolation; it was a symptom of a larger, systemic collapse of law and order. In late February 2020, the districts of North East Delhi were transformed into a battlefield. The catalyst for this violence was the intense polarization surrounding the [Citizenship Amendment Act (CAA)](https://en.wikipedia.org/wiki/Citizenship_(Amendment)_Act,_2019) and the proposed [National Register of Citizens (NRC)](https://en.wikipedia.org/wiki/National_Register_of_Citizens).
 
 What began as political protests and counter-protests rapidly devolved into communal clashes. Between February 23 and February 26, the neighborhoods of Jaffrabad, Bhajanpura, and Maujpur became epicenters of arson and slaughter. The official figures are staggering: **53 people lost their lives**, hundreds were hospitalized with critical injuries, and thousands were displaced from their ancestral homes.
 
@@ -140,7 +141,7 @@ For a deeper understanding of the legal and social context of this case, the fol
 
 *   **Legal Proceedings**: [Live Law: Tahir Hussain, Others Get Life Imprisonment For Murder Of IB Staffer Ankit Sharma](https://www.livelaw.in) - Detailed coverage of the court's reasoning and the specific evidence cited.
 *   **Historical Context**: [Wikipedia: 2020 Delhi Riots](https://en.wikipedia.org/wiki/2020_Delhi_riots) - A comprehensive overview of the timeline, casualties, and political triggers.
-*   **Legislative Background**: [Wikipedia: Citizenship Amendment Act, 2019](https://en.wikipedia.org/wiki/Citizenship_Amendment_Act_2019) - Understanding the law that sparked the initial protests.
+*   **Legislative Background**: [Wikipedia: Citizenship Amendment Act, 2019](https://en.wikipedia.org/wiki/Citizenship_(Amendment)_Act,_2019) - Understanding the law that sparked the initial protests.
 *   **Administrative Context**: [Wikipedia: National Register of Citizens](https://en.wikipedia.org/wiki/National_Register_of_Citizens) - Analysis of the NRC and its role in the communal tension.
 *   **Statutory Law**: [Indian Kanoon: IPC Section 302](https://indiankanoon.org/doc/1451423/) - The legal definition and punishment for murder under the Indian Penal Code.
 *   **News Archives**: [NDTV: Delhi Riot Convictions](https://www.ndtv.com) - Reporting on the various trials and sentencing phases of the 2020 riots.

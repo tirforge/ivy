@@ -12,6 +12,7 @@ image:
   photographer: "Samuel Schroth"
   photographer_url: "https://unsplash.com/@sammy"
   unsplash_url: "https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-hyPt63Df3Dw"
+tags: [senators, unveil, stopgap, avert, shutdown]
 ---
 
 # 🏛️ The December 11 Countdown: Can the Senate Actually Stop a Government Shutdown?
@@ -28,7 +29,7 @@ For the average citizen, a "government shutdown" often sounds like a bureaucrati
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1570941144223-7e4f5d0624ee?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxVUyUyMHNlbmF0b3JzJTIwdW52ZWlsfGVufDB8MHx8fDE3ODU3MTk2MjF8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="white concrete building under clear blue sky" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/XU93D-JThyE/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxVUyUyMHNlbmF0b3JzJTIwdW52ZWlsfGVufDB8MHx8fDE3ODU3MTk2MjF8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@albrb">Alejandro Barba</a> on <a href="https://unsplash.com/photos/white-concrete-building-under-clear-blue-sky-XU93D-JThyE">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@albrb">Alejandro Barba</a> on <a href="https://unsplash.com/photos/white-concrete-building-under-clear-blue-sky-XU93D-JThyE">Unsplash</a></div>
 </div>
 
 

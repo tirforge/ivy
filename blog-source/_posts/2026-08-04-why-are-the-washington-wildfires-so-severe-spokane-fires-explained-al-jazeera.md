@@ -12,6 +12,7 @@ image:
   photographer: "Oyemike Princewill"
   photographer_url: "https://unsplash.com/@supaslim"
   unsplash_url: "https://unsplash.com/photos/a-young-boy-holding-his-hands-up-VI2X0b01p6g"
+tags: [washington, wildfires, severe, spokane, fires]
 ---
 
 # 🌲 The New Normal for the Pacific Northwest
@@ -28,7 +29,7 @@ This is not an accidental escalation; it is a systemic failure. When we analyze 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1633082568100-b23b295589f8?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaHklMjBhcmUlMjB0aGV8ZW58MHwwfHx8MTc4NTg0MzkzNXww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a book with the title the power of why" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/axK93Sfmflc/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxXaHklMjBhcmUlMjB0aGV8ZW58MHwwfHx8MTc4NTg0MzkzNXww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@77hn">The 77 Human Needs System</a> on <a href="https://unsplash.com/photos/a-book-with-the-title-the-power-of-why-axK93Sfmflc">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@77hn">The 77 Human Needs System</a> on <a href="https://unsplash.com/photos/a-book-with-the-title-the-power-of-why-axK93Sfmflc">Unsplash</a></div>
 </div>
 
 
@@ -38,7 +39,7 @@ Relative humidity tells us how much water is in the air relative to its maximum 
 
 Because of the thermodynamics of a warming planet, warmer air has a higher capacity to hold water vapor. As temperatures rise, the air becomes exponentially more "thirsty." This creates a powerful suction effect; the atmosphere acts as a massive sponge, aggressively pulling moisture out of the soil, the needles of ponderosa pines, and the grasslands of the Spokane plateau. When the VPD is high, plants lose water through transpiration faster than their root systems can replenish it from the ground. This triggers "fuel curing"—a process where live vegetation becomes biologically stressed, dies, and transforms into highly flammable tinder.
 
-According to research on [wildfire amplification](https://arxiv.org/abs/2305.00000), the relationship between increasing temperatures and fuel dryness is not linear—it is exponential. Even a modest increase in average temperature can lead to a precipitous drop in fuel moisture. In Washington, this has resulted in a "seasonal shift": the window for ignition now opens earlier in the spring and remains open well into the autumn. We are seeing the rise of "flash droughts," where a sudden heat spike can strip a landscape of its moisture in a matter of days, leaving the forest floor primed for an explosion.
+According to research on [wildfire dynamics and fuel moisture](https://arxiv.org/abs/2412.04517), the relationship between increasing temperatures and fuel dryness is not linear—it is exponential. Even a modest increase in average temperature can lead to a precipitous drop in fuel moisture. In Washington, this has resulted in a "seasonal shift": the window for ignition now opens earlier in the spring and remains open well into the autumn. We are seeing the rise of "flash droughts," where a sudden heat spike can strip a landscape of its moisture in a matter of days, leaving the forest floor primed for an explosion.
 
 **The Critical Metrics of Desiccation:**
 *   **1.5°C to 2°C:** This is the global warming threshold identified by the [IPCC](https://www.ipcc.ch/) as a potential "tipping point" for Northwest forests. Beyond this, these ecosystems risk flipping from carbon sinks (which absorb CO2) to carbon sources (which release it).
@@ -153,7 +154,7 @@ The "atmospheric thirst" of a warming planet is a reality we cannot ignore. We c
 
 ## 📚 References
 
-*   **Climate Data & VPD:** [ArXiv - Research on Wildfire Amplification and Climate](https://arxiv.org/abs/2305.00000)
+*   **Climate Data & VPD:** [ArXiv — Modeling wildfire dynamics with fuel moisture](https://arxiv.org/abs/2412.04517)
 *   **General Wildfire Dynamics:** [Wikipedia - Wildfire](https://en.wikipedia.org/wiki/Wildfire)
 *   **WUI Guidelines:** [Wikipedia - Wildland-Urban Interface](https://en.wikipedia.org/wiki/Wildland%E2%80%93urban_interface)
 *   **Global Climate Trends:** [IPCC - Intergovernmental Panel on Climate Change](https://www.ipcc.ch/)

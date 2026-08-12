@@ -1,0 +1,45 @@
+{
+  "$description": "Ivy Blog (blog.aaruvi.space) — editorial golden-standard design tokens, extracted from _sass/custom/custom.scss. Dark = Combination 85 \"Frozen lake\" (default), Light = Combination 60 \"Quiet luxury\". Import into OpenDesign as Design Tokens (JSON).",
+  "color": {
+    "bg-dark": { "$value": "#202A38", "$type": "color", "$description": "Dark page base — slate" },
+    "surface-dark": { "$value": "#263140", "$type": "color", "$description": "Dark raised panels" },
+    "surface-raised-dark": { "$value": "#2E3B4D", "$type": "color", "$description": "Dark hover / elevated" },
+    "fg-dark": { "$value": "#EFF4F7", "$type": "color", "$description": "Dark body text — snow" },
+    "muted-dark": { "$value": "#9AA7B8", "$type": "color", "$description": "Dark muted text" },
+    "border-dark": { "$value": "#374354", "$type": "color", "$description": "Dark hairlines, dividers" },
+    "accent-dark": { "$value": "#A8D4E6", "$type": "color", "$description": "Dark primary accent — icy blue (links, active nav, focus rings, tags)" },
+    "accent-deep-dark": { "$value": "#6FA9C9", "$type": "color", "$description": "Dark secondary accent" },
+    "aurora-dark": { "$value": "#9CD0E5", "$type": "color", "$description": "Dark signature hairline" },
+    "bg-light": { "$value": "#F6F1E8", "$type": "color", "$description": "Light page base — champagne" },
+    "surface-light": { "$value": "#FFFFFF", "$type": "color", "$description": "Light raised panels" },
+    "surface-raised-light": { "$value": "#FBF7EE", "$type": "color", "$description": "Light hover / elevated" },
+    "fg-light": { "$value": "#3A2E26", "$type": "color", "$description": "Light body text — warm brown" },
+    "muted-light": { "$value": "#76665B", "$type": "color", "$description": "Light muted text — warm taupe (AA on champagne)" },
+    "border-light": { "$value": "#E6DDCC", "$type": "color", "$description": "Light hairlines, dividers" },
+    "accent-light": { "$value": "#9A4E57", "$type": "color", "$description": "Light primary accent — muted rose (AA as text)" },
+    "accent-deep-light": { "$value": "#7C3B43", "$type": "color", "$description": "Light secondary accent" },
+    "aurora-light": { "$value": "#C08A8F", "$type": "color", "$description": "Light signature hairline" },
+    "warning": { "$value": "#FFB74D", "$type": "color", "$description": "Amber — warnings" },
+    "danger": { "$value": "#E57373", "$type": "color", "$description": "Coral — errors" }
+  },
+  "font": {
+    "family-display": { "$value": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif", "$type": "fontFamily", "$description": "Headings, UI. Weights: 400/500/600/700" },
+    "family-body": { "$value": "'IBM Plex Serif', Georgia, 'Times New Roman', serif", "$type": "fontFamily", "$description": "Reading column. Weights: 400/500/600/700 + italics" },
+    "family-ui": { "$value": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif", "$type": "fontFamily", "$description": "Labels, meta, buttons" },
+    "family-mono": { "$value": "ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace", "$type": "fontFamily", "$description": "Index numerals, code" }
+  },
+  "borderRadius": {
+    "radius": { "$value": "8px", "$type": "dimension", "$description": "Buttons, inputs, chips" },
+    "radius-lg": { "$value": "12px", "$type": "dimension", "$description": "Cards, featured panel, images" },
+    "circle": { "$value": "50%", "$type": "dimension", "$description": "Avatar" }
+  },
+  "shadow": {
+    "card-dark": { "$value": "0 6px 18px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.12)", "$type": "shadow", "$description": "Dark elevation" },
+    "card-light": { "$value": "0 6px 18px rgba(90, 70, 50, 0.08), 0 0 0 1px rgba(90, 70, 50, 0.06)", "$type": "shadow", "$description": "Light elevation" }
+  },
+  "dimension": {
+    "container": { "$value": "1160px", "$type": "dimension", "$description": "Page container" },
+    "feed": { "$value": "780px", "$type": "dimension", "$description": "Home reading column" },
+    "article": { "$value": "700px", "$type": "dimension", "$description": "Article reading column" }
+  }
+}

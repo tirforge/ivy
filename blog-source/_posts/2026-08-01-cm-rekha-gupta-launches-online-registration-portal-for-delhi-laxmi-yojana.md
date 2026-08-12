@@ -5,18 +5,14 @@ date: 2026-08-01 11:04:52 +0000
 toc: true
 mermaid: true
 description: >-
-  ---
+  Delhi CM Rekha Gupta launches an online registration portal for the Laxmi Yojana — a fact-checked guide to women's welfare schemes across India.
+tags: [india-politics, delhi, government-schemes]
 image:
   path: "https://images.unsplash.com/photo-1782287932263-0e68e4f08fa1?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwxfHxDTSUyMFJla2hhJTIwR3VwdGF8ZW58MHwwfHx8MTc4NTU4MjI5MXww&ixlib=rb-4.1.0&fm=webp&w=1200&h=630&fit=crop"
   alt: "People viewing artwork in a modern exhibition gallery"
   photographer: "Zainab Iqbal"
   photographer_url: "https://unsplash.com/@ink_earnest"
   unsplash_url: "https://unsplash.com/photos/people-viewing-artwork-in-a-modern-exhibition-gallery-e_zIYlPvrBQ"
----
-
----
-title: Guide to Women's Welfare Schemes in Delhi and Madhya Pradesh
-tags: [women-empowerment, delhi-government, mp-government, ladli-scheme, government-schemes, financial-aid, india-welfare]
 ---
 
 # 🌸 Empowering the Girl Child: A Comprehensive Guide to Women's Welfare Schemes in India
@@ -31,7 +27,7 @@ This guide provides an exhaustive, fact-checked analysis of the actual schemes a
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1616098055249-3a594c1df11c?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxDTSUyMFJla2hhJTIwR3VwdGF8ZW58MHwwfHx8MTc4NTU4MjI5MXww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="woman in white red and green floral shirt smiling" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/eGCl47t9Uvk/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxDTSUyMFJla2hhJTIwR3VwdGF8ZW58MHwwfHx8MTc4NTU4MjI5MXww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@akevsery">kevs</a> on <a href="https://unsplash.com/photos/woman-in-white-red-and-green-floral-shirt-smiling-eGCl47t9Uvk">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@akevsery">kevs</a> on <a href="https://unsplash.com/photos/woman-in-white-red-and-green-floral-shirt-smiling-eGCl47t9Uvk">Unsplash</a></div>
 </div>
 
 
@@ -218,7 +214,7 @@ For verified information, please refer to the following official portals:
 4.  **Ministry of Women and Child Development (MWCD):** [wcd.nic.in](https://wcd.nic.in)
 5.  **Samagra Portal (Madhya Pradesh):** [samagra.gov.in](https://samagra.gov.in)
 6.  **DigiLocker Official Site:** [digilocker.gov.in](https://digilocker.gov.in)
-7.  **National Family Health Survey (NFHS) Data:** [rchiips.org](http://rchiips.org/nfhs)
+7.  **National Family Health Survey (NFHS) Data:** [rchiips.org](https://nfhsindia.org/)
 8.  **Department of School Education & Literacy:** [education.gov.in](https://www.education.gov.in)
 9.  **Direct Benefit Transfer (DBT) India:** [dbtbharat.gov.in](https://dbtbharat.gov.in)
 10. **UNESCO Institute for Statistics (Education Data):** [uis.unesco.org](https://uis.unesco.org)

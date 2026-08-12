@@ -13,6 +13,7 @@ image:
   photographer: "Bagus Hernawan"
   photographer_url: "https://unsplash.com/@bhaguz"
   unsplash_url: "https://unsplash.com/photos/person-holding-space-gray-iphone-7-A6JxK37IlPo"
+tags: [apple, smartphones, iphone, livemintcom]
 ---
 
 Heads up: it looks like Apple is about to fundamentally change how they price their hardware, and it is not a shift that will help our wallets. For over a decade, Apple has operated on a predictable pricing cadence—they would bump the price slightly for a generational leap in storage or a "Pro" feature, and the base models remained relatively stable. But that era of predictability is ending. 
@@ -27,7 +28,7 @@ This isn't just a rumor about some distant future model; we are talking about th
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1616410011236-7a42121dd981?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxpUGhvbmUlMjBwcmljZSUyMGhpa2V8ZW58MHwwfHx8MTc4NjI3MDI4OHww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="silver iphone 6 and red iphone case" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/OKjJZNTl004/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxpUGhvbmUlMjBwcmljZSUyMGhpa2V8ZW58MHwwfHx8MTc4NjI3MDI4OHww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@onurbinay">Onur Binay</a> on <a href="https://unsplash.com/photos/silver-iphone-6-and-red-iphone-case-OKjJZNTl004">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@onurbinay">Onur Binay</a> on <a href="https://unsplash.com/photos/silver-iphone-6-and-red-iphone-case-OKjJZNTl004">Unsplash</a></div>
 </div>
 
 

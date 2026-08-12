@@ -1,0 +1,14 @@
+{
+  "name": "Ivy",
+  "short_name": "Ivy",
+  "description": "Daily thoughts on tech, science & culture.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#202A38",
+  "theme_color": "#202A38",
+  "icons": [
+    { "src": "og-cover.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "og-cover.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

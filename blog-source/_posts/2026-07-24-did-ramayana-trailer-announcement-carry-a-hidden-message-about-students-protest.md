@@ -12,6 +12,7 @@ image:
   photographer: "Anil Reddy"
   photographer_url: "https://unsplash.com/@anildesign"
   unsplash_url: "https://unsplash.com/photos/a-woman-in-a-yellow-and-red-sari-talking-on-a-cell-phone-bYrhc0tj2zQ"
+tags: [india-politics, politics, education]
 ---
 
 # 🎬 The Cinematic Ramayana: Mythology, Politics, and the Art of Speculation
@@ -24,7 +25,7 @@ The *Ramayana*, as an epic, provides a moral and ethical blueprint for millions.
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1637132637066-dea64502d3a6?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxEaWQlMjBSYW1heWFuYSUyMHRyYWlsZXJ8ZW58MHwwfHx8MTc4NDg3NzQxM3ww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a man sitting next to a woman near a body of water" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/2_CRVpWa7Gs/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxEaWQlMjBSYW1heWFuYSUyMHRyYWlsZXJ8ZW58MHwwfHx8MTc4NDg3NzQxM3ww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@ankitgirwal">Ankit Girwal</a> on <a href="https://unsplash.com/photos/a-man-sitting-next-to-a-woman-near-a-body-of-water-2_CRVpWa7Gs">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@ankitgirwal">Ankit Girwal</a> on <a href="https://unsplash.com/photos/a-man-sitting-next-to-a-woman-near-a-body-of-water-2_CRVpWa7Gs">Unsplash</a></div>
 </div>
 
 

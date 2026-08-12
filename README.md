@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="blog-source/assets/avatar.webp" width="120" height="120" style="border-radius:50%; border: 3px solid #BB86FC;" alt="Ivy Logo"/>
+  <img src="blog-source/assets/avatar.webp" width="120" height="120" style="border-radius:50%; border: 3px solid #A8D4E6;" alt="Ivy Logo"/>
   <h1 align="center">🌿 Ivy</h1>
   <p align="center">
     <b>AI Blog Bot</b> — Telegram assistant + automated blog writer
@@ -174,7 +174,7 @@ A `repair-posts.yml` cron (every 6h) scans `_posts/` for LLM-leak / truncation i
 ├─ Web Search ───── Tavily API
 ├─ Database ─────── Cloudflare D1 (SQLite) — sessions, memories, reminders, jobs, knowledge
 ├─ Blog Writer ──── CrewAI — 3 agents: Writer (research) → Humaniser (rewrite) → Editor (polish)
-├─ Blog Host ────── Jekyll + Chirpy 7.5 → GitHub Pages (Midnight Purple theme)
+├─ Blog Host ────── Jekyll + Chirpy 7.5 → GitHub Pages (editorial golden-standard theme: dark “Frozen lake” / light “Quiet luxury”)
 ├─ Trending ─────── Curren's API + Tavily
 ├─ Images ───────── Unsplash API
 └─ CI/CD ────────── GitHub Actions (4x daily cron + manual dispatch + 6-hourly post repair)

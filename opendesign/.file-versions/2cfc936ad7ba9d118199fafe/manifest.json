@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "fileName": "ivy-blog-home.html",
+  "currentVersionId": "4d7a015e-b485-46f8-ab0b-3a8bbde2948e",
+  "entries": [
+    {
+      "id": "4d7a015e-b485-46f8-ab0b-3a8bbde2948e",
+      "fileName": "ivy-blog-home.html",
+      "version": 1,
+      "label": "Version 1",
+      "createdAt": 1786500178331,
+      "source": "manual",
+      "prompt": null,
+      "size": 27053,
+      "mime": "text/html; charset=utf-8",
+      "kind": "html",
+      "contentPath": "0001-4d7a015e-b485-46f8-ab0b-3a8bbde2948e.html",
+      "contentDigest": "62f0a12d86ae974ace01398d4380c206e1c57fbe44d01241a1983b38de2bc396",
+      "promptSource": "manual"
+    }
+  ]
+}

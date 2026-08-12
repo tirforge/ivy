@@ -25,7 +25,7 @@ Whether you're a pro still pushing a Galaxy Book 4 Ultra to its limits or a stud
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1661595676335-aa93ecbf4b42?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxzYW1zdW5nJTIwZ2FsYXh5Ym9vayUyMDR8ZW58MHwwfHx8MTc4MjQ5MTU2OXww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="graphical user interface, application" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/8MOzCL9kBgo/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxzYW1zdW5nJTIwZ2FsYXh5Ym9vayUyMDR8ZW58MHwwfHx8MTc4MjQ5MTU2OXww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@shawn_rain">Shawn Rain</a> on <a href="https://unsplash.com/photos/graphical-user-interface-application-8MOzCL9kBgo">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@shawn_rain">Shawn Rain</a> on <a href="https://unsplash.com/photos/graphical-user-interface-application-8MOzCL9kBgo">Unsplash</a></div>
 </div>
 
 

@@ -13,6 +13,7 @@ image:
   photographer: "Hermeus"
   photographer_url: "https://unsplash.com/@hermeus"
   unsplash_url: "https://unsplash.com/photos/tail-of-an-airplane-with-american-flag-and-logo-SKMwDi3KLbo"
+tags: [launches, heavy, strikes, jazeera]
 ---
 
 The geopolitical landscape of the Middle East has undergone a fundamental and violent shift. What [Al Jazeera](https://www.aljazeera.com/news/2026/7/30/us-launches-another-round-of-attacks-on-iran) describes as a "heavy wave" of US strikes on Iranian military targets has effectively dismantled the established rules of engagement. For over a decade, the United States and the Islamic Republic of Iran operated within the confines of a "shadow war"—a sophisticated game of attrition characterized by cyberattacks, maritime skirmishes, and the utilization of proxy militias to maintain plausible deniability.
@@ -23,7 +24,7 @@ However, the events of July 2026 have shattered that facade. We have moved beyon
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1605289357852-0397ad2db276?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxVUyUyMGxhdW5jaGVzJTIwJUUyJTgwJTk4aGVhdnl8ZW58MHwwfHx8MTc4NTQxMTgxMnww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="man in blue and black adidas jacket wearing white cap" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/ydWtwxxjvys/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxVUyUyMGxhdW5jaGVzJTIwJUUyJTgwJTk4aGVhdnl8ZW58MHwwfHx8MTc4NTQxMTgxMnww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@longlivehaas">Jacinto</a> on <a href="https://unsplash.com/photos/man-in-blue-and-black-adidas-jacket-wearing-white-cap-ydWtwxxjvys">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@longlivehaas">Jacinto</a> on <a href="https://unsplash.com/photos/man-in-blue-and-black-adidas-jacket-wearing-white-cap-ydWtwxxjvys">Unsplash</a></div>
 </div>
 
 

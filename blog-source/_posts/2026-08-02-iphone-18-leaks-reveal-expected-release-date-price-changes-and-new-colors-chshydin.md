@@ -13,6 +13,7 @@ image:
   photographer: "Bagus Hernawan"
   photographer_url: "https://unsplash.com/@bhaguz"
   unsplash_url: "https://unsplash.com/photos/person-holding-space-gray-iphone-7-A6JxK37IlPo"
+tags: [apple, smartphones, iphone, leaks, reveal]
 ---
 
 # 🚀 Introduction: Looking Toward 2026
@@ -29,7 +30,7 @@ When combined with rumors of a truly "all-screen" aesthetic—driven by under-di
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1616410011236-7a42121dd981?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxpUGhvbmUlMjAxOCUyMExlYWtzfGVufDB8MHx8fDE3ODU2MzM0MTR8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="silver iphone 6 and red iphone case" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/OKjJZNTl004/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxpUGhvbmUlMjAxOCUyMExlYWtzfGVufDB8MHx8fDE3ODU2MzM0MTR8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@onurbinay">Onur Binay</a> on <a href="https://unsplash.com/photos/silver-iphone-6-and-red-iphone-case-OKjJZNTl004">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@onurbinay">Onur Binay</a> on <a href="https://unsplash.com/photos/silver-iphone-6-and-red-iphone-case-OKjJZNTl004">Unsplash</a></div>
 </div>
 
 
@@ -100,7 +101,7 @@ This shift is also tied to Apple's 2030 carbon-neutral goals. The use of recycle
 
 The transition to the **A20 chip** is the most significant technical event of the iPhone 18 cycle. In semiconductor manufacturing, the "node" size refers to the distance between transistors. Moving to 2nm is not just about making things smaller; it's about changing the architecture of the transistor itself.
 
-Drawing from [semiconductor physics research](https://arxiv.org/abs/2301.00000), the A20 will likely transition from FinFET (Fin Field-Effect Transistor) to **GAAFET (Gate-All-Around Field-Effect Transistor)**. In a GAAFET, the gate surrounds the channel on all four sides, providing far superior electrostatic control. This reduces "leakage current"—the electricity that escapes and turns into wasted heat.
+Drawing from [semiconductor physics research](https://arxiv.org/abs/2304.08175), the A20 will likely transition from FinFET (Fin Field-Effect Transistor) to **GAAFET (Gate-All-Around Field-Effect Transistor)**. In a GAAFET, the gate surrounds the channel on all four sides, providing far superior electrostatic control. This reduces "leakage current"—the electricity that escapes and turns into wasted heat.
 
 **The 2nm Performance Dividends:**
 *   **Thermal Efficiency**: A projected **15-20% reduction in power consumption** for the same workload, meaning less throttling during heavy gaming or AI processing.

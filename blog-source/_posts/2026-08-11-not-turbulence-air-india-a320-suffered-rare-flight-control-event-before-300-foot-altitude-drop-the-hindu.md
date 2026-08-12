@@ -28,7 +28,7 @@ This wasn't weather. This was a "rare flight-control event." In the simplest ter
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1622926625491-dedb9315ff64?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxOb3QlMjB0dXJidWxlbmNlJTNBJTIwQWlyfGVufDB8MHx8fDE3ODY0MDY5NTJ8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="white and black fish wall decor" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/JjgesqSOd2o/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxOb3QlMjB0dXJidWxlbmNlJTNBJTIwQWlyfGVufDB8MHx8fDE3ODY0MDY5NTJ8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@reskp">Jametlene Reskp</a> on <a href="https://unsplash.com/photos/white-and-black-fish-wall-decor-JjgesqSOd2o">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@reskp">Jametlene Reskp</a> on <a href="https://unsplash.com/photos/white-and-black-fish-wall-decor-JjgesqSOd2o">Unsplash</a></div>
 </div>
 
 
@@ -83,7 +83,7 @@ However, this protection relies entirely on the integrity of the data coming fro
 
 ## ⚖️ The "Laws" of the Plane: Normal, Alternate, and Direct
 
-The A320 does not operate in a single mode. Depending on the health of its sensors and computers, it switches between different "Flight Control Laws." This hierarchy is a critical safety feature designed to ensure the plane remains flyable even during multiple system failures, a concept explored deeply in [Flight Control Law Switching research](https://arxiv.org/abs/2105.00000).
+The A320 does not operate in a single mode. Depending on the health of its sensors and computers, it switches between different "Flight Control Laws." This hierarchy is a critical safety feature designed to ensure the plane remains flyable even during multiple system failures, a concept explored deeply in [Flight Control Law Switching research](https://arxiv.org/abs/2304.14350).
 
 ### 1. Normal Law
 This is the standard operating mode. Full digital protections are active. The pilot provides "load factor" commands (e.g., "I want the plane to climb"), and the computer handles the precise surface movements to achieve that goal while ensuring the plane stays within the safe envelope.
@@ -100,7 +100,7 @@ In the Air India case, the aircraft was operating under **Normal Law**. The "mom
 
 ## 🗳️ The Sensor Glitch and the "Voting" Process
 
-How does a flight computer know if a sensor is lying? It uses a process called "voting logic" or "sensor fusion," a cornerstone of [Fault-Tolerant Control systems](https://arxiv.org/abs/1911.00000).
+How does a flight computer know if a sensor is lying? It uses a process called "voting logic" or "sensor fusion," a cornerstone of [Fault-Tolerant Control systems](https://arxiv.org/abs/1910.14127).
 
 The A320 utilizes three independent **Air Data Inertial Reference Units (ADIRUs)**. These units combine information from Pitot tubes (speed), static ports (altitude), and accelerometers (attitude). To ensure accuracy, the computers constantly compare the readings from all three ADIRUs.
 
@@ -178,8 +178,8 @@ As the aviation industry moves toward increased autonomy and the integration of 
 *   **Wikipedia:** [Airbus A320 Family Technical Specifications](https://en.wikipedia.org/wiki/Airbus_A320_family)
 *   **SKYbrary:** [Uncommanded Flight Control Movements](https://skybrary.aero/)
 *   **DGCA India:** [Official Safety Directives and Aviation Regulations](https://www.dgca.gov.in)
-*   **ArXiv:** [Analysis of Flight Control Law Switching in Fly-By-Wire Aircraft](https://arxiv.org/abs/2105.00000)
-*   **ArXiv:** [Fault-Tolerant Control for Commercial Aircraft based on Sensor Fusion](https://arxiv.org/abs/1911.00000)
+*   **ArXiv:** [Fault Tolerant Super Twisting Sliding Mode Control of a Quadrotor UAV Using Control Allocation](https://arxiv.org/abs/2304.14350)
+*   **ArXiv:** [Self-Repairing Hardware Architecture for Safety-Critical Cyber-Physical-Systems](https://arxiv.org/abs/1910.14127)
 *   **FAA:** [Flight Standards and Airworthiness Directives](https://www.faa.gov)
 *   **EASA:** [Safety Oversight and Certification Standards](https://www.easa.europa.eu)
 *   **Airbus:** [Flight Control Laws and Envelope Protection Documentation](https://www.airbus.com)

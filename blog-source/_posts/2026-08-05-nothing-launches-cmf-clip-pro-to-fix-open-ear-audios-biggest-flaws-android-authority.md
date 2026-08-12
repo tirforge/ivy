@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   For over a decade, the consumer audio market has been defined by a binary choice that leaves many users dissatisfied. On one side, we have the traditi
+tags: [smartphones, audio, nothing, launches, audios]
 ---
 
 # Why CMF's Clip Pro Might Actually Fix Open-Ear Headphones

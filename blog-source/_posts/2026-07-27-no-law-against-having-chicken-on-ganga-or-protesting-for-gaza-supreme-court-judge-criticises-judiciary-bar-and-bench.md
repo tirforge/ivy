@@ -12,6 +12,7 @@ image:
   photographer: "Kalea Morgan"
   photographer_url: "https://unsplash.com/@kakalea"
   unsplash_url: "https://unsplash.com/photos/grayscale-photo-of-woman-holding-i-love-you-to-the-moon-and-back--R3pWoWJmTY"
+tags: [supreme-court, courts, india-politics, india]
 ---
 
 # ⚖️ Justice Gavai on Why Judges Shouldn't Play Moral Police
@@ -28,7 +29,7 @@ This is not merely a debate about diet or foreign policy; it is a fundamental cr
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1609593949896-c79049c40f1d?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxObyUyMGxhdyUyMGFnYWluc3R8ZW58MHwwfHx8MTc4NTExNTE3Mnww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="people standing on street during daytime" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/MXgh6ydt7Is/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxObyUyMGxhdyUyMGFnYWluc3R8ZW58MHwwfHx8MTc4NTExNTE3Mnww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@deastama">Deastama</a> on <a href="https://unsplash.com/photos/people-standing-on-street-during-daytime-MXgh6ydt7Is">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@deastama">Deastama</a> on <a href="https://unsplash.com/photos/people-standing-on-street-during-daytime-MXgh6ydt7Is">Unsplash</a></div>
 </div>
 
 

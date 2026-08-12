@@ -20,3 +20,4 @@ scripts/used_topics.json
 
 # Local dev secrets (never commit)
 .dev.vars
+blog-source/jekyll.log

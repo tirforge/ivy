@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   The global semiconductor landscape is currently undergoing a seismic shift, moving away from the era of borderless efficiency toward a fragmented era 
+tags: [semiconductors, chipmaker, becomes, mainland, chinas]
 ---
 
 # 🚀 The Silicon Sovereign: How CXMT Became China's Most Valuable Chip Titan

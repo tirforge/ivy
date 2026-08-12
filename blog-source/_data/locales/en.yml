@@ -1,0 +1,4 @@
+# Site-side locale overrides — deep-merged over the Chirpy theme's en.yml.
+# Kept minimal on purpose: only keys we intentionally change.
+not_found:
+  statement: "This page wandered off into the 4D pocket and couldn't find its way back."

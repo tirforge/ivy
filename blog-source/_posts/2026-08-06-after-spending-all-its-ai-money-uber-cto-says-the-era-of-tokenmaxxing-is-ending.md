@@ -13,6 +13,7 @@ image:
   photographer: "Frugal Flyer"
   photographer_url: "https://unsplash.com/@frugalflyer"
   unsplash_url: "https://unsplash.com/photos/calendar-VbdUnqoe5UU"
+tags: [spending, money, tokenmaxxing, ending]
 ---
 
 # 📉 Brute Force is Just Too Expensive: Moving from Long-Context LLMs to Efficiency
@@ -29,7 +30,7 @@ But for global enterprises like Uber—where a few milliseconds of latency can r
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1650821288564-d543d3533bc1?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBZnRlciUyMHNwZW5kaW5nJTIwYWxsfGVufDB8MHx8fDE3ODYwMTY3NjN8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="calendar" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/V-CGr9T7kAM/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBZnRlciUyMHNwZW5kaW5nJTIwYWxsfGVufDB8MHx8fDE3ODYwMTY3NjN8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@frugalflyer">Frugal Flyer</a> on <a href="https://unsplash.com/photos/calendar-V-CGr9T7kAM">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@frugalflyer">Frugal Flyer</a> on <a href="https://unsplash.com/photos/calendar-V-CGr9T7kAM">Unsplash</a></div>
 </div>
 
 

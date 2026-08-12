@@ -13,6 +13,7 @@ image:
   photographer: "Clem Onojeghuo"
   photographer_url: "https://unsplash.com/@clemono"
   unsplash_url: "https://unsplash.com/photos/macro-photography-of-blue-wooden-door-painted-with-number-6-H-82Nbe8m7o"
+tags: [drones, war, ukrainian, drone, attack]
 ---
 
 For years, the inhabitants of Belgorod, a regional center in Russia’s borderlands, viewed the conflict in Ukraine as a distant storm—one that occasionally rained shrapnel but remained largely contained within the borders of the neighboring state. However, the sonic landscape of the city has fundamentally shifted. The thunderous roar of heavy artillery and the shrieking descent of cruise missiles have been joined, and in some cases replaced, by a high-pitched, insect-like buzz. This is the sound of the Unmanned Aerial Vehicle (UAV), and it signals a profound evolution in the strategy of the Ukrainian Armed Forces.
@@ -27,7 +28,7 @@ For the first time since the full-scale invasion of 2022, the Russian domestic f
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1607967511753-2cb66c5cbf8a?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTaXglMjBkaWUlMjBpbnxlbnwwfDB8fHwxNzg2MzIwNjUyfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="white and black p printed road sign" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/510t2DpFDd0/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTaXglMjBkaWUlMjBpbnxlbnwwfDB8fHwxNzg2MzIwNjUyfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@kairohweder">Kai Rohweder</a> on <a href="https://unsplash.com/photos/white-and-black-p-printed-road-sign-510t2DpFDd0">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@kairohweder">Kai Rohweder</a> on <a href="https://unsplash.com/photos/white-and-black-p-printed-road-sign-510t2DpFDd0">Unsplash</a></div>
 </div>
 
 

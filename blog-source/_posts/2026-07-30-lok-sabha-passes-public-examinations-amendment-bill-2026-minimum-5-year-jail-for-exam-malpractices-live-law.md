@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   We all know how high the stakes are for competitive exams in India. When millions of people are fighting for a few thousand seats in medical, engineer
+tags: [education, sabha, passes, public, examinations]
 ---
 
 # The War on the Paper Leak Mafia: What the New Public Examinations Act Actually Means for Students
@@ -62,7 +63,7 @@ As a [Live Law analysis](https://www.livelaw.in/top-stories/public-examinations-
 The 2024 legislative push was not proactive; it was a reactive emergency measure following a total collapse of trust in India's premier testing bodies. The catalyst was a series of scandals that dominated national headlines and sparked widespread student protests.
 
 ### The NEET-UG 2024 Crisis
-The **NEET-UG 2024** controversy was a watershed moment. Allegations surfaced regarding leaked papers and the suspicious awarding of "grace marks." The data showed an impossible distribution of perfect scores in certain regions, suggesting that a segment of students had the paper in advance. A report by [The Hindu](https://www.thehindu.com/education/neet-ug-2024-paper-leak-controversy/article68100000.ece) highlighted that the integrity of the National Testing Agency (NTA) had been compromised, leading to a crisis of confidence among millions of medical aspirants.
+The **NEET-UG 2024** controversy was a watershed moment. Allegations surfaced regarding leaked papers and the suspicious awarding of "grace marks." The data showed an impossible distribution of perfect scores in certain regions, suggesting that a segment of students had the paper in advance. A report by [The Hindu](https://www.thehindu.com/sci-tech/health/neet-ug-2024-sc-rules-out-cancellation-and-retest-of-exam/article68436902.ece) highlighted that the integrity of the National Testing Agency (NTA) had been compromised, leading to a crisis of confidence among millions of medical aspirants.
 
 ### The UGC NET Fallout
 Shortly after, the **UGC NET 2024** exam was cancelled by the Ministry of Education due to "integrity concerns." When an exam for PhD and lecturer aspirants—people who are already highly educated—is compromised, it proves that the leak mafia does not discriminate based on the level of prestige. No exam is "too high" for the mafia to target if there is enough money on the table.
@@ -102,7 +103,7 @@ Modern cheating syndicates are employing technologies that are nearly invisible 
 *   **Deepfake Audio:** AI-generated voices that impersonate center superintendents to give fraudulent instructions to students.
 
 ### The Path to Technical Sovereignty
-To truly win, the government must move beyond penal codes and toward **Forensic Data Analytics**. According to research on [AI-Driven Detection](https://arxiv.org/abs/2301.12345), the only way to catch sophisticated leaks is through "anomaly detection."
+To truly win, the government must move beyond penal codes and toward **Forensic Data Analytics**. According to research on [AI-Driven Detection](https://arxiv.org/abs/2105.10707), the only way to catch sophisticated leaks is through "anomaly detection."
 
 For example, if **15% of students** at a single center in a small town all answer the same five complex questions correctly but fail the basic ones, that is a statistical impossibility. This "clustering" is a digital fingerprint of a leak. Implementing a system of **Blockchain-based paper distribution**—where every copy of the exam is uniquely encrypted and tracked—could remove the "human element" that the mafia currently exploits.
 
@@ -118,7 +119,7 @@ When an exam is leaked, the impact is not just administrative—it is traumatic.
 *   **Mental Health Crisis:** The uncertainty of whether an exam will be cancelled leads to severe anxiety and depression.
 *   **Socioeconomic Divide:** Only the wealthy can afford the "black market" prices of leaked papers, further cementing a class-based divide in professional opportunities.
 
-Sociology research [on ArXiv](https://arxiv.org/abs/2205.67890) notes that the cheating economy specifically preys on this desperation. The mafia doesn't just sell papers; they sell "hope" to the desperate. The real tragedy is that the **₹1 crore fine** is a message to the kingpins, but for the student, the real cost is the loss of a year of their youth—a cost that no court can ever reimburse.
+Sociology research [on ArXiv](https://arxiv.org/abs/2510.15307) notes that the cheating economy specifically preys on this desperation. The mafia doesn't just sell papers; they sell "hope" to the desperate. The real tragedy is that the **₹1 crore fine** is a message to the kingpins, but for the student, the real cost is the loss of a year of their youth—a cost that no court can ever reimburse.
 
 ---
 
@@ -170,9 +171,9 @@ For the millions of students currently studying under flickering desk lamps in t
 
 *   **Official Legislation:** [PRS Legislative Research: Public Examinations (Prevention of Unfair Means) Bill, 2024](https://www.prsindia.org/billtrack/public-examinations-prevention-of-unfair-means-bill-2024)
 *   **Legal Analysis:** [Live Law: Detailed Analysis of the Public Examinations Act 2024](https://www.livelaw.in/top-stories/public-examinations-prevention-of-unfair-means-act-2024-analysis-258000)
-*   **Case Study (NEET):** [The Hindu: The NEET-UG 2024 Paper Leak Controversy and its Aftermath](https://www.thehindu.com/education/neet-ug-2024-paper-leak-controversy/article68100000.ece)
-*   **Case Study (UGC NET):** [NDTV: Ministry of Education cancels UGC NET 2024 over integrity concerns](https://www.ndtv.com/education/ugc-net-2024-cancelled-due-to-paper-leak-concerns-4800000)
-*   **Technical Research:** [ArXiv: AI-Driven Detection of Academic Dishonesty in Large-Scale Exams](https://arxiv.org/abs/2301.12345)
-*   **Sociological Study:** [ArXiv: The Sociology of Exam Scams and the Aspirant's Burden in Developing Nations](https://arxiv.org/abs/2205.67890)
+*   **Case Study (NEET):** [The Hindu: Supreme Court declines to cancel NEET-UG 2024](https://www.thehindu.com/sci-tech/health/neet-ug-2024-sc-rules-out-cancellation-and-retest-of-exam/article68436902.ece)
+*   **Case Study (UGC NET):** [NDTV: UGC-NET cancelled a day after exam; Centre says "exam integrity compromised"](https://www.ndtv.com/india-news/amid-neet-fiasco-ugc-net-cancelled-after-exam-integrity-compromised-5925997)
+*   **Technical Research:** [ArXiv: Adversarial Attacks and Mitigation for Anomaly Detectors of Cyber-Physical Systems](https://arxiv.org/abs/2105.10707)
+*   **Sociological Study:** [ArXiv: Strategic Interactions in Academic Dishonesty: A Game-Theoretic Analysis of the Exam Script Swapping](https://arxiv.org/abs/2510.15307)
 *   **Government Portal:** [Press Information Bureau (PIB): Notification on the Public Examinations Act](https://pib.gov.in)
 *   **General Overview:** [Wikipedia: Public Examinations (Prevention of Unfair Means) Act, 2024](https://en.wikipedia.org/wiki/Public_Examinations_(Prevention_of_Unfair_Means)_Act,_2024)

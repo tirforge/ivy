@@ -12,11 +12,12 @@ image:
   photographer: "saad ali"
   photographer_url: "https://unsplash.com/@saadalii07"
   unsplash_url: "https://unsplash.com/photos/two-men-talking-to-children-outdoors-p8BCyGn5VCE"
+tags: [india, india-politics, rahul, gandhi, detained]
 ---
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1624280252414-45004b6c0444?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxSYWh1bCUyMEdhbmRoaSUyMGRldGFpbmVkJTNBfGVufDB8MHx8fDE3ODQ2NTAxNzF8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="man in white dress shirt sitting on tree branch during daytime" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/-Di6VS0nSqg/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxSYWh1bCUyMEdhbmRoaSUyMGRldGFpbmVkJTNBfGVufDB8MHx8fDE3ODQ2NTAxNzF8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@ml_qureshi">ml _qureshi</a> on <a href="https://unsplash.com/photos/man-in-white-dress-shirt-sitting-on-tree-branch-during-daytime--Di6VS0nSqg">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@ml_qureshi">ml _qureshi</a> on <a href="https://unsplash.com/photos/man-in-white-dress-shirt-sitting-on-tree-branch-during-daytime--Di6VS0nSqg">Unsplash</a></div>
 </div>
 
 

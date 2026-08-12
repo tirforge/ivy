@@ -7,6 +7,7 @@ mermaid: true
 math: true
 description: >-
   The Indian telecom landscape has always been a high-stakes battlefield, but every few years, a move occurs that doesn't just nudge the market—it compl
+tags: [gaming, independence, announced, 100mbps, broadband]
 ---
 
 # 🚀 The Great Broadband Reset: How Jio’s Rs 6,000 Price Cut is Changing the Game

@@ -48,6 +48,24 @@ social:
 
 paginate: 5
 
+# Curated topics shown in the home "Browse by topic" nav and the Topics page
+# chips. `slug` is byte-exact and case-sensitive against post tags in
+# frontmatter (e.g. the "AI" tag is stored uppercase) — links are only
+# rendered when the tag exists, so missing topics are skipped.
+curated_topics:
+  - { name: Technology, slug: technology }
+  - { name: AI, slug: AI }
+  - { name: India, slug: india }
+  - { name: Smartphones, slug: smartphones }
+  - { name: Education, slug: education }
+  - { name: Health, slug: health }
+  - { name: Aviation, slug: aviation }
+  - { name: India Politics, slug: india-politics }
+  - { name: Apple, slug: apple }
+  - { name: Music, slug: music }
+  - { name: Privacy, slug: privacy }
+  - { name: Cybersecurity, slug: cybersecurity }
+
 comments:
   active:
 

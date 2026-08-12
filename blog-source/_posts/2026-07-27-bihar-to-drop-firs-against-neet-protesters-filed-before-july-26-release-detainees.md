@@ -12,6 +12,7 @@ image:
   photographer: "Vizag Explore"
   photographer_url: "https://unsplash.com/@vizagexplore"
   unsplash_url: "https://unsplash.com/photos/a-field-with-hay-bales-in-the-distance-IMoWA8Lu6o8"
+tags: [india-politics, education, bihar, against, protesters]
 ---
 
 # 🩺 Healing the Rift: Why Bihar is Dropping Charges Against NEET Protesters
@@ -31,7 +32,7 @@ In a surprising turn of events, the Bihar government has decided to drop FIRs ag
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1672561924208-7762120e7077?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxCaWhhciUyMHRvJTIwZHJvcHxlbnwwfDB8fHwxNzg1MTcxMDA5fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a lush green field with a house in the middle" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/4rRbOQ4IZqY/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxCaWhhciUyMHRvJTIwZHJvcHxlbnwwfDB8fHwxNzg1MTcxMDA5fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@pervezrobin">Pervez Robin</a> on <a href="https://unsplash.com/photos/a-lush-green-field-with-a-house-in-the-middle-4rRbOQ4IZqY">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@pervezrobin">Pervez Robin</a> on <a href="https://unsplash.com/photos/a-lush-green-field-with-a-house-in-the-middle-4rRbOQ4IZqY">Unsplash</a></div>
 </div>
 
 

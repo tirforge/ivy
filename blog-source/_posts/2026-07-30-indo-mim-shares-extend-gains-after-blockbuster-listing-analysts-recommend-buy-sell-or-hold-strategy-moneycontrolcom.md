@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   You know how the Indian stock market loves a "blockbuster" IPO? We see it all the time—a stock rockets up on day one, fueled by retail euphoria and a 
+tags: [shares, extend, gains, blockbuster, listing]
 ---
 
 # Indo-MIM: A Blockbuster Debut and the Big Question Over Its Price Tag

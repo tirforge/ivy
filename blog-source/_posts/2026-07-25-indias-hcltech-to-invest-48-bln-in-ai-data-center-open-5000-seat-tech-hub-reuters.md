@@ -7,6 +7,7 @@ mermaid: true
 math: true
 description: >-
   For three decades, the narrative of the Indian Information Technology (IT) sector was defined by a single, powerful concept: **labor arbitrage**. The 
+tags: [india, technology, indias, hcltech, invest]
 ---
 
 # 🚀 The $1.48 Billion Bet: How HCLTech is Engineering India's AI Future

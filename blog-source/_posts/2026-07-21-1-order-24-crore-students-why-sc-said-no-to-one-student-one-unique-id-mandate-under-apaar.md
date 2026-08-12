@@ -12,6 +12,7 @@ image:
   photographer: "Samuel Regan-Asante"
   photographer_url: "https://unsplash.com/@reganography"
   unsplash_url: "https://unsplash.com/photos/a-red-order-sign-hanging-from-the-side-of-a-building-rHXI_D1yltA"
+tags: [education, order, crore, students, student]
 ---
 
 Imagine the scale of this digital architecture: **24 crore students**—ranging from toddlers in preschool to PhD candidates—each assigned a single, lifelong digital identity. This is the **APAAR (Automated Permanent Academic Account Registry)**, the center-piece of India’s "One Nation, One Student ID" plan. On paper, it presents as a bureaucratic dream. It promises a frictionless method to transfer academic credits, a secure digital locker for all certifications, and a definitive end to the nightmare of hunting down physical paperwork every time a student applies for a university or a scholarship.
@@ -28,7 +29,7 @@ This is where the Supreme Court of India becomes the final arbiter. By leaning o
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1728404050703-42fe0cc01ff5?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwxJTIwT3JkZXIlMkMlMjAyNHxlbnwwfDB8fHwxNzg0NjMzNDA2fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="A sign that is lit up in the dark" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/53dp_Oyt3m0/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwxJTIwT3JkZXIlMkMlMjAyNHxlbnwwfDB8fHwxNzg0NjMzNDA2fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@jayopeniano">Jay Openiano</a> on <a href="https://unsplash.com/photos/a-sign-that-is-lit-up-in-the-dark-53dp_Oyt3m0">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@jayopeniano">Jay Openiano</a> on <a href="https://unsplash.com/photos/a-sign-that-is-lit-up-in-the-dark-53dp_Oyt3m0">Unsplash</a></div>
 </div>
 
 

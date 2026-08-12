@@ -12,6 +12,7 @@ image:
   photographer: "Nick Fewings"
   photographer_url: "https://unsplash.com/@jannerboy62"
   unsplash_url: "https://unsplash.com/photos/ouch-sign-SG9Ycz2uqGs"
+tags: [india, india-politics, oppns, sentiments, rajya]
 ---
 
 **Alternative Headline: Sentiments vs. Statutes: That Moment the Rajya Sabha Chairman Told Rijiju to Talk to Amit Shah**
@@ -26,7 +27,7 @@ According to reports from the [Hindustan Times](https://www.hindustantimes.com),
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1714327293333-f75d52dbf269?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwlRTIlODAlOThFY2hvJTIwT3BwbiUyN3MlMjBzZW50aW1lbnRzfGVufDB8MHx8fDE3ODYwOTg4NTV8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a sign that says making sense is optional" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/thSiaZPe9vU/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwlRTIlODAlOThFY2hvJTIwT3BwbiUyN3MlMjBzZW50aW1lbnRzfGVufDB8MHx8fDE3ODYwOTg4NTV8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@simplicity">Marija Zaric</a> on <a href="https://unsplash.com/photos/a-sign-that-says-making-sense-is-optional-thSiaZPe9vU">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@simplicity">Marija Zaric</a> on <a href="https://unsplash.com/photos/a-sign-that-says-making-sense-is-optional-thSiaZPe9vU">Unsplash</a></div>
 </div>
 
 

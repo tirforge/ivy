@@ -12,6 +12,7 @@ image:
   photographer: "sunrise University"
   photographer_url: "https://unsplash.com/@alwarsunrise"
   unsplash_url: "https://unsplash.com/photos/crt-computer-monitor-bK5t_WPETow"
+tags: [technology, btech, course]
 ---
 
 It’s 2026, and let’s be honest—the tech world looks completely different than it did even a few years ago. We aren't just talking about "learning to code" or "making websites" anymore. We're living in a world of autonomous AI agents, quantum security, and GenAI that can essentially write its own manuals. 
@@ -30,7 +31,7 @@ Picking the "wrong" one won't ruin your life, but picking the *right* one means 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1719159381981-1327b22aff9b?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxidGVjaCUyMGNzJTIwdnMlMjBpdCUyMGNvdXJzZXxlbnwwfDB8fHwxNzgyNTc1MTQ3fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="A group of people sitting at desk with laptops" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/LKySOH0mr38/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxidGVjaCUyMGNzJTIwdnMlMjBpdCUyMGNvdXJzZXxlbnwwfDB8fHwxNzgyNTc1MTQ3fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@haseebm">Haseeb Modi</a> on <a href="https://unsplash.com/photos/a-group-of-people-sitting-at-desk-with-laptops-LKySOH0mr38">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@haseebm">Haseeb Modi</a> on <a href="https://unsplash.com/photos/a-group-of-people-sitting-at-desk-with-laptops-LKySOH0mr38">Unsplash</a></div>
 </div>
 
 

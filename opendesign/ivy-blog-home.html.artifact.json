@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "Ivy Blog — Medium-style Homepage",
+  "entry": "ivy-blog-home.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "primary": true,
+  "createdAt": "2026-08-12T02:02:58.310Z",
+  "updatedAt": "2026-08-12T02:02:58.317Z",
+  "metadata": {
+    "identifier": "ivy-blog-home",
+    "artifactType": "text/html",
+    "inferred": false
+  }
+}

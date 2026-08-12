@@ -5,12 +5,8 @@ date: 2026-07-26 15:38:42 +0000
 toc: true
 mermaid: true
 description: >-
-  ---
----
-
----
-title: "Mirabai Chanu: The Iron Will of Indian Weightlifting"
-tags: [mirabai-chanu, weightlifting, commonwealth-games, indian-sports, biomechanics, tops-scheme, olympics, sports-science]
+  Mirabai Chanu powered India to its first CWG 2026 gold with a historic weightlifting three-peat — the story of an iron will and an unmatched comeback.
+tags: [sports, weightlifting, india]
 ---
 
 # 🏋️‍♀️ Mirabai Chanu: The Iron Will of Indian Weightlifting

@@ -12,6 +12,7 @@ image:
   photographer: "Denny Müller"
   photographer_url: "https://unsplash.com/@redaquamedia"
   unsplash_url: "https://unsplash.com/photos/green-frog-iphone-case-beside-black-samsung-android-smartphone-HfWA-Axq6Ek"
+tags: [android, feature]
 ---
 
 Picture this: It’s a morning in May 2026. You don’t have to fumble through your phone, opening a calendar app to check your day, a weather app to see if you need an umbrella, or a notes app to find your to-do list. Instead, your phone—running **Android 17**—has already done the legwork. It’s analyzed your emails, your schedule, and the local weather to place a simple, helpful "Morning Brief" right on your lock screen. It hasn't just listed your meetings; it’s already drafted replies to a few urgent emails and calculated exactly when you should leave the house based on current traffic and your preference for a quiet drive.
@@ -26,7 +27,7 @@ Essentially, Android 17 is moving us from the "App Era" to the "Agent Era." Inst
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1694878982190-6e37aa9eb306?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxhbmRyb2lkJTIwMTclMjBmZWF0dXJlfGVufDB8MHx8fDE3ODI1ODM5OTZ8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a cell phone with a green icon on it" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/hkXmZ_jQP4k/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxhbmRyb2lkJTIwMTclMjBmZWF0dXJlfGVufDB8MHx8fDE3ODI1ODM5OTZ8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@kellysikkema">Kelly Sikkema</a> on <a href="https://unsplash.com/photos/a-cell-phone-with-a-green-icon-on-it-hkXmZ_jQP4k">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@kellysikkema">Kelly Sikkema</a> on <a href="https://unsplash.com/photos/a-cell-phone-with-a-green-icon-on-it-hkXmZ_jQP4k">Unsplash</a></div>
 </div>
 
 

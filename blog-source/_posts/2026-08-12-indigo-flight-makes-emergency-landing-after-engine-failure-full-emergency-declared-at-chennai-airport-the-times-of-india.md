@@ -25,7 +25,7 @@ The flight crew was forced to declare a "Full Emergency" at Chennai Internationa
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1726409410412-03417e9571b7?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxJbmRpR28lMjBmbGlnaHQlMjBtYWtlc3xlbnwwfDB8fHwxNzg2NTMxNDM0fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="A large jetliner sitting on top of an airport runway" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/4-MSW1OwSz4/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxJbmRpR28lMjBmbGlnaHQlMjBtYWtlc3xlbnwwfDB8fHwxNzg2NTMxNDM0fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@shafinur686rs">Md Shafinur Rahman</a> on <a href="https://unsplash.com/photos/a-large-jetliner-sitting-on-top-of-an-airport-runway-4-MSW1OwSz4">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@shafinur686rs">Md Shafinur Rahman</a> on <a href="https://unsplash.com/photos/a-large-jetliner-sitting-on-top-of-an-airport-runway-4-MSW1OwSz4">Unsplash</a></div>
 </div>
 
 

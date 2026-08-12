@@ -12,6 +12,7 @@ image:
   photographer: "BoliviaInteligente"
   photographer_url: "https://unsplash.com/@boliviainteligente"
   unsplash_url: "https://unsplash.com/photos/a-blue-cube-with-a-white-logo-7nLzbeVfjA4"
+tags: [samsung, health, technology]
 ---
 
 # Can a Ring Actually Keep You Out of the Doctor's Office? Samsung’s Big AI Bet
@@ -30,7 +31,7 @@ This shift represents a move toward the "Quantified Self" on a systemic scale. I
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxFeGNsdXNpdmUlM0ElMjBTYW1zdW5nJTI3cyUyMFZQfGVufDB8MHx8fDE3ODUwNTA0MDR8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="black and white iphone case" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/PdALQmfEqvE/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxFeGNsdXNpdmUlM0ElMjBTYW1zdW5nJTI3cyUyMFZQfGVufDB8MHx8fDE3ODUwNTA0MDR8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@anhnhat1205">Anh Nhat</a> on <a href="https://unsplash.com/photos/black-and-white-iphone-case-PdALQmfEqvE">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@anhnhat1205">Anh Nhat</a> on <a href="https://unsplash.com/photos/black-and-white-iphone-case-PdALQmfEqvE">Unsplash</a></div>
 </div>
 
 
@@ -40,7 +41,7 @@ Samsung’s vision is to provide a "movie" instead of a "snapshot." When an AI t
 
 Biometric drift occurs when your data begins to slide away from your own established baseline. For most people, a resting heart rate of 70 BPM is normal. But if *your* personal baseline is 55 BPM, and it suddenly climbs to 65 BPM over a week, that **18% increase** is a significant signal, even though you are still well within the "normal" range for the general population.
 
-As highlighted in research regarding [AI in preventative medicine](https://arxiv.org/abs/2211.67890), the power of wearables lies in this continuous monitoring. By detecting these shifts early, the AI can nudge a user to adjust their behavior—perhaps by prioritizing sleep or reducing caffeine—before the drift leads to a clinical event like burnout, a severe respiratory infection, or a cardiovascular episode.
+As highlighted in research regarding [AI in healthcare](https://arxiv.org/abs/2303.15563), the power of wearables lies in this continuous monitoring. By detecting these shifts early, the AI can nudge a user to adjust their behavior—perhaps by prioritizing sleep or reducing caffeine—before the drift leads to a clinical event like burnout, a severe respiratory infection, or a cardiovascular episode.
 
 > "The goal is to move from simple data collection to actionable intelligence," the Samsung VP told TechRadar.
 
@@ -86,7 +87,7 @@ Samsung’s AI handles this by monitoring SpO2 levels and movement patterns thro
 
 This is the "keeping people away from doctors" philosophy in action. Instead of every snoring adult undergoing a sleep study, the AI acts as a high-efficiency filter. Only those with high-probability flags go to the clinic, drastically reducing the load on sleep specialists and ensuring that those at highest risk are prioritized.
 
-Similarly, Samsung is exploring the integration of PPG (Photoplethysmography) sensors to monitor cardiovascular health. Research into [Deep Learning for Cardiovascular Diseases](https://arxiv.org/abs/2305.12345) indicates that these light-based sensors can be trained to detect arrhythmias and early signs of hypertension. If successfully implemented, the Galaxy ecosystem becomes a primary screening tool for heart disease, moving the point of detection from the clinic to the living room.
+Similarly, Samsung is exploring the integration of PPG (Photoplethysmography) sensors to monitor cardiovascular health. Research into [Deep Learning for Cardiovascular Diseases](https://arxiv.org/abs/1812.04693) indicates that these light-based sensors can be trained to detect arrhythmias and early signs of hypertension. If successfully implemented, the Galaxy ecosystem becomes a primary screening tool for heart disease, moving the point of detection from the clinic to the living room.
 
 ```mermaid
 graph TD
@@ -155,9 +156,9 @@ As we enter this era of biological intelligence, the goal is clear: use technolo
 
 - [TechRadar: Samsung's VP reveals AI health overhaul](https://www.techradar.com/health/exclusive-samsungs-vp-of-mobile-experience-reveals-more-about-samsungs-ai-health-overhaul)
 - [Samsung Global: Galaxy Ring Product Page](https://www.samsung.com/global/galaxy/galaxy-ring/)
-- [ArXiv: AI in Preventative Medicine Review](https://arxiv.org/abs/2211.67890)
-- [ArXiv: Privacy-Preserving AI for Health Data](https://arxiv.org/abs/2308.11223)
-- [ArXiv: Deep Learning for Cardiovascular Diseases](https://arxiv.org/abs/2305.12345)
+- [ArXiv: Privacy-preserving machine learning for healthcare: open challenges and future perspective](https://arxiv.org/abs/2303.15563)
+- [Wikipedia: Federated learning](https://en.wikipedia.org/wiki/Federated_learning)
+- [ArXiv: ECG Arrhythmia Classification Using Transfer Learning from 2-D CNN Features](https://arxiv.org/abs/1812.04693)
 - [Reuters: Samsung FDA Clearance for Sleep Apnea](https://www.reuters.com/technology/samsung-health-sleep-apnea-fda-clearance)
 - [Psychology Today: The Stress of Digital Tracking](https://www.psychologytoday.com/us/blog/digital-health/the-stress-of-tracking)
 - [Samsung Global: Galaxy Ring Energy Score](https://www.samsung.com/global/galaxy/galaxy-ring/energy-score/)

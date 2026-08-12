@@ -12,6 +12,7 @@ image:
   photographer: "Patrick Hendry"
   photographer_url: "https://unsplash.com/@worldsbetweenlines"
   unsplash_url: "https://unsplash.com/photos/person-doing-yoga-exercises-w5SgojGZooI"
+tags: [technology, hindutva, fanatic, adityanaths, message]
 ---
 
 # 🚩 The Saffron Surge in God's Own Country: How Yogi Adityanath’s Rhetoric Shook the Left's Fortress
@@ -40,7 +41,7 @@ This phenomenon was not isolated to temple towns like Pathanamthitta; it permeat
 
 ### ⛰️ The Sabarimala Shadow: A Legacy of Alienation
 
-To understand why a Chief Minister from the Hindi heartland is impacting a Kerala election, one must analyze the [Sabarimala temple controversy](https://en.wikipedia.org/wiki/Sabarimala_temple_controversy). The conflict reached a breaking point in 2018 when the Supreme Court of India ruled that women of all ages should be permitted to enter the temple, overturning a centuries-old tradition that barred women between the ages of 10 and 50.
+To understand why a Chief Minister from the Hindi heartland is impacting a Kerala election, one must analyze the [Sabarimala temple controversy](https://en.wikipedia.org/wiki/Sabarimala_Temple). The conflict reached a breaking point in 2018 when the Supreme Court of India ruled that women of all ages should be permitted to enter the temple, overturning a centuries-old tradition that barred women between the ages of 10 and 50.
 
 The LDF government, driven by its ideological commitment to gender equality and the rule of law, attempted to implement the court's ruling. While legally sound, the move was perceived by thousands of devotees as an affront to the deity and a violation of sacred traditions. This created a massive trust deficit between the state and a significant portion of the Hindu population. For many, the LDF’s insistence on the "legal" and "secular" framework appeared devoid of empathy for the lived faith of the people.
 
@@ -141,12 +142,12 @@ As Kerala moves toward its next electoral cycle, the LDF faces a daunting task. 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1723406251847-168ea7a02077?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwlMjdIaW5kdXR2YSUyMGZhbmF0aWMlMjclMjBZb2dpfGVufDB8MHx8fDE3ODUyNTYxNTB8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="A group of people doing yoga on the beach" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/Deqn8q739DA/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwlMjdIaW5kdXR2YSUyMGZhbmF0aWMlMjclMjBZb2dpfGVufDB8MHx8fDE3ODUyNTYxNTB8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@jaspindersingh">Jaspinder Singh</a> on <a href="https://unsplash.com/photos/a-group-of-people-doing-yoga-on-the-beach-Deqn8q739DA">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@jaspindersingh">Jaspinder Singh</a> on <a href="https://unsplash.com/photos/a-group-of-people-doing-yoga-on-the-beach-Deqn8q739DA">Unsplash</a></div>
 </div>
 
 
 *   **Primary Reports**: [Deccan Herald: Analysis of CPI(M) Internal Review on Yogi Adityanath](https://www.deccanherald.com/)
-*   **Legal Background**: [Wikipedia: The Sabarimala Temple Controversy](https://en.wikipedia.org/wiki/Sabarimala_temple_controversy)
+*   **Legal Background**: [Wikipedia: The Sabarimala Temple Controversy](https://en.wikipedia.org/wiki/Sabarimala_Temple)
 *   **Official Party Stance**: [CPI(M) Official Portal](https://www.cpim.org/)
 *   **Electoral Data**: [Election Commission of India: 2024 Lok Sabha Results](https://results.eci.gov.in/)
 *   **Political Analysis**: [The Hindu: Trends in Kerala's Shifting Vote Share](https://www.thehindu.com/)

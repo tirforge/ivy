@@ -23,7 +23,7 @@ The jump from Generative AI to Agentic AI is probably the biggest shake-up in te
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxUaGUlMjBGdXR1cmUlMjBvZiUyMEFJJTIwQWdlbnRzfGVufDB8MHx8fDE3ODI0NjM3NDB8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="white and black typewriter with white printer paper" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/tGBXiHcPKrM/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxUaGUlMjBGdXR1cmUlMjBvZiUyMEFJJTIwQWdlbnRzfGVufDB8MHx8fDE3ODI0NjM3NDB8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@markuswinkler">Markus Winkler</a> on <a href="https://unsplash.com/photos/white-and-black-typewriter-with-white-printer-paper-tGBXiHcPKrM">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@markuswinkler">Markus Winkler</a> on <a href="https://unsplash.com/photos/white-and-black-typewriter-with-white-printer-paper-tGBXiHcPKrM">Unsplash</a></div>
 </div>
 
 

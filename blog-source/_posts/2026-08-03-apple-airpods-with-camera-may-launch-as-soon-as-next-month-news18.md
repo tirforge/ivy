@@ -12,6 +12,7 @@ image:
   photographer: "Daniel Romero"
   photographer_url: "https://unsplash.com/@rmrdnl"
   unsplash_url: "https://unsplash.com/photos/shallow-focus-photo-of-apple-airpods-AgLMrojqjAM"
+tags: [apple, airpods, camera, month, news18]
 ---
 
 # 🎧 Can Your Ears Actually See? Breaking Down the Camera-Enabled AirPods Rumors
@@ -28,7 +29,7 @@ If these rumors materialize, we aren't just looking at a hardware update; we are
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBcHBsZSUyMEFpclBvZHMlMjB3aXRofGVufDB8MHx8fDE3ODU3NzYwNTl8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="white apple airpods charging case" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/Mc5EwlPC3zA/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBcHBsZSUyMEFpclBvZHMlMjB3aXRofGVufDB8MHx8fDE3ODU3NzYwNTl8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@john_smit">John M. Smit</a> on <a href="https://unsplash.com/photos/white-apple-airpods-charging-case-Mc5EwlPC3zA">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@john_smit">John M. Smit</a> on <a href="https://unsplash.com/photos/white-apple-airpods-charging-case-Mc5EwlPC3zA">Unsplash</a></div>
 </div>
 
 
@@ -49,7 +50,7 @@ Integrating a camera into a chassis as small as an AirPod is not merely a design
 ### 1. The Power Paradox
 AirPods rely on minuscule batteries that are already stretched thin by ANC and Bluetooth connectivity. A standard CMOS image sensor running at 30 or 60 frames per second would deplete the battery in a matter of minutes. To circumvent this, Apple is likely exploring **event-based vision sensors**, also known as neuromorphic sensors.
 
-As detailed in various [ArXiv research papers](https://arxiv.org/abs/2103.00000), event-based cameras do not capture traditional frames. Instead, they only record changes in brightness at the pixel level. If nothing in the scene moves, the sensor consumes virtually zero power. This allows the device to "detect" motion or changes in the environment without the massive energy overhead of traditional video recording.
+As detailed in various [ArXiv research papers](https://arxiv.org/abs/1904.08405), event-based cameras do not capture traditional frames. Instead, they only record changes in brightness at the pixel level. If nothing in the scene moves, the sensor consumes virtually zero power. This allows the device to "detect" motion or changes in the environment without the massive energy overhead of traditional video recording.
 
 ### 2. The Thermal Wall
 Processing visual data generates significant heat. In an iPhone, this heat is dissipated across a large surface area of glass and aluminum. In an AirPod, the processor sits mere millimeters from the sensitive skin of the ear canal. If the chip exceeds a certain temperature threshold, it becomes not only uncomfortable but potentially dangerous.
@@ -157,7 +158,7 @@ The screen is fading. The era of Ambient Vision is here.
 *   **Wikipedia**: [Comprehensive History of the AirPods Lineup](https://en.wikipedia.org/wiki/AirPods)
 *   **Wikipedia**: [The Social Impact of Google Glass](https://en.wikipedia.org/wiki/Google_Glass)
 *   **Hacker News**: [Engineering Constraints of Wearable CMOS Sensors](https://news.ycombinator.com)
-*   **ArXiv**: [Neuromorphic Vision: Event-Based Sensing for Low Power](https://arxiv.org/abs/2103.00000)
+*   **ArXiv**: [Event-based Vision: A Survey (Gallego et al.)](https://arxiv.org/abs/1904.08405)
 *   **Meta**: [Ray-Ban Meta Smart Glasses Product Specifications](https://www.meta.com/smart-glasses/)
 *   **The Verge**: [Analysis of Ambient Computing Trends](https://www.theverge.com)
 *   **Wired**: [The Ethics of Always-On Wearable Cameras](https://www.wired.com)

@@ -12,6 +12,7 @@ image:
   photographer: "Marius Masalar"
   photographer_url: "https://unsplash.com/@marius"
   unsplash_url: "https://unsplash.com/photos/tilt-selective-photograph-of-music-notes-rPOmLGwai2w"
+tags: [theme, music]
 ---
 
 For a long time, the music world has felt like it's in a constant state of chaos. We went from the tactile feel of vinyl to the convenience of CDs, then survived the wild west of Napster, and eventually just let Spotify’s algorithms tell us what to like. But as we hit 2026, we aren't just talking about how we *get* our music anymore. We're talking about what music actually *is*.
@@ -26,7 +27,7 @@ This isn't just a passing phase; it's a total rewrite of how the industry works.
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1591025810539-a321000cda85?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHx0aGVtZSUyMG9mJTIwbXVzaWN8ZW58MHwwfHx8MTc4MjY0NjYyMXww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="musical notes on white paper" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/3pCRW_JRKM8/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHx0aGVtZSUyMG9mJTIwbXVzaWN8ZW58MHwwfHx8MTc4MjY0NjYyMXww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@shootnmatch">weston m</a> on <a href="https://unsplash.com/photos/musical-notes-on-white-paper-3pCRW_JRKM8">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@shootnmatch">weston m</a> on <a href="https://unsplash.com/photos/musical-notes-on-white-paper-3pCRW_JRKM8">Unsplash</a></div>
 </div>
 
 

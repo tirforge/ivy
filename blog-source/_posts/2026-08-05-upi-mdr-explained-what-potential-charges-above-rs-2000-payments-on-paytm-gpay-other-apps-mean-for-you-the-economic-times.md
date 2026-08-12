@@ -13,11 +13,12 @@ image:
   photographer: "Kai Gradert"
   photographer_url: "https://unsplash.com/@kai"
   unsplash_url: "https://unsplash.com/photos/up-paint-signage-HNx24Jy9esY"
+tags: [explained, potential, charges, above, payments]
 ---
 
 For years, "scanning and paying" in India has felt like a total win. Whether you're paying a street vendor ₹10 for a cutting chai or dropping ₹50,000 at an electronics store, the money moves in seconds—and more importantly, it’s **free**. UPI didn't just change how we handle money; it changed the psychological fabric of spending in India. By removing "friction"—the anxiety of exact change or the fear of transaction fees—UPI turned a cash-obsessed nation into a global leader in real-time digital payments.
 
-But lately, a wave of anxiety has swept through social media and news cycles. Headlines from outlets like [The Economic Times](https://economictimes.indiatimes.com/tech/technology/upi-mdr-explained-what-potential-charges-above-rs-2000-payments-on-paytm-gpay-other-apps-mean-for-you/articleshow/98638712.cms) have reintroduced a technical term that most users had happily ignored: **MDR**, or Merchant Discount Rate. With reports of "charges above Rs 2,000," millions of users on Paytm, Google Pay, and PhonePe are wondering if the "free ride" is finally over.
+But lately, a wave of anxiety has swept through social media and news cycles. Headlines from outlets like [The Economic Times](https://economictimes.indiatimes.com/industry/banking/finance/upi-mdr-explained-what-potential-charges-above-rs-2000-on-paytm-gpay-other-payment-apps-mean-for-you-and-merchants/articleshow/132903354.cms) have reintroduced a technical term that most users had happily ignored: **MDR**, or Merchant Discount Rate. With reports of "charges above Rs 2,000," millions of users on Paytm, Google Pay, and PhonePe are wondering if the "free ride" is finally over.
 
 Here is the bottom line: **No, UPI is not suddenly becoming a paid service for the average consumer.** 
 
@@ -29,7 +30,7 @@ The reality is far more nuanced. It is a story of regulatory balancing, the stru
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1776952199880-b9619672c86a?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxVUEklMjBNRFIlMjBleHBsYWluZWQlM0F8ZW58MHwwfHx8MTc4NTk0Nzc4MXww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="Close-up of text from a book about religious garments." loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/DgDqBeWzpdE/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxVUEklMjBNRFIlMjBleHBsYWluZWQlM0F8ZW58MHwwfHx8MTc4NTk0Nzc4MXww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@brett_jordan">Brett Jordan</a> on <a href="https://unsplash.com/photos/close-up-of-text-from-a-book-about-religious-garments-DgDqBeWzpdE">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@brett_jordan">Brett Jordan</a> on <a href="https://unsplash.com/photos/close-up-of-text-from-a-book-about-religious-garments-DgDqBeWzpdE">Unsplash</a></div>
 </div>
 
 
@@ -65,7 +66,7 @@ The [NPCI](https://www.npci.org.in) recognized that wallet providers provide add
 *   **Payments up to ₹2,000:** These remain **completely free** for both the user and the merchant.
 *   **Payments above ₹2,000:** A fee of up to **1.1%** can be charged.
 
-**Crucially, this fee is charged to the MERCHANT, not the customer.** If you use your wallet to buy a gadget for ₹2,500, the store pays the 1.1% fee. You still only pay ₹2,500. This distinction was clarified by [The Economic Times](https://economictimes.indiatimes.com/industry/banking/finance/industry/npci-clarifies-no-charges-for-regular-upi-payments/articleshow/98639100.cms), noting that regular bank-to-bank transfers are untouched.
+**Crucially, this fee is charged to the MERCHANT, not the customer.** If you use your wallet to buy a gadget for ₹2,500, the store pays the 1.1% fee. You still only pay ₹2,500. This distinction was clarified by [The Economic Times](https://economictimes.indiatimes.com/news/india/upi-to-remain-free-for-consumers-says-payments-council-of-india/articleshow/133035443.cms), noting that regular bank-to-bank transfers are untouched.
 
 ---
 
@@ -179,9 +180,9 @@ The digital revolution in India was built on the principle of accessibility. Mov
 
 *   **Regulatory Guidelines:** [National Payments Corporation of India (NPCI)](https://www.npci.org.in) - Official documentation on the UPI and PPI frameworks.
 *   **Policy Oversight:** [Reserve Bank of India (RBI)](https://www.rbi.org.in) - Guidelines on payment systems and digital currency (CBDC).
-*   **Market Analysis:** [The Economic Times: UPI MDR Explained](https://economictimes.indiatimes.com/tech/technology/upi-mdr-explained-what-potential-charges-above-rs-2000-payments-on-paytm-gpay-other-apps-mean-for-you/articleshow/98638712.cms) - Analysis of the impact of PPI charges.
-*   **Official Clarifications:** [The Economic Times: NPCI Clarification](https://economictimes.indiatimes.com/industry/banking/finance/industry/npci-clarifies-no-charges-for-regular-upi-payments/articleshow/98639100.cms) - Direct confirmation regarding bank-to-bank transfers.
+*   **Market Analysis:** [The Economic Times: UPI MDR Explained](https://economictimes.indiatimes.com/industry/banking/finance/upi-mdr-explained-what-potential-charges-above-rs-2000-on-paytm-gpay-other-payment-apps-mean-for-you-and-merchants/articleshow/132903354.cms) - Analysis of the impact of PPI charges.
+*   **Official Clarifications:** [The Economic Times: NPCI Clarification](https://economictimes.indiatimes.com/news/india/upi-to-remain-free-for-consumers-says-payments-council-of-india/articleshow/133035443.cms) - Direct confirmation regarding bank-to-bank transfers.
 *   **Technical Documentation:** [Wikipedia: Unified Payments Interface](https://en.wikipedia.org/wiki/Unified_Payments_Interface) - Comprehensive overview of the UPI architecture.
 *   **Financial Terms:** [Wikipedia: Merchant Discount Rate](https://en.wikipedia.org/wiki/Merchant_discount_rate) - Academic explanation of how MDR operates in global finance.
-*   **Wallet Frameworks:** [Wikipedia: Prepaid Payment Instrument](https://en.wikipedia.org/wiki/Prepaid_payment_instrument) - Details on the legal structure of digital wallets.
+*   **Wallet Frameworks:** [Wikipedia: Prepaid Payment Instrument](https://en.wikipedia.org/wiki/Stored-value_card) - Details on the legal structure of digital wallets.
 *   **Industry Discussion:** [Hacker News](https://news.ycombinator.com) - Community debates on fintech monetization and "Burn Rate" economics.

@@ -12,6 +12,7 @@ image:
   photographer: "Andrey Matveev"
   photographer_url: "https://unsplash.com/@zelebb"
   unsplash_url: "https://unsplash.com/photos/a-light-green-phone-with-a-paper-next-to-it-HZYcBANvpbs"
+tags: [smartphones, india, launched, 6500mah, battery]
 ---
 
 # 🔋 Finally, a Budget Phone That Actually Lasts: The iQOO Z11 Lite 5G
@@ -159,7 +160,7 @@ In the budget world, "luxury" is often defined by flashy specs that you only use
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1753973420919-d5231c31c6cb?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxpUU9PJTIwWjExJTIwTGl0ZXxlbnwwfDB8fHwxNzg1MDYzOTg5fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="A hand holds an iqoo smartphone." loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/tXBXrc-6LuQ/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxpUU9PJTIwWjExJTIwTGl0ZXxlbnwwfDB8fHwxNzg1MDYzOTg5fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@zelebb">Andrey Matveev</a> on <a href="https://unsplash.com/photos/a-hand-holds-an-iqoo-smartphone-tXBXrc-6LuQ">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@zelebb">Andrey Matveev</a> on <a href="https://unsplash.com/photos/a-hand-holds-an-iqoo-smartphone-tXBXrc-6LuQ">Unsplash</a></div>
 </div>
 
 

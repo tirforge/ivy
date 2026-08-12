@@ -6,6 +6,7 @@ toc: true
 mermaid: true
 description: >-
   For decades, the prevailing narrative of the internet was one of a "borderless" utopia. We were told that data was weightless—a digital mist that flow
+tags: [privacy, fastmail]
 ---
 
 For decades, the prevailing narrative of the internet was one of a "borderless" utopia. We were told that data was weightless—a digital mist that flowed seamlessly across oceans and continents, unbound by the archaic constraints of geography. This vision of the "Global Village" was seductive, promising a world where information was the only currency and maps were irrelevant. 

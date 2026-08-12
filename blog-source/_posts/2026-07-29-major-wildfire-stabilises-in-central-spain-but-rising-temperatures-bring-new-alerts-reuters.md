@@ -12,6 +12,7 @@ image:
   photographer: "Matt Palmer"
   photographer_url: "https://unsplash.com/@mattpalmer"
   unsplash_url: "https://unsplash.com/photos/wildfire-burning-across-hillside-at-dusk-kbTp7dBzHyY"
+tags: [major, wildfire, stabilises, central, spain]
 ---
 
 # Why "Stabilized" Fires in Guadalajara are Still a Big Deal: Heat, Wind, and Mega-Fires in Central Spain
@@ -26,7 +27,7 @@ With temperatures still climbing and the wind shifting across the Castilla-La Ma
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1511027643875-5cbb0439c8f1?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxNYWpvciUyMHdpbGRmaXJlJTIwc3RhYmlsaXNlc3xlbnwwfDB8fHwxNzg1MzQxNTMwfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="trees on fire" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/eAKDzK4lo4o/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxNYWpvciUyMHdpbGRmaXJlJTIwc3RhYmlsaXNlc3xlbnwwfDB8fHwxNzg1MzQxNTMwfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@thematthoward">Matt Howard</a> on <a href="https://unsplash.com/photos/trees-on-fire-eAKDzK4lo4o">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@thematthoward">Matt Howard</a> on <a href="https://unsplash.com/photos/trees-on-fire-eAKDzK4lo4o">Unsplash</a></div>
 </div>
 
 
@@ -56,7 +57,7 @@ Furthermore, the soil composition in this region is prone to hydrophobic behavio
 
 We are witnessing a fundamental shift in the behavior of Mediterranean wildfires. Historically, most fires in Spain were "surface fires"—low-intensity blazes that consumed the underbrush but left the canopy intact. Today, we are seeing the rise of "mega-fires," defined as blazes that cover more than **10,000 hectares** and exhibit behaviors that defy traditional firefighting tactics.
 
-According to research on [projected fire weather in the Mediterranean](https://arxiv.org/abs/2300.00000), the "fire weather window"—the period during which humidity is low and temperatures are high enough to sustain extreme fire—is expanding. We are now seeing a dangerous positive feedback loop: dry soil reduces evapotranspiration (the process by which plants release moisture into the air), which in turn makes the local atmosphere hotter and drier, further desiccating the soil.
+According to research on [global wildfire danger under climate change](https://www.nature.com/articles/ncomms8537), the "fire weather window"—the period during which humidity is low and temperatures are high enough to sustain extreme fire—is expanding. We are now seeing a dangerous positive feedback loop: dry soil reduces evapotranspiration (the process by which plants release moisture into the air), which in turn makes the local atmosphere hotter and drier, further desiccating the soil.
 
 The most terrifying manifestation of this is the **Pyrocumulonimbus (pyroCb) cloud**. These are essentially fire-generated thunderstorms. When a mega-fire releases an immense amount of heat and moisture, it creates a powerful updraft that pushes smoke and water vapor high into the troposphere. This forms a massive cumulonimbus cloud that can produce its own lightning—starting new fires miles away from the original front—and erratic, high-velocity wind gusts that push flames in random, unpredictable directions.
 
@@ -132,11 +133,11 @@ As Spain waits for the next heatwave, the lesson is clear: we cannot simply thro
 ## References
 
 - [Reuters: Major wildfire stabilises in central Spain](https://www.reuters.com/world/europe/major-wildfire-stabilises-central-spain-rising-temperatures-bring-new-alerts-2024-08-14)
-- [Wikipedia: Wildfires in Spain](https://en.wikipedia.org/wiki/Wildfires_in_Spain)
+- [Wikipedia: 2026 Spain wildfires](https://en.wikipedia.org/wiki/2026_Spain_wildfires)
 - [Wikipedia: Guadalajara (Spain)](https://en.wikipedia.org/wiki/Guadalajara_(Spain))
 - [Wikipedia: Castilla-La Mancha](https://en.wikipedia.org/wiki/Castilla-La_Mancha)
 - [EFFIS: European Forest Fire Information System](https://effis.jrc.ec.europa.eu/)
-- [ArXiv: Projected changes in fire weather in the Mediterranean](https://arxiv.org/abs/2300.00000)
+- **Jolly et al. (2015):** [Climate-induced variations in global wildfire danger (Nature Communications)](https://www.nature.com/articles/ncomms8537)
 - [Hacker News: AI for Wildfire Prediction](https://news.ycombinator.com/item?id=2345678)
 - [Copernicus: Sentinel-2 Satellite Data](https://sentinels.copernicus.eu/)
 - [European Environment Agency (EEA): Climate Change Impacts](https://www.eea.europa.eu/en)

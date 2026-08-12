@@ -12,6 +12,7 @@ image:
   photographer: "Khurshid Dustmurodov"
   photographer_url: "https://unsplash.com/@africuz"
   unsplash_url: "https://unsplash.com/photos/cricket-stadium-with-groundsmen-covering-the-pitch-zcLsFdzR5MI"
+tags: [cricket, ashes, schedule, announced, trent]
 ---
 
 # 🏏 The Return of the Nottingham Roar: Breaking Down the 2027 Ashes Schedule
@@ -28,7 +29,7 @@ This analysis dives deep into the dates, the strategic implications of the venue
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBc2hlcyUyMDIwMjclMjBzY2hlZHVsZXxlbnwwfDB8fHwxNzg0ODA2NTEyfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="crowd of people sitting on stadium seats" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/bY4cqxp7vos/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxBc2hlcyUyMDIwMjclMjBzY2hlZHVsZXxlbnwwfDB8fHwxNzg0ODA2NTEyfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@aksh1802">Aksh yadav</a> on <a href="https://unsplash.com/photos/crowd-of-people-sitting-on-stadium-seats-bY4cqxp7vos">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@aksh1802">Aksh yadav</a> on <a href="https://unsplash.com/photos/crowd-of-people-sitting-on-stadium-seats-bY4cqxp7vos">Unsplash</a></div>
 </div>
 
 

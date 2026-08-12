@@ -27,7 +27,7 @@ For the urban poor, the monsoon is not a seasonal change; it is a battle for exi
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1561931153-1c178973c0eb?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwyJTIwZGVhZCUyQyUyMHNldmVyYWx8ZW58MHwwfHx8MTc4NjUxNDU1MXww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="dead end signage" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/xI8cWGzAN5U/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHwyJTIwZGVhZCUyQyUyMHNldmVyYWx8ZW58MHwwfHx8MTc4NjUxNDU1MXww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@wizwow">Donald Giannatti</a> on <a href="https://unsplash.com/photos/dead-end-signage-xI8cWGzAN5U">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@wizwow">Donald Giannatti</a> on <a href="https://unsplash.com/photos/dead-end-signage-xI8cWGzAN5U">Unsplash</a></div>
 </div>
 
 

@@ -70,7 +70,7 @@
 (function () {
   var input = document.getElementById('story-search');
   if (!input) return;
-  var rows = Array.prototype.slice.call(document.querySelectorAll('.post-row'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.post-row, .featured-card'));
   var count = document.getElementById('search-count');
   var empty = document.getElementById('search-empty');
   function run() {
@@ -85,6 +85,30 @@
     if (empty) empty.hidden = n !== 0;
   }
   input.addEventListener('input', run);
+})();
+</script>
+
+<!-- ── TOC resilience ────────────────────────────────────────────────
+     post.min.js calls tocbot unconditionally, so a blocked/flaky tocbot
+     CDN script made it throw "ReferenceError: tocbot is not defined"
+     (an uncaught promise rejection in the console). Two layers:
+     1) a parse-time stub below — runs before the defer post.min.js — turns
+        a missing tocbot into a silent no-op instead of a throw;
+     2) the load-time cleanup hides the (dead) outline UI. -->
+<script>
+window.tocbot = window.tocbot || { init: function () {}, destroy: function () {}, refresh: function () {} };
+</script>
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    if (typeof tocbot !== 'undefined') return;
+    ['toc-bar', 'toc-solo-trigger', 'toc-popup', 'toc-wrapper'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
+    var cover = document.querySelector('.toc-border-cover');
+    if (cover) cover.style.display = 'none';
+  });
 })();
 </script>
 

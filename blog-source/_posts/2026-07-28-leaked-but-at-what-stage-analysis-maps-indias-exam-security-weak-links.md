@@ -12,6 +12,7 @@ image:
   photographer: "Matt Hoffman"
   photographer_url: "https://unsplash.com/@__matthoffman__"
   unsplash_url: "https://unsplash.com/photos/rain-drops-on-a-window-with-a-blurry-background-KtXP57MBDfU"
+tags: [india, education, leaked, stage, analysis]
 ---
 
 # 🚨 The Trust Gap: What’s Really Going On?
@@ -30,7 +31,7 @@ The catastrophic 2024 controversy surrounding the [NEET-UG and UGC-NET exams](ht
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1533684061023-65906fb695c0?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxMZWFrZWQlMkMlMjBidXQlMjBhdHxlbnwwfDB8fHwxNzg1MjM5MDQ5fDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="birds eye view of white open window" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/O8MImzp7ROo/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxMZWFrZWQlMkMlMjBidXQlMjBhdHxlbnwwfDB8fHwxNzg1MjM5MDQ5fDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/birds-eye-view-of-white-open-window-O8MImzp7ROo">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/birds-eye-view-of-white-open-window-O8MImzp7ROo">Unsplash</a></div>
 </div>
 
 

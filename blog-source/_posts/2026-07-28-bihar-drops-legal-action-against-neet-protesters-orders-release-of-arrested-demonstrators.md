@@ -12,6 +12,7 @@ image:
   photographer: "Bio Hemp Life"
   photographer_url: "https://unsplash.com/@biohemplife"
   unsplash_url: "https://unsplash.com/photos/white-and-blue-labeled-box-NbJOiq_H3Zk"
+tags: [india-politics, education, bihar, drops, legal]
 ---
 
 # 🎓 When Merit Hits a Breaking Point: The NEET Crisis in Bihar
@@ -144,7 +145,7 @@ The students of Bihar have proven that they are not passive recipients of a degr
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1651151891252-e5c1e1701718?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxCaWhhciUyMERyb3BzJTIwTGVnYWx8ZW58MHwwfHx8MTc4NTIwMDY1MHww&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="a concrete wall with a sign on it" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/CHGhU164GhI/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxCaWhhciUyMERyb3BzJTIwTGVnYWx8ZW58MHwwfHx8MTc4NTIwMDY1MHww" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@refat3158">Refat Ul Islam</a> on <a href="https://unsplash.com/photos/a-concrete-wall-with-a-sign-on-it-CHGhU164GhI">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@refat3158">Refat Ul Islam</a> on <a href="https://unsplash.com/photos/a-concrete-wall-with-a-sign-on-it-CHGhU164GhI">Unsplash</a></div>
 </div>
 
 

@@ -12,6 +12,7 @@ image:
   photographer: "Samuel Angor"
   photographer_url: "https://unsplash.com/@sammysays___"
   unsplash_url: "https://unsplash.com/photos/white-smartphone-with-google-logo-and-camera-array-O6Or-El4hdU"
+tags: [google-pixel, google, pixel]
 ---
 
 Timing is everything when investing in a new flagship smartphone. For the savvy consumer, there is usually a "sweet spot"—that precise window where the current model is fully polished, the Day One software bugs have been patched, and the price begins to dip aggressively just as the industry starts whispering about the next generation. 
@@ -30,7 +31,7 @@ Let's dissect the current deals, the actual utility of the Pixel 9, and the tech
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1724322535079-11b08f7f5c88?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxHb29nbGUlMjBQaXhlbCUyMDEwfGVufDB8MHx8fDE3ODY0Mjc3MTd8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="A person holding a cell phone in their hand" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/MuGEpHK8S4k/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxHb29nbGUlMjBQaXhlbCUyMDEwfGVufDB8MHx8fDE3ODY0Mjc3MTd8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@amanz">Amanz</a> on <a href="https://unsplash.com/photos/a-person-holding-a-cell-phone-in-their-hand-MuGEpHK8S4k">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@amanz">Amanz</a> on <a href="https://unsplash.com/photos/a-person-holding-a-cell-phone-in-their-hand-MuGEpHK8S4k">Unsplash</a></div>
 </div>
 
 

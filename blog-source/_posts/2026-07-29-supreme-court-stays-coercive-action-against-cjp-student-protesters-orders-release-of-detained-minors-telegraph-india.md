@@ -5,18 +5,14 @@ date: 2026-07-29 07:34:32 +0000
 toc: true
 mermaid: true
 description: >-
-  ---
+  The Supreme Court halts coercive action against student protesters and orders the release of detained minors — a flashpoint in India's student activism.
+tags: [supreme-court, india-politics, education]
 image:
   path: "https://images.unsplash.com/photo-1658958327132-a80f8a9409fb?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwxfHxTdXByZW1lJTIwQ291cnQlMjBzdGF5c3xlbnwwfDB8fHwxNzg1MzEwNDcyfDA&ixlib=rb-4.1.0&fm=webp&w=1200&h=630&fit=crop"
   alt: "a large white building with columns with United States Supreme Court Building in the background"
   photographer: "Fine Photographics"
   photographer_url: "https://unsplash.com/@finephotographics"
   unsplash_url: "https://unsplash.com/photos/a-large-white-building-with-columns-with-united-states-supreme-court-building-in-the-background-osJUjMNpcak"
----
-
----
-title: "Justice for Youth: SC Halts Coercion of CJP Protesters"
-tags: [supreme-court-india, student-rights, juvenile-justice, cjp, free-speech, indian-law, human-rights, activism]
 ---
 
 You know how things usually go when university students and the government clash? It is almost always a high-stakes tug-of-war between the state's desire for "maintaining order" and the fundamental right of the youth to actually speak up. Recently, the Supreme Court of India stepped in to halt what appeared to be a massive overreach by police forces against students linked to the [Citizens for Justice and Peace (CJP)](https://en.wikipedia.org/wiki/Citizens_for_Justice_and_Peace), an organization dedicated to documenting communal violence and fighting for the marginalized.
@@ -27,7 +23,7 @@ A bench led by **Justices B.R. Gavai and Sandeep Mehta** did more than just gran
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1603119380999-ef522dd64b3c?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTdXByZW1lJTIwQ291cnQlMjBzdGF5c3xlbnwwfDB8fHwxNzg1MzEwNDcyfDA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="beige concrete building under blue sky during daytime" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/U8WfiRpsQ7Y/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxTdXByZW1lJTIwQ291cnQlMjBzdGF5c3xlbnwwfDB8fHwxNzg1MzEwNDcyfDA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@ianhutchinson92">Ian Hutchinson</a> on <a href="https://unsplash.com/photos/beige-concrete-building-under-blue-sky-during-daytime-U8WfiRpsQ7Y">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@ianhutchinson92">Ian Hutchinson</a> on <a href="https://unsplash.com/photos/beige-concrete-building-under-blue-sky-during-daytime-U8WfiRpsQ7Y">Unsplash</a></div>
 </div>
 
 

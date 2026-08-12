@@ -1,0 +1,86 @@
+<!-- JS selector for site.
+     Site override of the Chirpy theme include. The stock include bundles every
+     CDN library into ONE jsdelivr /combine/ request (~3MB on post pages).
+     A single failed combine kills SJS, glightbox, clipboard, dayjs, tocbot AND
+     mermaid at once (observed live: tocbot missing -> post.min.js throws
+     "ReferenceError: tocbot is not defined"). Loading each library as its own
+     defer script isolates failures, parallelizes downloads, and keeps the same
+     per-layout gating. defer scripts run in document order, so the app bundle
+     below still sees every library it needs. -->
+
+{% assign type = 'cors' %}
+
+<!-- commons: full-text search -->
+<script defer src="{{ site.data.origin[type].search.js }}"></script>
+
+{% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' %}
+  <!-- image lazy-loading polyfill -->
+  <script defer src="{{ site.data.origin[type]['lazy-polyfill'].js }}"></script>
+
+  {% unless page.layout == 'home' %}
+    <!-- image popup + clipboard -->
+    <script defer src="{{ site.data.origin[type].glightbox.js }}"></script>
+    <script defer src="{{ site.data.origin[type].clipboard.js }}"></script>
+  {% endunless %}
+{% endif %}
+
+{% if page.layout == 'home'
+  or page.layout == 'post'
+  or page.layout == 'archives'
+  or page.layout == 'category'
+  or page.layout == 'tag'
+%}
+  <!-- dayjs: vendored locally (assets/js/lib/dayjs/) instead of jsdelivr. The
+       theme's home/post bundles call dayjs unconditionally, so a flaky CDN
+       request made them throw "ReferenceError: dayjs is not defined". These
+       four files total ~10KB and are now same-origin, so the datetime
+       localization can never be taken down by a CDN outage. -->
+  <script defer src="{{ '/assets/js/lib/dayjs/dayjs.min.js' | relative_url }}"></script>
+  <!-- en-only site: locale-en.js is hardcoded. If `lang` ever changes,
+       swap this for the matching locale file. -->
+  <script defer src="{{ '/assets/js/lib/dayjs/locale-en.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/lib/dayjs/plugin-relativeTime.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/lib/dayjs/plugin-localizedFormat.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.content contains '<h2' or page.content contains '<h3' and site.toc and page.toc %}
+  <script defer src="{{ site.data.origin[type].toc.js }}"></script>
+{% endif %}
+
+{% if page.mermaid %}
+  <script defer src="{{ site.data.origin[type].mermaid.js }}"></script>
+{% endif %}
+
+{% case page.layout %}
+  {% when 'home', 'categories', 'post', 'page' %}
+    {% assign js = page.layout %}
+  {% when 'archives', 'category', 'tag' %}
+    {% assign js = 'misc' %}
+  {% else %}
+    {% assign js = 'commons' %}
+{% endcase %}
+
+{% capture script %}/assets/js/dist/{{ js }}.min.js{% endcapture %}
+
+<script defer src="{{ script | relative_url }}"></script>
+
+{% if page.math %}
+  <!-- MathJax -->
+  <script src="{{ '/assets/js/data/mathjax.js' | relative_url }}"></script>
+  <script async src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="{{ site.data.origin[type].mathjax.js | relative_url }}"></script>
+{% endif %}
+
+<!-- Pageviews -->
+{% if page.layout == 'post' %}
+  {% assign provider = site.pageviews.provider %}
+
+  {% if provider and provider != empty %}
+    {% case provider %}
+      {% when 'goatcounter' %}
+        {% if site.analytics[provider].id != empty and site.analytics[provider].id %}
+          {% include pageviews/{{ provider }}.html %}
+        {% endif %}
+    {% endcase %}
+  {% endif %}
+{% endif %}

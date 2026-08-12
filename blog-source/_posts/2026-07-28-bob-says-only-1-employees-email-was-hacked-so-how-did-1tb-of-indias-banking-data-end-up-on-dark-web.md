@@ -13,6 +13,7 @@ image:
   photographer: "Aditya Hegde"
   photographer_url: "https://unsplash.com/@adihegde"
   unsplash_url: "https://unsplash.com/photos/bob-dylan-album-cover-held-in-a-dimly-lit-room-lcmDf5AtXNE"
+tags: [india, cybersecurity, privacy]
 ---
 
 # 🛡️ The 1TB Mystery: How One "Hacked Email" Opened the Vault for Millions in India
@@ -29,7 +30,7 @@ Let's pull back the curtain on the corporate spin, analyze the technical kill ch
 
 ### 📉 Section 1: The Breach Breakdown — 1TB vs. The Corporate Spin
 
-The incident came to light when threat actors on dark web forums, specifically [BreachForums](https://breachforums.st/), claimed to have exfiltrated a massive database of Bank of Baroda customer information. We are not talking about a few leaked spreadsheets; we are talking about **1 terabyte of raw data**. Reports suggest this dump included full names, account numbers, detailed transaction histories, and highly sensitive KYC (Know Your Customer) documents.
+The incident came to light when threat actors on dark web forums, specifically BreachForums, claimed to have exfiltrated a massive database of Bank of Baroda customer information. We are not talking about a few leaked spreadsheets; we are talking about **1 terabyte of raw data**. Reports suggest this dump included full names, account numbers, detailed transaction histories, and highly sensitive KYC (Know Your Customer) documents.
 
 The bank, however, maintained a "localized" narrative. By insisting that only one email was hit, they attempted to frame the event as a simple phishing error rather than a systemic network failure. But the math simply doesn't add up. 
 
@@ -160,8 +161,6 @@ As India accelerates its journey toward a fully digital economy, the banking sec
 *   **Reserve Bank of India (RBI) Cyber Security Framework:** [https://www.rbi.org.in/](https://www.rbi.org.in/)
 *   **CERT-In (Indian Computer Emergency Response Team):** [https://www.cert-in.org.in/](https://www.cert-in.org.in/)
 *   **OWASP Top 10 - Broken Access Control:** [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
-*   **ArXiv - Research on Lateral Movement in Enterprise Networks:** [https://arxiv.org/abs/2305.12345](https://arxiv.org/abs/2305.12345)
-*   **BreachForums (Incident Reports):** [https://breachforums.st/](https://breachforums.st/)
 *   **NIST Special Publication 800-207 (Zero Trust Architecture):** [https://csrc.nist.gov/](https://csrc.nist.gov/)
 *   **MITRE ATT&CK Framework - Credential Access:** [https://attack.mitre.org/](https://attack.mitre.org/)
 *   **Ministry of Electronics and IT (MeitY) - DPDP Act 2023:** [https://www.meity.gov.in/](https://www.meity.gov.in/)

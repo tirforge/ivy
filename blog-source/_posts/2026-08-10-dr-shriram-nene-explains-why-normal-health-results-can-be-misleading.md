@@ -12,6 +12,7 @@ image:
   photographer: "Usman Yousaf"
   photographer_url: "https://unsplash.com/@usmanyousaf"
   unsplash_url: "https://unsplash.com/photos/man-in-white-dress-shirt-wearing-black-framed-eyeglasses-pTrhfmj2jDA"
+tags: [health, misleading]
 ---
 
 You’ve just left the doctor's office. You're looking at your latest blood work, and every single number—cholesterol, glucose, liver enzymes—is in the clear. The doctor gives you the thumbs up and says, **"Everything is normal."**
@@ -26,7 +27,7 @@ There is a massive, often dangerous gap between "not being clinically sick" and 
 
 <div class="post-hero">
   <img src="https://images.unsplash.com/photo-1612349316228-5942a9b489c2?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxEciUyMFNocmlyYW0lMjBOZW5lfGVufDB8MHx8fDE3ODYzNTg5MjJ8MA&ixlib=rb-4.1.0&fm=webp&w=780&h=440&fit=crop" alt="man in white dress shirt wearing black framed eyeglasses" loading="lazy" width="780" height="440" data-unsplash-dl="https://api.unsplash.com/photos/SakqLf78KVo/download?ixid=M3w5ODUxMjJ8MHwxfHNlYXJjaHwyfHxEciUyMFNocmlyYW0lMjBOZW5lfGVufDB8MHx8fDE3ODYzNTg5MjJ8MA" />
-  <div class="post-hero-credit">📸 <a href="https://unsplash.com/@usmanyousaf">Usman Yousaf</a> on <a href="https://unsplash.com/photos/man-in-white-dress-shirt-wearing-black-framed-eyeglasses-SakqLf78KVo">Unsplash</a></div>
+  <div class="post-hero-credit"> <a href="https://unsplash.com/@usmanyousaf">Usman Yousaf</a> on <a href="https://unsplash.com/photos/man-in-white-dress-shirt-wearing-black-framed-eyeglasses-SakqLf78KVo">Unsplash</a></div>
 </div>
 
 

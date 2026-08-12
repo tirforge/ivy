@@ -1,16 +1,22 @@
 writing_task:
   description: >
-    Write a 2000+ word blog post about "{topic}".
+    Write a blog post about "{topic}". LENGTH: if the topic is a news event or
+    current affair (e.g. a product launch, court ruling, accident, price change),
+    write 600-900 words — news readers want the facts fast. Otherwise write
+    1200-1500 words (a 5-6 minute read, easy to finish in one sitting). Never
+    pad for word count — dense beats long.
     1. Plan first then write. Research: news_search (5 sources), wikipedia_search,
        hackernews_search, arxiv_search
     2. Every claim needs a real source URL. Never fabricate. NO reference-style [1] or [^1] — only inline [text](url) links
-    3. Structure: 2 headline options, Intro (~200 words), 6 sections (~250 words each),
-       Conclusion (~150 words), ## References
-    4. Formatting: Emoji headers, bold stats, blockquotes, 8-12 inline [text](url) links,
-       1 mermaid diagram (```mermaid graph LR```), --- between sections
-    5. Verify: count words (>=2000) and links (>=8) before finishing
+    3. Structure: 2 headline options, Intro (~100 words, key facts FIRST for news),
+       then 4-5 sections (~200 words each), Conclusion (~80 words). Skip the
+       References section — inline links are enough
+    4. Formatting: Emoji headers, bold stats, blockquotes, 5-8 inline [text](url) links,
+       at most 1 mermaid diagram (```mermaid graph LR```), --- between sections
+    5. Verify: word count within the target range and links (>=5) before finishing
   expected_output: >
-    2000+ word article with sources, formatting, and mermaid diagram.
+    Article at the right length for the topic (600-900 news / 1200-1500 general),
+    with sources, formatting, and at most one mermaid diagram.
   agent: writer
 
 humanising_task:
@@ -26,11 +32,18 @@ finalise_task:
   description: >
     Final polish, SEO, and quality check. Output ONLY the complete final article.
     1. Fix grammar, spelling, flow. Remove unsupported statements
-    2. Add YAML frontmatter: title (<60 chars), tags: [5-8 tags]
-    3. Verify: 2000+ words (expand if short), 8+ real inline links, emoji headers,
-       mermaid diagram, blockquotes, bold stats, references section
+    2. Start the article with a YAML frontmatter block (fenced with ```yaml on its
+       own lines, FIRST thing in the output, before any content):
+       title: a short title (<60 chars)
+       tags: [5-8 specific keywords people actually search for — lowercase,
+       hyphenated, e.g. ai-agents, robotics, india-politics, smartphones. NOT
+       generic words like "technology" or "news"]
+    3. Verify: word count still within the target range (600-900 news / 1200-1500
+       general — cut padding, keep density), 5+ real inline links, emoji headers,
+       mermaid diagram, blockquotes, bold stats
     4. Fix any missing elements silently
-    OUTPUT ONLY the complete article with frontmatter. No commentary, no status.
+    OUTPUT ONLY the complete article with the YAML block first. No commentary, no status.
   expected_output: >
-    Complete polished article with YAML frontmatter, ready for Jekyll.
+    Complete polished article with ```yaml frontmatter block (title + tags) first,
+    ready for Jekyll.
   agent: editor
