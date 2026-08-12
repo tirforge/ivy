@@ -1,9 +1,9 @@
 <!-- Related posts — fallback to newest posts when no tag/category matches.
      Chirpy's stock include renders NOTHING when the current post shares no
      tags (common here), killing internal linking. This override guarantees
-     3 cards: tag-matched first, newest-3 fallback. -->
+     10 cards: tag-matched first, newest-fallback fills the rest. -->
 
-{% assign TOTAL_SIZE = 3 %}
+{% assign TOTAL_SIZE = 10 %}
 {% assign TAG_SCORE = 1 %}
 {% assign CATEGORY_SCORE = 0.5 %}
 {% assign SEPARATOR = ':' %}
