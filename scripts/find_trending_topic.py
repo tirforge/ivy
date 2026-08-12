@@ -111,16 +111,21 @@ SKIP_PATTERNS: Set[str] = {
 }
 
 
-def load_used_topics() -> Set[str]:
-    if USED_TOPICS_FILE.exists():
-        try:
+def _read_used_entries() -> List[str]:
+    """The stored used-topics list (newest first), or [] on any problem."""
+    try:
+        if USED_TOPICS_FILE.exists():
             with open(USED_TOPICS_FILE) as f:
                 data = json.load(f)
                 if isinstance(data, list):
-                    return set(str(e) for e in data if isinstance(e, str))
-        except (json.JSONDecodeError, OSError, TypeError, ValueError):
-            pass
-    return set()
+                    return [str(e) for e in data if isinstance(e, str)]
+    except (json.JSONDecodeError, OSError, TypeError, ValueError):
+        pass
+    return []
+
+
+def load_used_topics() -> Set[str]:
+    return set(_read_used_entries())
 
 
 def save_used_topic(topic: str) -> None:
@@ -129,15 +134,7 @@ def save_used_topic(topic: str) -> None:
     Kept as an ordered list (not a set) so the 'last 200' really means the
     most-recently-used 200 — the old set→list slice kept an arbitrary 200.
     """
-    entries: List[str] = []
-    try:
-        if USED_TOPICS_FILE.exists():
-            with open(USED_TOPICS_FILE) as f:
-                data = json.load(f)
-                if isinstance(data, list):
-                    entries = [str(e) for e in data if isinstance(e, str)]
-    except (json.JSONDecodeError, OSError, TypeError, ValueError):
-        entries = []
+    entries = _read_used_entries()
     # Dedupe keeping the newest occurrence
     seen = {topic}
     fresh = [topic] + [e for e in entries if e not in seen]
@@ -615,6 +612,8 @@ def llm_rank_topics(candidates: List[str], hints: List[str] | None = None) -> Di
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not key or not candidates:
         return None
+    if hints and len(hints) != len(candidates):
+        hints = None  # never let a length mismatch truncate the prompt
     if hints:
         numbered = "\n".join(
             f"{i + 1}. [{h}] {t}" for i, (t, h) in enumerate(zip(candidates, hints))
@@ -833,9 +832,9 @@ def main():
         print(f"  {i}. [{s:.0f}] {t[:80]}", file=sys.stderr)
 
     if not top:
-        topic = pick_evergreen(used)
+        topic = PUBLISHER_SUFFIX.sub("", pick_evergreen(used)).strip()
         print(f"\nFallback (evergreen): {topic}", file=sys.stderr)
-        print(PUBLISHER_SUFFIX.sub("", topic).strip())
+        print(topic)
         save_used_topic(topic)
         return
 
