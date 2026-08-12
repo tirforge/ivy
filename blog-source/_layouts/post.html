@@ -27,10 +27,20 @@ script_includes:
       </ol>
     </nav>
 
+    <p class="article-eyebrow ui-label ui-accent">{{ page.categories.first | default: 'Journal' }} &middot; {{ page.date | date: '%b %d, %Y' }}</p>
+
     <h1 data-toc-skip>{{ page.title }}</h1>
     {% if page.description %}
       <p class="post-desc fw-light mb-4">{{ page.description }}</p>
     {% endif %}
+
+    <div class="article-byline">
+      <span class="avatar" aria-hidden="true">{{ site.social.name | slice: 0 }}</span>
+      <div class="byline">
+        <strong>{{ site.social.name }}</strong>
+        <span class="meta">{% include read-time.html content=content prompt=true lang=lang %}</span>
+      </div>
+    </div>
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -189,4 +199,20 @@ script_includes:
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->
+
+  <!-- Author card (design: opendesign/post.html) -->
+  <section class="author-card reveal" data-od-id="author-card">
+    <div class="row">
+      <span class="avatar" aria-hidden="true">{{ site.social.name | slice: 0 }}</span>
+      <div class="byline">
+        <strong>{{ site.social.name }}</strong>
+        <span class="meta">{{ site.tagline }}</span>
+      </div>
+    </div>
+    <div class="author-links">
+      <a href="{{ site.social.links | first }}">{{ site.social.links | first | remove: 'https://' }}</a>
+      <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a>
+    </div>
+  </section>
+  <!-- .author-card -->
 </article>

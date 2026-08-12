@@ -1,0 +1,29 @@
+---
+layout: default
+# Editorial About — port of opendesign/about.html.
+# Shown at /tabs/about/ (the "About" tab).
+---
+
+{% include lang.html %}
+
+<div class="home-editorial">
+
+  <!-- Page hero -->
+  <section class="page-hero" data-od-id="about-hero">
+    <div class="page-hero-inner hero-anim">
+      <p class="ui-label ui-accent">About</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lead">{{ site.tagline }}</p>
+    </div>
+  </section>
+
+  <!-- About body -->
+  <section class="section about-body" data-od-id="about-body">
+    <div class="container">
+      <div class="about-copy reveal">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+</div>
