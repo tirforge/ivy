@@ -37,6 +37,12 @@ logger = logging.getLogger(__name__)
 CREW_MODEL_31B = os.environ.get("CREW_MODEL_31B", "gemini/gemma-4-31b-it")
 CREW_MODEL_26B = os.environ.get("CREW_MODEL_26B", "gemini/gemma-4-26b-it")
 
+logger.info(
+    "Writing crew models: writer/editor=%s, humaniser=%s",
+    CREW_MODEL_31B,
+    CREW_MODEL_26B,
+)
+
 
 def _cooldown_seconds(error: Exception, default: float = 45.0) -> float:
     """Server-recommended wait from a 429 error text ('retry in 42s',
