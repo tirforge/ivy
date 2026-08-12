@@ -115,17 +115,59 @@ def load_used_topics() -> Set[str]:
     if USED_TOPICS_FILE.exists():
         try:
             with open(USED_TOPICS_FILE) as f:
-                return set(json.load(f))
-        except (json.JSONDecodeError, OSError):
+                data = json.load(f)
+                if isinstance(data, list):
+                    return set(str(e) for e in data if isinstance(e, str))
+        except (json.JSONDecodeError, OSError, TypeError, ValueError):
             pass
     return set()
 
 
 def save_used_topic(topic: str) -> None:
-    used = load_used_topics()
-    used.add(topic)
-    used_list = list(used)[-MAX_USED:]
-    USED_TOPICS_FILE.write_text(json.dumps(used_list, indent=2))
+    """Persist a picked topic, newest first, capped at MAX_USED.
+
+    Kept as an ordered list (not a set) so the 'last 200' really means the
+    most-recently-used 200 — the old set→list slice kept an arbitrary 200.
+    """
+    entries: List[str] = []
+    try:
+        if USED_TOPICS_FILE.exists():
+            with open(USED_TOPICS_FILE) as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    entries = [str(e) for e in data if isinstance(e, str)]
+    except (json.JSONDecodeError, OSError, TypeError, ValueError):
+        entries = []
+    # Dedupe keeping the newest occurrence
+    seen = {topic}
+    fresh = [topic] + [e for e in entries if e not in seen]
+    USED_TOPICS_FILE.write_text(json.dumps(fresh[:MAX_USED], indent=2))
+
+
+def load_published_titles() -> Set[str]:
+    """Titles of every post already on the blog (frontmatter of blog-source/_posts).
+
+    Seeds near-dup detection so a topic identical to an OLD post gets blocked,
+    not just ones picked by this script in recent runs.
+    """
+    posts_dir = Path(__file__).resolve().parent.parent / "blog-source" / "_posts"
+    titles = set()
+    if not posts_dir.is_dir():
+        return titles
+    try:
+        for md in sorted(posts_dir.glob("*.md")):
+            text = md.read_text(encoding="utf-8", errors="ignore")
+            parts = text.split("---", 2)
+            if len(parts) < 3:
+                continue
+            m = re.search(r"^title:\s*(.+?)\s*$", parts[1], re.MULTILINE)
+            if m:
+                t = m.group(1).strip().strip("\"'")
+                if len(t) >= 15:
+                    titles.add(t)
+    except OSError:
+        return set()
+    return titles
 
 
 def is_skip(title: str) -> bool:
@@ -494,7 +536,13 @@ EVERGREEN_TOPICS = [
 PUBLISHER_SUFFIX = re.compile(
     r"\s*[-–—|]\s*(times of india|the hindu|hindustan times|indian express|"
     r"ndtv|business standard|financial express|deccan herald|the new indian express|"
-    r"times now|india today|livemint|moneycontrol|economictimes|toi|news18)\s*$"
+    r"times now|india today|livemint|moneycontrol|economictimes|toi|news18|"
+    r"deccan chronicle|the tribune|zee news|aaj tak|scroll|the wire|cnbc tv18|"
+    r"the verge|ars technica|techcrunch|wired|mashable|cnet|gizmodo|engadget|"
+    r"the guardian|bbc|reuters|associated press|ap news|cnn|nytimes|wsj|"
+    r"business insider|9to5google|9to5mac|9to5toys|venturebeat|theregister|"
+    r"the economist|bloomberg|forbes|hacker news|dev community|ubc faculty of medicine)\s*$",
+    re.IGNORECASE,
 )
 
 
@@ -554,18 +602,25 @@ def pick_evergreen(used: Set[str]) -> str:
     return random.choice(EVERGREEN_TOPICS)
 
 
-def llm_rank_topics(candidates: List[str]) -> Dict[int, float] | None:
+def llm_rank_topics(candidates: List[str], hints: List[str] | None = None) -> Dict[int, float] | None:
     """Score every shortlist headline 0-100 with one cheap lite-model call
     (gemini-2.5-flash-lite). Heuristics pre-rank; the model adds editorial
     judgment by scoring ALL candidates, not just picking one.
 
+    hints[i] (optional) labels the candidate's sources, e.g. 'hackernews' or
+    'hackernews,indian_rss' (multiple independent sources = stronger story).
     Returns {index: score} or None (→ pure-heuristic path) when the API key
     is missing or the call fails — never blocks publishing.
     """
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not key or not candidates:
         return None
-    numbered = "\n".join(f"{i + 1}. {t}" for i, t in enumerate(candidates))
+    if hints:
+        numbered = "\n".join(
+            f"{i + 1}. [{h}] {t}" for i, (t, h) in enumerate(zip(candidates, hints))
+        )
+    else:
+        numbered = "\n".join(f"{i + 1}. {t}" for i, t in enumerate(candidates))
     prompt = (
         "You are an editor choosing a topic for a tech/science blog. Score EACH "
         "numbered headline 0-100 for how substantive, novel and blog-worthy it is.\n"
@@ -581,6 +636,8 @@ def llm_rank_topics(candidates: List[str]) -> Dict[int, float] | None:
         "- Penalise 'top N gadgets' listicles and clickbait.\n"
         "- Penalise very short or vague titles.\n"
         "- Reward depth, novelty, India relevance, and things readers can act on.\n"
+        "- The label in [brackets] lists the sources that carried the story; "
+        "multiple independent sources is a strong importance signal.\n"
         "Reply with ONLY JSON, no prose: "
         "{\"scores\": {\"1\": 85, \"2\": 41, \"3\": 70, \"4\": 22, \"5\": 63}}\n\n"
         f"{numbered}"
@@ -631,7 +688,9 @@ def main():
 
     tavily_key = os.environ.get("TAVILY_API_KEY", "") #SS #ZB
     currents_key = os.environ.get("CURRENTS_API_KEY", "") #RK
-    used = load_used_topics()
+    # used = topics picked by this script recently + every post already on the
+    # blog (frontmatter titles) so near-dup detection covers the whole archive.
+    used = load_used_topics() | load_published_titles()
 
     scored: List[Tuple[str, float, str, float | None]] = []  # (title, score, source, age_hours)
     source_counts: Dict[str, int] = {}  # Track how many items each source contributes
@@ -755,14 +814,14 @@ def main():
     unique_scored = []
     for stats in key_stats.values():
         bonus = velocity_bonus(len(stats["sources"]))
-        unique_scored.append((stats["title"], stats["score"] + bonus))
+        unique_scored.append((stats["title"], stats["score"] + bonus, stats["sources"]))
 
     # Filter: skip junk (incl. deals/prices) + require relevance + avoid
     # near-copies of recently published topics.
-    unique_scored = [(t, s) for t, s in unique_scored if not is_skip(t)]
-    unique_scored = [(t, s) for t, s in unique_scored if not is_clickbait(t)]
-    unique_scored = [(t, s) for t, s in unique_scored if is_relevant_to_people(t)]
-    unique_scored = [(t, s) for t, s in unique_scored if not is_near_dup(t, used)]
+    unique_scored = [(t, s, src) for t, s, src in unique_scored if not is_skip(t)]
+    unique_scored = [(t, s, src) for t, s, src in unique_scored if not is_clickbait(t)]
+    unique_scored = [(t, s, src) for t, s, src in unique_scored if is_relevant_to_people(t)]
+    unique_scored = [(t, s, src) for t, s, src in unique_scored if not is_near_dup(t, used)]
 
     # Sort by score desc
     unique_scored.sort(key=lambda x: x[1], reverse=True)
@@ -770,7 +829,7 @@ def main():
     # Take top candidates
     top = unique_scored[:20]
     print(f"\nTop {len(top)} candidates:", file=sys.stderr)
-    for i, (t, s) in enumerate(top[:7], 1):
+    for i, (t, s, _src) in enumerate(top[:7], 1):
         print(f"  {i}. [{s:.0f}] {t[:80]}", file=sys.stderr)
 
     if not top:
@@ -784,17 +843,18 @@ def main():
     # (gemini-2.5-flash-lite), then blend 60% editorial / 40% heuristics. Falls
     # back to pure heuristics on any failure or NONE — never blocks publishing.
     top5 = top[:5]
-    llm_scores = llm_rank_topics([t for t, _ in top5])
+    hints = [",".join(sorted(src)) for _t, _s, src in top5]
+    llm_scores = llm_rank_topics([t for t, _s, _src in top5], hints)
     if llm_scores:
         blended = []
-        for i, (t, s) in enumerate(top5):
+        for i, (t, s, _src) in enumerate(top5):
             llm = llm_scores.get(i)
             if llm is None:
                 llm = min(max(s, 0.0), 100.0)  # missing score -> trust heuristics
             blended.append((t, 0.6 * llm + 0.4 * min(max(s, 0.0), 100.0)))
         blended.sort(key=lambda x: x[1], reverse=True)
         print("\nLLM scores:", file=sys.stderr)
-        for i, (t, s) in enumerate(top5):
+        for i, (t, s, _src) in enumerate(top5):
             llm = llm_scores.get(i)
             if llm is not None:
                 print(f"  {i + 1}. [heu {s:.0f} | llm {llm:.0f}] {t[:70]}", file=sys.stderr)
@@ -812,7 +872,7 @@ def main():
         # Mostly-deterministic: weighted pick from the top 3 (heavily favours
         # the #1 candidate instead of the old flat top-5 lottery).
         pool = top[:3]
-        weights = [max(s, 1.0) for _, s in pool]
+        weights = [max(s, 1.0) for _, s, _src in pool]
         topic = random.choices(pool, weights=weights, k=1)[0][0]
         print(f"\nSelected (heuristic): {topic}", file=sys.stderr)
     else:
