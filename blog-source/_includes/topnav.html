@@ -10,16 +10,13 @@
         class="{% if page.layout == 'home' %}active{% endif %}"
         {% if page.layout == 'home' %}aria-current="page"{% endif %}
       >Home</a>
-      <a
-        href="{{ '/tags/' | relative_url }}"
-        class="{% if page.layout == 'tags' or page.layout == 'tag' or page.layout == 'categories' or page.layout == 'category' %}active{% endif %}"
-        {% if page.layout == 'tags' or page.layout == 'tag' or page.layout == 'categories' or page.layout == 'category' %}aria-current="page"{% endif %}
-      >Topics</a>
-      <a
-        href="{{ '/about/' | relative_url }}"
-        class="{% if page.url contains '/about/' %}active{% endif %}"
-        {% if page.url contains '/about/' %}aria-current="page"{% endif %}
-      >About</a>
+      {% for tab in site.tabs %}
+        <a
+          href="{{ tab.url | relative_url }}"
+          class="{% if tab.url == page.url %}active{% endif %}"
+          {% if tab.url == page.url %}aria-current="page"{% endif %}
+        >{{ tab.title }}</a>
+      {% endfor %}
     </nav>
 
     <div class="topnav-right">

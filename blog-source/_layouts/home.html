@@ -46,6 +46,9 @@ layout: default
   {% endfor %}
 {% endif %}
 
+{% assign feed_size = posts.size %}
+{% if paginator.page == 1 %}{% assign feed_size = feed_size | minus: 1 %}{% endif %}
+
 <div class="home-editorial">
 
   <!-- Masthead -->
@@ -64,7 +67,7 @@ layout: default
       <div class="search-field">
         <svg class="search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
         <input id="story-search" type="search" placeholder="Search by title, topic or keyword&hellip;" autocomplete="off" />
-        <span class="search-count meta" id="search-count">{{ posts.size }} stories</span>
+        <span class="search-count meta" id="search-count">{{ feed_size }} stories</span>
       </div>
       <p class="search-empty meta" id="search-empty" hidden>No stories match your search — try another topic.</p>
     </div>

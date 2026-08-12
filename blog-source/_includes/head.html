@@ -127,6 +127,10 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
+  <!-- theme.min.js stays loaded: Chirpy's other bundles call
+       Theme.getThemeMapper() at load. Its mode-switching is inert because
+       data-mode="dark" is always present (theme_mode: dark in _config.yml);
+       the editorial toggle owns dark/light via data-theme. -->
   <link rel="preload" as="script" href="{{ '/assets/js/dist/theme.min.js' | relative_url }}" fetchpriority="high">
   <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}" defer></script>
 
