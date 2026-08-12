@@ -19,7 +19,7 @@ jobs:
   repair:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Idempotent: only rewrites files with real fixes, so `git diff` below
       # is the source of truth for whether anything actually changed.
