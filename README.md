@@ -112,9 +112,14 @@ Set these in `.env`:
 npm run deploy
 ```
 
-Then visit:
-- `https://your-worker.workers.dev/init` — creates D1 tables
+Then set up the DB and webhook (note: `/init` and `/migrate` are admin-gated and need the `x-admin` header):
+- `curl -H "x-admin: $ADMIN_PASSWORD" https://your-worker.workers.dev/init` — creates D1 tables
 - `https://your-worker.workers.dev/?command=set` — registers Telegram webhook
+
+> 🔐 **Webhook hardening (optional):** set a `TELEGRAM_WEBHOOK_SECRET` secret and
+> re-run `?command=set`. Incoming calls without `X-Telegram-Bot-Api-Secret-Token`
+> are then rejected. Set the secret AND re-register the webhook together —
+> otherwise Telegram's own updates would be refused.
 
 ---
 

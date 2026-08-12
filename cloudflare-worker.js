@@ -331,11 +331,15 @@ async function handleChat(env, chatId, text) {
       if (response._retry_without_tools) {
         // Without this, `message` stays the tool_calls-only message and the
         // user gets NO reply — grab the fresh response before breaking out.
+        // `?? message` keeps the stale message when the retry itself is
+        // rate-limited, so the final `if (message.content)` below can't crash.
         response = await callGroq(env, history, []);
-        message = response.choices?.[0]?.message;
+        message = response.choices?.[0]?.message ?? message;
         break;
       }
-      message = response.choices?.[0]?.message;
+      const nextMsg = response.choices?.[0]?.message;
+      if (!nextMsg) break; // rate-limited/empty turn — stop, don't re-run tools
+      message = nextMsg;
     } catch (e) {
       await sendTelegram(env, chatId, `Error: ${e.message}`, "HTML");
       return;
