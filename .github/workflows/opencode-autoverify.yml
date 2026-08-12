@@ -18,7 +18,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v7.6
 
       - name: Install deps
         run: uv sync
