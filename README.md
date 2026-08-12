@@ -105,7 +105,7 @@ Set these in `.env`:
 | `TELEGRAM_CHAT_ID` | Workflow notification recipient |
 | `CLOUDFLARE_API_TOKEN` | Cloudflare cache purge on deploy |
 
-> <sub>Optional: `TMDB_API_KEY`, `REDDIT_CLIENT_ID/SECRET/USER_AGENT` for enhanced movie tools; `ADMIN_PASSWORD` for admin + `/debug/*` routes (`x-admin` header); `IVY_PERSONA` bot persona override (`wrangler secret put IVY_PERSONA`); `DISCORD_BOT_TOKEN` / `DISCORD_PUBLIC_KEY` / `DISCORD_APP_ID` for Discord.</sub>
+> <sub>Optional: `TMDB_API_KEY`, `REDDIT_CLIENT_ID/SECRET/USER_AGENT` for enhanced movie tools; `ADMIN_PASSWORD` for admin + `/debug/*` routes (`x-admin` header); `IVY_PERSONA` bot persona override (`wrangler secret put IVY_PERSONA`).</sub>
 
 ### 3. Deploy the Worker
 ```bash
