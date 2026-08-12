@@ -1,7 +1,17 @@
 name: Rebuild & Deploy
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog-source/**'
+      - '.github/workflows/rebuild-deploy.yml'
   workflow_dispatch:
+
+# Only one rebuild at a time — new pushes supersede in-progress builds
+concurrency:
+  group: rebuild-deploy
+  cancel-in-progress: true
 
 permissions:
   contents: write
