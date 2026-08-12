@@ -1280,7 +1280,9 @@ main > article .post-tail-wrapper { max-width: var(--article); margin-inline: au
 #related-posts nav.row { display: block; margin: 0; }
 #related-posts article.col { padding: 0; }
 #related-posts .post-preview {
-  display: block;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
   padding-block: 24px;
   border-top: 1px solid var(--border);
   background: none;
@@ -1289,7 +1291,18 @@ main > article .post-tail-wrapper { max-width: var(--article); margin-inline: au
 }
 #related-posts .post-preview:last-of-type { border-bottom: 1px solid var(--border); }
 #related-posts .post-preview::before { display: none; }
-#related-posts .card-body { padding: 0; }
+#related-posts .related-thumb {
+  flex-shrink: 0;
+  width: 96px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--surface);
+}
+#related-posts .card-body { padding: 0; flex: 1; min-width: 0; }
+@media (max-width: 640px) {
+  #related-posts .related-thumb { width: 72px; }
+}
 #related-posts .card-body time {
   font-family: var(--font-ui);
   font-size: 12px;
