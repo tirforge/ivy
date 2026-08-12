@@ -30,9 +30,15 @@
 <!-- Atom feed discovery (RSS readers find the feed without a bookmark) -->
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }} — Atom Feed" href="{{ '/feed.xml' | absolute_url }}">
 
-<!-- Robots — allow full index + large image previews in SERPs -->
+<!-- Robots — allow full index + large image previews in SERPs.
+     The 404 page is served 200 at /404.html, so keep it out of the index. -->
+{% if page.url == '/404.html' %}
+<meta name="robots" content="noindex, follow">
+<meta name="googlebot" content="noindex, follow">
+{% else %}
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow, max-image-preview:large">
+{% endif %}
 
 <!-- Meta keywords -->
 <meta name="keywords" content="technology, science, culture, tech blog, future, AI, {{ page.tags | join: ', ' | default: '' }}">
@@ -72,8 +78,8 @@ window.mermaid = {
 <meta property="og:locale" content="{{ site.lang | default: 'en' }}">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
+<!-- Twitter Card — large image only when the page has a real cover -->
+<meta name="twitter:card" content="{% if page.layout == 'post' %}summary_large_image{% else %}summary{% endif %}">
 <meta name="twitter:title" content="{{ page.title | default: site.title }}">
 <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 200 | default: site.description }}">
 
