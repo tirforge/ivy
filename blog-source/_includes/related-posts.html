@@ -85,9 +85,12 @@
             {% if post.image %}
               {% assign img_path = post.image.path | default: post.image %}
               {% assign card_img = img_path | replace: 'w=1200&h=630', 'w=640&h=400' %}
+              {% if card_img contains '://' and card_img contains 'unsplash' %}
+                {% assign card_img = card_img | replace: '&fm=webp', '&auto=format' | append: '&q=75' %}
+              {% endif %}
               <img src="{{ card_img }}" class="related-thumb"
                    alt="{{ post.image.alt | default: post.title | escape }}"
-                   loading="lazy" width="640" height="400">
+                   loading="lazy" decoding="async" width="640" height="400">
             {% endif %}
             <div class="card-body">
               {% include datetime.html date=post.date lang=include.lang %}

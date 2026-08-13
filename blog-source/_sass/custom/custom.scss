@@ -274,6 +274,13 @@
   :root { --gutter: 20px; }
 }
 
+/* interactive targets: kill the 300ms tap delay + gray tap flash on touch
+   (focus-visible outlines still render for keyboard users) */
+a, button { touch-action: manipulation; }
+.post-row h3 a, .featured-card, .post-thumb, .topics-nav a, .topic-nav a, #related-posts .post-preview {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ── 2. Reset & base ──────────────────────────────────────────────── */
 *,
 *::before,
@@ -298,8 +305,11 @@ body {
 img,
 svg { display: block; max-width: 100%; }
 a { color: var(--link-color); }
-p { text-wrap: pretty; }
-h1, h2, h3, h4, h5 { text-wrap: balance; }
+/* text-wrap: balance/pretty force extra layout passes per element — on long
+   posts (dozens of headings/paragraphs) that measurably slows first layout
+   and scroll on mid-range mobile. Scope balance to the big display headings
+   only and drop pretty entirely (rag polish isn't worth the cost). */
+h1, h2 { text-wrap: balance; }
 
 ::selection { background: var(--accent-soft); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -319,7 +329,7 @@ h1, h2, h3, h4, h5 { text-wrap: balance; }
 
 /* ── 3. Motion (transform-only; never opacity-gated content) ───────── */
 #main-wrapper {
-  animation: ivy-enter 0.45s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+  animation: ivy-enter 0.35s cubic-bezier(0.2, 0.65, 0.3, 1) both;
 }
 
 @keyframes ivy-enter {
@@ -329,9 +339,17 @@ h1, h2, h3, h4, h5 { text-wrap: balance; }
 
 .reveal-init {
   transform: translateY(14px);
-  transition: transform 0.55s cubic-bezier(0.2, 0.65, 0.3, 1);
+  transition: transform 0.45s cubic-bezier(0.2, 0.65, 0.3, 1);
 }
 .reveal-init.is-visible { transform: translateY(0); }
+
+/* mobile: entrance animations on load feel sluggish on phones — render the
+   page instantly and keep only the (faster) scroll reveals */
+@media (max-width: 760px) {
+  #main-wrapper { animation: none; }
+  .hero-anim > * { animation: none; }
+  .reveal-init { transition-duration: 0.3s; }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .feed-inner > .post-row.reveal-init,
@@ -345,10 +363,10 @@ h1, h2, h3, h4, h5 { text-wrap: balance; }
   }
 }
 
-.hero-anim > * { animation: hero-enter 0.6s cubic-bezier(0.2, 0.65, 0.3, 1) both; }
-.hero-anim > *:nth-child(2) { animation-delay: 0.08s; }
-.hero-anim > *:nth-child(3) { animation-delay: 0.16s; }
-.hero-anim > *:nth-child(4) { animation-delay: 0.24s; }
+.hero-anim > * { animation: hero-enter 0.5s cubic-bezier(0.2, 0.65, 0.3, 1) both; }
+.hero-anim > *:nth-child(2) { animation-delay: 0.06s; }
+.hero-anim > *:nth-child(3) { animation-delay: 0.12s; }
+.hero-anim > *:nth-child(4) { animation-delay: 0.18s; }
 
 @keyframes hero-enter {
   from { transform: translateY(16px); }
@@ -390,17 +408,18 @@ main { padding-inline: 0 !important; }
 /* mobile bar: search only (breadcrumb/title/sidebar-trigger hidden;
    desktop topbar hidden entirely — the editorial breadcrumb lives in the
    article header instead) */
+/* backdrop-filter on sticky/fixed bars forces a re-blur of the content behind
+   them on EVERY scroll frame — the top scroll-jank source. At ~94% opacity a
+   solid bar reads the same as a frosted one, at zero compositor cost. */
 #topbar-wrapper {
   position: relative !important;
   height: auto;
   min-height: 48px;
-  background: color-mix(in oklch, var(--bg) 88%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in oklch, var(--bg) 94%, transparent);
   border-bottom: 1px solid var(--border);
 }
 @media (max-width: 760px), (hover: none) and (pointer: coarse) {
-  #topbar-wrapper { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  #topbar-wrapper { background: var(--bg); }
 }
 @media (min-width: 992px) { #topbar-wrapper { display: none; } }
 #topbar { background: transparent; border-bottom: 0; }
@@ -421,19 +440,12 @@ main { padding-inline: 0 !important; }
   position: sticky;
   top: 0;
   z-index: 1020;
-  background: var(--bg);
-  background: color-mix(in oklch, var(--bg) 88%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in oklch, var(--bg) 94%, transparent);
   border-bottom: 1px solid var(--border);
 }
 
 @media (max-width: 760px), (hover: none) and (pointer: coarse) {
-  .site-topnav {
-    background: var(--bg);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
+  .site-topnav { background: var(--bg); }
 }
 
 .topnav-inner {
@@ -642,7 +654,9 @@ main { padding-inline: 0 !important; }
   color: var(--fg);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.featured-card:hover { transform: translateY(-2px); border-color: var(--aurora); }
+@media (hover: hover) {
+  .featured-card:hover { transform: translateY(-2px); border-color: var(--aurora); }
+}
 
 .featured-meta {
   display: flex;
@@ -685,9 +699,11 @@ main { padding-inline: 0 !important; }
   color: var(--fg);
   transition: color 0.18s ease;
 }
-.featured-card:hover .featured-cta { color: var(--accent); }
 .featured-cta .arrow { transition: transform 0.2s ease; }
-.featured-card:hover .featured-cta .arrow { transform: translateX(4px); }
+@media (hover: hover) {
+  .featured-card:hover .featured-cta { color: var(--accent); }
+  .featured-card:hover .featured-cta .arrow { transform: translateX(4px); }
+}
 
 @media (max-width: 640px) {
   .featured-card { padding: 24px 20px; border-radius: var(--radius); }
@@ -707,6 +723,11 @@ main { padding-inline: 0 !important; }
   gap: var(--gap-lg);
   padding-block: 28px;
   border-top: 1px solid var(--border);
+  /* render-skip offscreen rows: long home pages / paginated feeds skip
+     layout+paint for below-fold rows on mobile GPUs. `auto` remembers the
+     real rendered size, so no scrollbar jump after first paint. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 220px;
 }
 .post-row:last-child { border-bottom: 1px solid var(--border); }
 
@@ -1288,6 +1309,9 @@ main > article .post-tail-wrapper { max-width: var(--article); margin-inline: au
   background: none;
   box-shadow: none;
   border-radius: 0;
+  /* 10 cards per post page, all below the fold — skip rendering until near */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 130px;
 }
 #related-posts .post-preview:last-of-type { border-bottom: 1px solid var(--border); }
 #related-posts .post-preview::before { display: none; }
@@ -1429,13 +1453,11 @@ main > article .post-tail-wrapper { max-width: var(--article); margin-inline: au
 
 /* ── 16. TOC (mobile popup + bar) ─────────────────────────────────── */
 #toc-bar {
-  background: color-mix(in oklch, var(--bg) 88%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in oklch, var(--bg) 94%, transparent);
   border-bottom: 1px solid var(--border);
 }
 @media (max-width: 760px), (hover: none) and (pointer: coarse) {
-  #toc-bar { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  #toc-bar { background: var(--bg); }
 }
 #toc-bar .label { font-family: var(--font-ui); color: var(--muted); }
 
@@ -1468,10 +1490,10 @@ main > article .post-tail-wrapper { max-width: var(--article); margin-inline: au
 
 /* ── 17. Back-to-top, footer ──────────────────────────────────────── */
 /* frosted chip — matches the topnav; never a stark white disc in light mode */
+/* frosted chip — solid surface, no backdrop-filter (fixed element would
+   re-blur the page behind it on every scroll frame, worst on mobile) */
 #back-to-top {
-  background: color-mix(in oklch, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--surface);
   border: 1px solid var(--border);
   color: var(--muted);
   border-radius: var(--radius);

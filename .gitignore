@@ -6,6 +6,10 @@ __pycache__/
 output/
 *.egg-info/
 dist/
+# ...but the patched PWA app.min.js IS committed: it must override the theme's
+# vendored copy at the same relative path (Jekyll site files beat theme files).
+!blog-source/assets/js/dist/
+!blog-source/assets/js/dist/app.min.js
 build/
 blog-source/_site/
 blog-source/.bundle/

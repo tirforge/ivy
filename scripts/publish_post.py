@@ -256,8 +256,10 @@ def fetch_unsplash_images(topic: str, count: int = 2) -> list:
                 requests.get(img["links"]["download_location"], headers=headers, timeout=5)
             except Exception:
                 pass
+            # auto=format lets Unsplash negotiate AVIF/WebP per client Accept
+            # (fm=webp forced WebP and blocked AVIF — ~30% larger images).
             images.append({
-                "path": img["urls"]["raw"] + "&fm=webp",
+                "path": img["urls"]["raw"] + "&auto=format",
                 "alt": img.get("alt_description") or topic,
                 "photographer": img["user"]["name"],
                 "photographer_url": img["user"]["links"]["html"],

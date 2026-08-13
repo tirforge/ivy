@@ -1,0 +1,9 @@
+# Site override of the theme's `_data/origin/cors.yml` (Jekyll merges theme
+# data under site data; site wins per key).
+#
+# The theme ships `all.min.css` — every solid/regular/brand icon + v4-compat
+# rules (~21KB, Lighthouse measured 98% unused). This site only uses solid
+# and a handful of `far` (regular) icons, so load the two subsets instead.
+fontawesome:
+  css: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/solid.min.css
+  regular_css: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/regular.min.css

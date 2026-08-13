@@ -12,15 +12,27 @@
   and fetch another.
   ============================================================
 {% endcomment %}
-{% assign first_post = site.posts | first %}
-{% if first_post and first_post.image %}
-  {% assign first_src = first_post.image.path | default: first_post.image %}
-  {% if first_src contains '://' %}
-    {% assign first_480 = first_src | replace: 'w=1200', 'w=480' | replace: 'h=630', 'h=252' | append: '&q=75' %}
-    {% assign first_680 = first_src | replace: 'w=1200', 'w=680' | replace: 'h=630', 'h=357' | append: '&q=75' %}
-    {% assign first_960 = first_src | replace: 'w=1200', 'w=960' | replace: 'h=630', 'h=504' | append: '&q=75' %}
-    <link rel="preload" as="image" href="{{ first_960 }}" imagesrcset="{{ first_480 }} 480w, {{ first_680 }} 680w, {{ first_960 }} 960w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high">
+{% comment %}Pick the page's real LCP image:
+  - post page:  the current post's hero (was: newest post — wrong on old posts,
+                wasting bandwidth and missing the actual LCP)
+  - home page:  first FEED row's thumb (posts[1] — posts[0] is the text-only
+                featured card; site has no pinned posts)
+{% endcomment %}
+{% assign lcp_src = nil %}
+{% if page.layout == 'post' and page.image %}
+  {% assign lcp_src = page.image.path | default: page.image %}
+{% elsif page.layout == 'home' and site.posts.size > 1 %}
+  {% assign lcp_post = site.posts[1] %}
+  {% if lcp_post.image %}
+    {% assign lcp_src = lcp_post.image.path | default: lcp_post.image %}
   {% endif %}
+{% endif %}
+{% if lcp_src and lcp_src contains '://' %}
+  {% assign lcp_src = lcp_src | replace: '&fm=webp', '&auto=format' %}
+  {% assign lcp_480 = lcp_src | replace: 'w=1200', 'w=480' | replace: 'h=630', 'h=252' | append: '&q=75' %}
+  {% assign lcp_680 = lcp_src | replace: 'w=1200', 'w=680' | replace: 'h=630', 'h=357' | append: '&q=75' %}
+  {% assign lcp_960 = lcp_src | replace: 'w=1200', 'w=960' | replace: 'h=630', 'h=504' | append: '&q=75' %}
+  <link rel="preload" as="image" href="{{ lcp_960 }}" imagesrcset="{{ lcp_480 }} 480w, {{ lcp_680 }} 680w, {{ lcp_960 }} 960w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high">
 {% endif %}
 
 <!--

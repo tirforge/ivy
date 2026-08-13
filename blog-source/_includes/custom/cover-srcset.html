@@ -11,6 +11,8 @@
   This include:
     - emits 480/680/960 candidates + q=75 (Unsplash quality;
       visually identical, ~50% smaller files)
+    - swaps forced fm=webp for auto=format so capable browsers get
+      AVIF (Chrome/Safari 16.4+) — ~30% smaller than WebP at q=75
     - keeps the 0.525 aspect ratio (h = w * 0.525) so the
       width/height attributes prevent CLS
     - falls back to the plain URL for non-Unsplash images
@@ -22,6 +24,7 @@
 {% assign src = include.src %}
 
 {% if src contains '://' and src contains 'unsplash' and src contains 'w=1200' %}
+  {% assign src = src | replace: '&fm=webp', '&auto=format' %}
   {% assign s480 = src | replace: 'w=1200', 'w=480' | replace: 'h=630', 'h=252' | append: '&q=75' %}
   {% assign s680 = src | replace: 'w=1200', 'w=680' | replace: 'h=630', 'h=357' | append: '&q=75' %}
   {% assign s960 = src | replace: 'w=1200', 'w=960' | replace: 'h=630', 'h=504' | append: '&q=75' %}

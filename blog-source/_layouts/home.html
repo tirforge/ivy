@@ -120,7 +120,7 @@ layout: default
           {% if post.image %}
             <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="Cover: {{ post.title | xml_escape }}" tabindex="-1">
               {% capture img_attrs %}{% include custom/cover-srcset.html src=src %}{% endcapture %}
-              <img {{ img_attrs }} alt="{{ post.title | xml_escape }}" loading="lazy">
+              <img {{ img_attrs }} alt="{{ post.title | xml_escape }}" loading="lazy" decoding="async">
             </a>
           {% else %}
             <span class="post-thumb" aria-hidden="true"><span class="ph-img">Cover</span></span>

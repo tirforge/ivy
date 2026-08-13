@@ -35,7 +35,9 @@
     {{- site.title -}}
   </title>
 
-  {% include_cached favicons.html %}
+  {% comment %}Not include_cached: the LCP preload inside depends on the
+     current page (post hero vs home feed row), so it must render per page.{% endcomment %}
+  {% include favicons.html %}
 
   {% unless site.assets.self_host.enabled %}
     {% for hint in site.data.origin.cors.resource_hints %}
@@ -51,14 +53,21 @@
 
   <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
 
-  <!-- Font Awesome Icons — non-blocking -->
+  <!-- Font Awesome Icons — solid + regular subsets only (no brands),
+       non-blocking. Subset URLs are overridden in _data/origin/cors.yml. -->
   <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.regular_css | relative_url }}" media="print" onload="this.media='all'">
   <noscript>
     <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">
+    <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.regular_css | relative_url }}">
   </noscript>
 
   {% if site.toc and page.toc %}
-    <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
+    <!-- tocbot.css is ~1.2KB — must not block first paint -->
+    <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
+    </noscript>
   {% endif %}
 
   {% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' %}
@@ -70,8 +79,16 @@
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
-    <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">
+    <!-- glightbox.css is ~3KB — non-blocking -->
+    <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">
+    </noscript>
   {% endif %}
+
+  <!-- Font Awesome solid icon font — preload so icons paint without FOUT
+       (subset CSS is non-blocking; the font is used on every page) -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/webfonts/fa-solid-900.woff2">
 
   <!-- Critical: set theme before paint to prevent flash.
        Reads saved choice (localStorage ivy-theme → cookie → OS preference),
