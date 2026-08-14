@@ -46,14 +46,18 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
           cname: blog.aaruvi.space
 
+      # Fail loudly on purge errors — the old `|| true` here hid a stale token
+      # for weeks (see repair-posts.yml for the same fix). Zone ID is a secret
+      # when set, falling back to the known production zone.
       - name: Purge Cloudflare cache
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID || '031c516ab46c1f7718dac0649f584501' }}
         run: |
-          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/031c516ab46c1f7718dac0649f584501/purge_cache" \
+          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             -H "Content-Type: application/json" \
-            -d '{"purge_everything":true}' || true
+            -d '{"purge_everything":true}' | python3 -c "import json,sys; d=json.load(sys.stdin); assert d.get('success'), d.get('errors'); print('purged:', d['result']['id'])"
 
       - name: Submit latest posts to IndexNow (Bing, Yandex, Seznam, Naver)
         run: python3 scripts/indexnow_submit.py --recent 5 --sitemap blog-source/_site/sitemap.xml

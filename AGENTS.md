@@ -310,7 +310,7 @@ Ivy's tool loop uses GOAP-style detection — `needsTools()` checks messages for
 |------|-------------|
 | `get_current_time(timezone?)` | UTC or IANA timezone (e.g. `Asia/Kolkata`) |
 | `get_weather(city)` | Weather for a city |
-| `get_youtube_transcript(url)` | Summarize a YouTube video from its transcript |
+| `get_youtube_transcript(url)` | Summarize a YouTube video from its transcript (innertube public-key API + watch-page scrape fallback) |
 
 ### 🎬 Movies (3-source fallback)
 | Tool | Chain | Description |
@@ -581,7 +581,7 @@ WORKER_URL = "https://ivy-blog-bot.priyamolmpraveen2.workers.dev"
 
 ```
 
-> KV is declared but **not actively used**. D1 is the primary store: sessions, memories, reminders, jobs, knowledge graph, dedup, and continuations. The `SELF` service binding re-enters the worker for split-and-continue passes (fallback to `WORKER_URL` only if the binding is absent).
+> D1 is the primary store: sessions, memories, reminders, jobs, knowledge graph, dedup, and continuations. KV (`IVY_KV`) is used only as a short-lived screenshot cache in `browser.ts` (`SHOT_CACHE_TTL`). The `SELF` service binding re-enters the worker for split-and-continue passes (fallback to `WORKER_URL` only if the binding is absent).
 
 ---
 
@@ -597,4 +597,4 @@ WORKER_URL = "https://ivy-blog-bot.priyamolmpraveen2.workers.dev"
 | **Reminders** | D1-backed, `* * * * *` cron |
 | **Tool loop** | Max 5 turns per message |
 | **Message dedup** | `dedup` D1 table (`INSERT OR IGNORE`, atomic cross-isolate) + in-memory Map fast path; rows pruned hourly by cron |
-| **Tests** | `tests/` dir exists but empty |
+| **Tests** | Python `unittest` suite in `tests/` (publish helpers, topic scoring, repair helpers, crew cooldown) — run via `uv run python -m unittest discover -s tests`, wired into `ci-checks.yml` |

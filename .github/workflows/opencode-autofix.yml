@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Run OpenCode
-        uses: sst/opencode/github@latest
+        uses: sst/opencode/github@v1.18.18
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         with:

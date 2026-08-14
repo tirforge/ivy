@@ -71,13 +71,14 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
           cname: blog.aaruvi.space
 
+      # Push must fail loudly: a silent failure here drifts main from gh-pages
+      # with no trace. The rebase absorbs commits that landed during the build
+      # (e.g. blog-writer); only the push is allowed to surface errors.
       - name: Push fixes to main
         if: steps.changes.outputs.changed == 'true'
         run: |
-          # Absorb commits that landed during the build (e.g. blog-writer)
-          # instead of failing the push silently and drifting from gh-pages.
           git pull --rebase --autostash || true
-          git push || true
+          git push
 
       # Fail loudly on purge errors (the `|| true`-swallowed failures in
       # rebuild-deploy.yml hid a stale token for weeks).
@@ -85,8 +86,9 @@ jobs:
         if: steps.changes.outputs.changed == 'true'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID || '031c516ab46c1f7718dac0649f584501' }}
         run: |
-          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/031c516ab46c1f7718dac0649f584501/purge_cache" \
+          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             -H "Content-Type: application/json" \
             -d '{"purge_everything":true}' | python3 -c "import json,sys; d=json.load(sys.stdin); assert d.get('success'), d.get('errors'); print('purged:', d['result']['id'])"
