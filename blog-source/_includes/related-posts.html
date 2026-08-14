@@ -27,6 +27,9 @@
   {% if post.url == page.url %}
     {% continue %}
   {% endif %}
+  {% if post.image == nil %}
+    {% continue %}
+  {% endif %}
   {% assign score = 0 %}
   {% for tag in post.tags %}
     {% if page.tags contains tag %}
@@ -56,10 +59,33 @@
 {% endif %}
 
 {% if relate_posts.size < TOTAL_SIZE %}
-  <!-- Fallback: fill the rest with newest posts not already listed -->
+  <!-- Fallback pass 1: newest posts WITH covers, so every card gets a
+       thumbnail. Only if the site runs short of image-bearing posts does
+       pass 2 fall back to text-only posts. -->
   {% for post in site.posts %}
     {% if relate_posts.size >= TOTAL_SIZE %}
       {% break %}
+    {% endif %}
+    {% if post.image == nil %}
+      {% continue %}
+    {% endif %}
+    {% assign already = false %}
+    {% for rp in relate_posts %}
+      {% if rp.url == post.url or post.url == page.url %}
+        {% assign already = true %}
+      {% endif %}
+    {% endfor %}
+    {% if already == false %}
+      {% assign relate_posts = relate_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+  <!-- Fallback pass 2: image-less posts, only if still short of TOTAL_SIZE -->
+  {% for post in site.posts %}
+    {% if relate_posts.size >= TOTAL_SIZE %}
+      {% break %}
+    {% endif %}
+    {% if post.image %}
+      {% continue %}
     {% endif %}
     {% assign already = false %}
     {% for rp in relate_posts %}
