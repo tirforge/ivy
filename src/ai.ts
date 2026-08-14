@@ -754,7 +754,9 @@ export function computeJobNextRun(scheduleJson: string, fromMs: number): number 
       const next = nextRunFromCron(s.expr, fromMs, s.tz || "UTC");
       return next > fromMs ? next : fromMs + 60000;
     }
-  } catch {}
+  } catch (e: any) {
+    console.warn(`[JOB] unparseable schedule ${scheduleJson.slice(0, 80)} — falling back to +24h: ${e?.message || e}`);
+  }
   return fromMs + 24 * 3600 * 1000;
 }
 
@@ -991,11 +993,16 @@ const INNERTUBE_CLIENTS = [
   { clientName: "ANDROID", clientVersion: "20.12.54", androidSdkVersion: 30 },
 ];
 
+// YouTube's PUBLIC web-client innertube key — embedded in every youtube.com page's
+// JS, not a secret. Cannot be "leaked" (it's already public); if YouTube rotates it,
+// replace this constant. Kept as a const so scanners/readers see it's intentional.
+const INNERTUBE_PUBLIC_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8";
+
 async function fetchYouTubePlayerResponse(videoId: string): Promise<any | null> {
   // Innertube player API (public web key used by YouTube's own web client) — no cookies needed
   for (const client of INNERTUBE_CLIENTS) {
     try {
-      const resp = await fetch("https://www.youtube.com/youtubei/v1/player?key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8", {
+      const resp = await fetch(`https://www.youtube.com/youtubei/v1/player?key=${INNERTUBE_PUBLIC_KEY}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ videoId, context: { client } }),
@@ -1005,7 +1012,9 @@ async function fetchYouTubePlayerResponse(videoId: string): Promise<any | null> 
         const data: any = await resp.json();
         if (data?.captions?.playerCaptionsTracklistRenderer?.captionTracks) return data;
       }
-    } catch {}
+    } catch (e: any) {
+      console.warn(`[YT] innertube ${client.clientName} failed: ${e?.message || e}`);
+    }
   }
   // Fallback: scrape the watch page for ytInitialPlayerResponse
   try {
@@ -1014,9 +1023,13 @@ async function fetchYouTubePlayerResponse(videoId: string): Promise<any | null> 
     if (m) {
       try {
         return JSON.parse(m[1]);
-      } catch {}
+      } catch (e: any) {
+        console.warn(`[YT] watch-page JSON parse failed: ${e?.message || e}`);
+      }
     }
-  } catch {}
+  } catch (e: any) {
+    console.warn(`[YT] watch-page scrape failed: ${e?.message || e}`);
+  }
   return null;
 }
 

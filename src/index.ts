@@ -1,3 +1,4 @@
+import { timingSafeEqual } from "node:crypto";
 import { Hono } from "hono";
 import { Bot, Context, InlineKeyboard, session, StorageAdapter } from "grammy";
 import { processAi, processAiStream, transcribeAudio, fileToBase64, loadUserMemories, clearUserMemories, isTextDocument, isPdfDocument, extractPdfText, renderLatex, renderMermaid, MODELS, runScheduledJob, computeJobNextRun, type JobRow, fetchUrlContent, getWeather, getYoutubeTranscript, listJobs, buildSchedule, createJob, cancelJob, detectEmotion, kgQuery, kgForget, loadKnowledge, loadContinuation, deleteContinuation, clearContinuations, CONTINUE_PREFIX, MAX_CONTINUE_PASSES, type ContinuationRow, autosaveFacts } from "./ai";
@@ -282,7 +283,9 @@ async function sendFormatted(
         if (!err1.includes("not modified")) {
           try {
             await ctx.api.editMessageText(chatId, placeholderMsg.message_id, stripHtml(parts[i]));
-          } catch {}
+          } catch (e2: any) {
+            console.warn(`[SEND] edit fallback failed for ${chatId}: ${e2?.message || e2}`);
+          }
         }
       }
     } else {
@@ -291,8 +294,13 @@ async function sendFormatted(
           parse_mode: "HTML",
           link_preview_options: { is_disabled: false, show_above_text: true },
         });
-      } catch {
-        await ctx.reply(stripHtml(parts[i]));
+      } catch (e: any) {
+        console.warn(`[SEND] HTML reply failed for ${chatId}, retrying plain: ${e?.message || e}`);
+        try {
+          await ctx.reply(stripHtml(parts[i]));
+        } catch (e2: any) {
+          console.error(`[SEND] plain reply also failed for ${chatId}: ${e2?.message || e2}`);
+        }
       }
     }
   }
@@ -1326,6 +1334,21 @@ async function handleChat(ctx: MyContext, env: Env, text: string, opts?: { autos
 
 const app = new Hono<{ Bindings: Env }>();
 
+// Constant-time secret comparison for admin auth (password body field and
+// x-admin header). Plain !== leaks timing information over the wire; this
+// pads both sides so timingSafeEqual never throws on length mismatch.
+function secretsEqual(a: string | undefined | null, b: string | undefined | null): boolean {
+  if (!a || !b) return false;
+  const bufA = new TextEncoder().encode(a);
+  const bufB = new TextEncoder().encode(b);
+  const maxLen = Math.max(bufA.length, bufB.length);
+  const padA = new Uint8Array(maxLen);
+  const padB = new Uint8Array(maxLen);
+  padA.set(bufA);
+  padB.set(bufB);
+  return timingSafeEqual(padA, padB);
+}
+
 // CORS helper for admin routes
 function corsHeaders(origin?: string): Record<string, string> {
   return {
@@ -1339,7 +1362,7 @@ function corsHeaders(origin?: string): Record<string, string> {
 // Admin API: verify password + list posts
 app.post("/admin/posts", async (c) => {
   const { password } = await c.req.json<{ password?: string }>();
-  if (!password || !c.env.ADMIN_PASSWORD || password !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(password, c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "Invalid verification code" }, 401, corsHeaders(c.req.header("Origin")));
   }
   const resp = await fetch(
@@ -1357,7 +1380,7 @@ app.post("/admin/posts", async (c) => {
 // Admin API: delete a post
 app.post("/admin/delete", async (c) => {
   const { password, path, sha } = await c.req.json<{ password?: string; path?: string; sha?: string }>();
-  if (!password || !c.env.ADMIN_PASSWORD || password !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(password, c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "Invalid verification code" }, 401, corsHeaders(c.req.header("Origin")));
   }
   if (!path || !sha) return c.json({ error: "Missing path or sha" }, 400, corsHeaders(c.req.header("Origin")));
@@ -1393,7 +1416,7 @@ app.options("/admin/:path", async (c) => {
 // ---------- Init endpoint (one-time: creates DB tables) ----------
 
 app.get("/init", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const statements = [
@@ -1439,7 +1462,7 @@ app.post("/internal/continue", async (c) => {
 
 app.get("/migrate", async (c) => {
   // Destructive (drops memories + reminders) — admin only, like the /debug routes.
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const statements = [
@@ -1464,7 +1487,7 @@ app.get("/migrate", async (c) => {
 // POST /admin/commands — re-register the Telegram command menu (setMyCommands)
 // without re-running the webhook setup, and return the BotFather paste text.
 app.post("/admin/commands", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const apiBase = `https://api.telegram.org/bot${c.env.TELEGRAM_BOT_TOKEN}`;
@@ -1482,7 +1505,7 @@ app.post("/admin/commands", async (c) => {
 // ensures the jobs table exists and inserts a reminder job due NOW so the
 // minute cron delivers a test message to TELEGRAM_CHAT_ID. Returns job id.
 app.post("/debug/smoke", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const ddl = [
@@ -1506,7 +1529,7 @@ app.post("/debug/smoke", async (c) => {
 
 // POST /debug/continuations — list split-and-continue checkpoints [admin]
 app.post("/debug/continuations", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const rows = await c.env.IVY_DB.prepare(
@@ -1517,7 +1540,7 @@ app.post("/debug/continuations", async (c) => {
 
 // POST /debug/jobs — list persisted jobs (verifies D1 writes) [admin]
 app.post("/debug/jobs", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const res = await c.env.IVY_DB.prepare("SELECT id, chat_id, type, schedule, message, keyword, next_run, last_run, last_result, enabled FROM jobs ORDER BY next_run ASC LIMIT 20").all();
@@ -1526,7 +1549,7 @@ app.post("/debug/jobs", async (c) => {
 
 // POST /debug/run — process due reminders + jobs inline (same code as cron) [admin]
 app.post("/debug/run", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const out = await processDueJobs(c.env);
@@ -1535,7 +1558,7 @@ app.post("/debug/run", async (c) => {
 
 // POST /debug/jobs-clean — delete all jobs (dev tool) [admin]
 app.post("/debug/jobs-clean", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const res = await c.env.IVY_DB.prepare("DELETE FROM jobs").run();
@@ -1544,7 +1567,7 @@ app.post("/debug/jobs-clean", async (c) => {
 
 // POST /debug/kg — list knowledge graph rows (verifies D1 writes) [admin]
 app.post("/debug/kg", async (c) => {
-  if (!c.env.ADMIN_PASSWORD || c.req.header("x-admin") !== c.env.ADMIN_PASSWORD) {
+  if (!secretsEqual(c.req.header("x-admin"), c.env.ADMIN_PASSWORD)) {
     return c.json({ error: "unauthorized" }, 401);
   }
   const res = await c.env.IVY_DB.prepare("SELECT chat_id, subject, predicate, object, source, updated_at FROM knowledge ORDER BY updated_at DESC LIMIT 20").all();
